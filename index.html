@@ -366,8 +366,8 @@ section{padding:80px 0}
 .sol-channels{grid-template-columns:1fr}
 .pres-cards{grid-template-columns:1fr!important}
 }
-<style>
-/* ═══ SHOWCASE DE IMÁGENES + TABS (add-on, no toca lo existente) ═══ */
+
+/* ═══ SHOWCASE DE IMÁGENES + TABS (add-on) ═══ */
 .ishow{position:relative;overflow:hidden;background:var(--bg-1)}
 .ishow.alt{background:transparent}
 .ig{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:48px}
@@ -378,6 +378,10 @@ section{padding:80px 0}
 .ig-media:hover{transform:translateY(-6px)}
 .ig-media img{display:block;width:100%;height:auto;border-radius:calc(var(--r-lg) - 2px);box-shadow:0 30px 80px rgba(0,0,0,.5)}
 .ig-media.portrait img{max-width:420px;margin:0 auto}
+.hero-pic{max-width:560px;margin:0 auto}
+.hero-pic .fb1{top:-22px;right:-16px;left:auto;bottom:auto}
+.hero-pic .fb2{bottom:-18px;left:-16px;right:auto;top:auto}
+.hero-pic .fb3{top:44%;right:-24px;left:auto;bottom:auto}
 .ig-chip{position:absolute;z-index:3;padding:9px 14px;border-radius:var(--r);background:var(--bg-glass);backdrop-filter:blur(20px);border:1px solid var(--border);box-shadow:0 12px 40px rgba(0,0,0,.5);animation:flt 6s ease-in-out infinite}
 .ig-chip .l{font-size:.5rem;color:var(--text-3);text-transform:uppercase;letter-spacing:.8px;font-weight:600}
 .ig-chip .v{font-size:1.05rem;font-weight:800;font-family:'JetBrains Mono',monospace}
@@ -391,7 +395,6 @@ section{padding:80px 0}
 .ig-list li:hover{border-color:var(--border-h);transform:translateX(6px);box-shadow:0 8px 30px rgba(0,0,0,.2)}
 .ig-list li b{color:var(--text);font-weight:700}
 .ig-list .ck{width:20px;height:20px;flex-shrink:0;margin-top:1px}
-/* Tabs */
 .itabs{margin-top:44px}
 .itab-nav{display:flex;justify-content:center;margin-bottom:8px}
 .itab-set{display:inline-flex;gap:4px;padding:5px;border-radius:60px;background:rgba(255,255,255,.03);border:1px solid var(--border)}
@@ -407,7 +410,13 @@ section{padding:80px 0}
 .ig-media{max-width:480px;margin:0 auto}
 .itab-b{padding:10px 16px;font-size:.75rem}
 }
-</style>
+@media(max-width:640px){
+.ig{gap:28px}
+.ig-chip{padding:7px 11px}
+.ig-chip .v{font-size:.9rem}
+.itab-b{padding:9px 13px;font-size:.7rem;gap:6px}
+.itab-set{gap:2px}
+}
 </style>
 </head>
 <body>
@@ -462,26 +471,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="hero-visual rv rv-d2">
-    <div class="dash">
+    <div class="ig-media hero-pic">
       <div class="fb fb1"><div class="fb-l">ROAS</div><div class="fb-v" style="color:var(--green)">4.2x</div></div>
       <div class="fb fb2"><div class="fb-l">CPL</div><div class="fb-v" style="color:var(--cyan)">-38%</div></div>
       <div class="fb fb3"><div class="fb-l">Conv.</div><div class="fb-v" style="color:var(--purple)">+62%</div></div>
-      <div class="dash-w">
-        <div class="dh"><div class="dh-dots"><span></span><span></span><span></span></div><div class="dh-t">Revenue Engine</div><div class="dh-live">Live</div></div>
-        <div class="db">
-          <div class="dk">
-            <div class="dk-i"><div class="dk-v" style="color:var(--cyan)" data-count="2847">0</div><div class="dk-l">Leads</div></div>
-            <div class="dk-i"><div class="dk-v" style="color:var(--purple)">$4.2k</div><div class="dk-l">Revenue</div></div>
-            <div class="dk-i"><div class="dk-v" style="color:var(--green)" data-count="68">0<span style="font-size:.85rem">%</span></div><div class="dk-l">Conv. Rate</div></div>
-          </div>
-          <div class="dc"><canvas id="hChart"></canvas></div>
-          <div class="df">
-            <div class="df-r"><div class="df-d" style="background:var(--purple)"></div><span class="df-l">Impresiones</span><div class="df-bar"><div class="df-bf" style="width:0;background:var(--purple)" data-w="100%"></div></div><span class="df-v" style="color:var(--purple)">124k</span></div>
-            <div class="df-r"><div class="df-d" style="background:var(--cyan)"></div><span class="df-l">Clics</span><div class="df-bar"><div class="df-bf" style="width:0;background:var(--cyan)" data-w="66%"></div></div><span class="df-v" style="color:var(--cyan)">8.2k</span></div>
-            <div class="df-r"><div class="df-d" style="background:var(--green)"></div><span class="df-l">Conversiones</span><div class="df-bar"><div class="df-bf" style="width:0;background:var(--green)" data-w="34%"></div></div><span class="df-v" style="color:var(--green)">2.8k</span></div>
-          </div>
-        </div>
-      </div>
+      <img src="principal.png" alt="YachSell: equipo captando clientes en Google Ads, Meta, LinkedIn y TikTok Ads" fetchpriority="high" width="1699" height="955">
     </div>
   </div>
 </div>
@@ -503,6 +497,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="pain-card rv"><div class="pain-icon">📉</div><h3>Campañas sin retorno claro</h3><p>Gastas en publicidad pero no sabes qué canal genera clientes reales ni cuánto cuesta cada uno.</p></div>
     <div class="pain-card rv rv-d1"><div class="pain-icon">⏳</div><h3>Tiempo perdido en pruebas</h3><p>Cada mes pruebas algo nuevo sin un plan claro. Sin estructura, los resultados tardan o no llegan.</p></div>
     <div class="pain-card rv rv-d2"><div class="pain-icon">🔄</div><h3>Agencias que no se implican</h3><p>Reportes bonitos pero sin impacto real en ventas. Necesitas un equipo que trabaje codo a codo contigo.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ AMPLIFICAR MENSAJE ═══ -->
+<section class="ishow alt">
+<div class="orb orb-p orb-bg" style="width:550px;height:550px;top:-10%;left:-12%"></div>
+<div class="ct">
+  <div class="ig rev">
+    <div class="ig-media rv">
+      <div class="ig-chip c1"><div class="l">Plataformas</div><div class="v" style="color:var(--purple)">Meta·Google·TikTok</div></div>
+      <img src="amplificar-mensaje.png" alt="Amplificamos tu mensaje en Meta, Google, LinkedIn y TikTok Ads" loading="lazy">
+    </div>
+    <div class="ig-txt rv rv-d1">
+      <span class="ig-k" style="background:rgba(244,114,182,.08);color:var(--magenta)">La solución</span>
+      <h3>Amplificamos tu mensaje <span class="gr">en los canales correctos</span></h3>
+      <p>El problema no es la publicidad, es la falta de sistema. Nosotros ponemos tu oferta frente a la audiencia adecuada, en la plataforma adecuada, con la segmentación adecuada.</p>
+      <ul class="ig-list">
+        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--magenta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Meta, Google, TikTok y LinkedIn</b> — tu mensaje donde está tu cliente.</span></li>
+        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--magenta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Segmentación quirúrgica</b> — sin desperdiciar euros en quien no compra.</span></li>
+        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--magenta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Mensaje que conecta</b> — comunicación pensada para convertir, no solo para verse.</span></li>
+      </ul>
+    </div>
   </div>
 </div>
 </section>
@@ -549,6 +566,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Hablemos de tu proyecto
     </a>
+  </div>
+</div>
+</section>
+
+<!-- ═══ CANALES: GOOGLE ADS + META ADS ═══ -->
+<section class="ishow">
+<div class="orb orb-c orb-bg" style="width:600px;height:600px;top:-15%;right:-10%"></div>
+<div class="ct">
+  <div class="sc rv">
+    <div class="tag">Meta Ads + Google Ads</div>
+    <h2 class="sh">Dos motores de captación, <span class="gr">un mismo objetivo</span></h2>
+    <p class="sp">Google capta la demanda que ya existe. Meta genera demanda nueva. Los combinamos según lo que tu negocio necesita.</p>
+  </div>
+
+  <div class="itabs rv rv-d1">
+    <div class="itab-nav">
+      <div class="itab-set">
+        <button class="itab-b on" onclick="iTab(this,'tabGoogle')">
+          <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 001 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          Google Ads
+        </button>
+        <button class="itab-b" onclick="iTab(this,'tabMeta')">
+          <svg viewBox="0 0 24 24"><defs><linearGradient id="mgt" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0088FE"/><stop offset="50%" stop-color="#A033FF"/><stop offset="100%" stop-color="#FF5C87"/></linearGradient></defs><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.563V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" fill="url(#mgt)"/></svg>
+          Meta Ads
+        </button>
+      </div>
+    </div>
+
+    <!-- Panel Google -->
+    <div class="itab-p on" id="tabGoogle">
+      <div class="ig">
+        <div class="ig-media">
+          <div class="ig-chip c1"><div class="l">ROAS</div><div class="v" style="color:var(--green)">4,31</div></div>
+          <div class="ig-chip c2"><div class="l">Conversiones</div><div class="v" style="color:var(--cyan)">+48%</div></div>
+          <img src="google-ads-dashboard.png" alt="Panel de rendimiento de Google Ads" loading="lazy">
+        </div>
+        <div class="ig-txt">
+          <span class="ig-k" style="background:rgba(0,229,255,.08);color:var(--cyan)">Intención de compra</span>
+          <h3>Apareces justo cuando <span class="gr">te están buscando</span></h3>
+          <p>Cuando alguien busca lo que ofreces, tu anuncio aparece primero. Captamos demanda activa: leads más calientes y listos para comprar.</p>
+          <ul class="ig-list">
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Búsqueda, Display, Shopping y YouTube</b> — presencia en todo el ecosistema Google.</span></li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Segmentación por intención real</b> — impactamos a quien ya quiere comprar.</span></li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Medición clic a venta</b> — cada euro invertido, rastreado hasta el resultado.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel Meta -->
+    <div class="itab-p" id="tabMeta">
+      <div class="ig rev">
+        <div class="ig-media">
+          <div class="ig-chip c1"><div class="l">CPL</div><div class="v" style="color:var(--magenta)">-38%</div></div>
+          <div class="ig-chip c2"><div class="l">Alcance</div><div class="v" style="color:var(--purple)">124k</div></div>
+          <img src="meta-ads-semaforo.png" alt="Meta Ads: Facebook e Instagram hacia la venta" loading="lazy">
+        </div>
+        <div class="ig-txt">
+          <span class="ig-k" style="background:rgba(168,85,247,.08);color:var(--purple)">Generación de demanda</span>
+          <h3>Del scroll al carrito en <span class="gr">Facebook e Instagram</span></h3>
+          <p>Despertamos interés donde tu cliente pasa el día. Creatividades que detienen el pulgar y convierten audiencia fría en compradores.</p>
+          <ul class="ig-list">
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Feed, Reels y Stories</b> — presencia en los formatos que más consumen.</span></li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Frío, retargeting y lookalikes</b> — embudo completo, no anuncios sueltos.</span></li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Creatividades que venden</b> — cada pieza pensada para convertir.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 </section>
@@ -601,6 +687,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>Coherencia visual en todos los puntos</li>
         </ul>
       </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ ESTRATEGIA MULTICANAL ═══ -->
+<section class="ishow alt">
+<div class="orb orb-p orb-bg" style="width:500px;height:500px;bottom:-15%;left:-12%"></div>
+<div class="ct">
+  <div class="ig">
+    <div class="ig-media rv">
+      <img src="estrategia-multicanal.png" alt="Estrategia multicanal apuntando a más clientes" loading="lazy">
+    </div>
+    <div class="ig-txt rv rv-d1">
+      <span class="ig-k" style="background:rgba(0,229,255,.08);color:var(--cyan)">Estrategia</span>
+      <h3>Cada canal cumple un rol, <span class="gr">todos apuntan a lo mismo</span></h3>
+      <p>No lanzamos campañas sueltas. Google capta la demanda existente, Meta la genera, el contenido sostiene la confianza. Una sola dirección: más clientes.</p>
+      <ul class="ig-list">
+        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Crecimiento medible</b> — decisiones sobre datos, no corazonadas.</span></li>
+        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Comunicación coherente</b> — mismo mensaje en cada punto de contacto.</span></li>
+        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Creatividad con foco</b> — cada pieza al servicio de la conversión.</span></li>
+      </ul>
     </div>
   </div>
 </div>
@@ -707,6 +815,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </section>
 
+<!-- ═══ GESTIÓN MULTICANAL ═══ -->
+<section class="ishow alt">
+<div class="orb orb-m orb-bg" style="width:550px;height:550px;top:-10%;right:-12%"></div>
+<div class="ct">
+  <div class="ig rev">
+    <div class="ig-media rv">
+      <div class="ig-chip c1"><div class="l">Canales</div><div class="v" style="color:var(--cyan)">5+</div></div>
+      <img src="gestion-multicanal.png" alt="Gestión de todos tus canales desde un solo equipo" loading="lazy">
+    </div>
+    <div class="ig-txt rv rv-d1">
+      <span class="ig-k" style="background:rgba(168,85,247,.08);color:var(--purple)">Un solo equipo</span>
+      <h3>Gestionamos <span class="gr">todos tus canales</span> desde un mismo lugar</h3>
+      <p>Google Ads, Meta, TikTok, LinkedIn y tu landing page, coordinados por un equipo dedicado. Sin agencias fragmentadas ni mensajes que no cuadran.</p>
+      <ul class="ig-list">
+        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Todas las plataformas</b> — Google, Meta, TikTok y LinkedIn Ads.</span></li>
+        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Landing de alta conversión</b> — el destino también trabaja para ti.</span></li>
+        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Un interlocutor directo</b> — sin rotación, sin perder contexto.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
 <!-- ═══ FAQ ═══ -->
 <section class="faq-s">
 <div class="ct">
@@ -717,6 +848,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="faq-item"><div class="faq-q">¿Cómo es la comunicación con el equipo?</div><div class="faq-a"><p>Directa y ágil. Trabajamos codo a codo con tu equipo por WhatsApp, videollamadas y herramientas colaborativas. Sin intermediarios ni burocracia.</p></div></div>
     <div class="faq-item"><div class="faq-q">¿Cuánto tiempo lleva ver resultados?</div><div class="faq-a"><p>Las primeras campañas se activan en la primer semana. Los primeros resultados suelen verse en los primeros 2-3 días posterior al lanzamiento. La optimización es continua para mejorar el rendimiento cada cadía.</p></div></div>
     <div class="faq-item"><div class="faq-q">¿Trabajas con mercados internacionales?</div><div class="faq-a"><p>Sí. Tenemos experiencia activa gestionando campañas en Europa, USA, México y toda Latinoamérica. Adaptamos estrategia y copy a cada mercado.</p></div></div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ CAPTAR CLIENTES ═══ -->
+<section class="ishow">
+<div class="orb orb-p orb-bg" style="width:600px;height:600px;top:0;left:50%;transform:translateX(-50%)"></div>
+<div class="ct">
+  <div class="ig">
+    <div class="ig-media portrait rv">
+      <img src="captar-clientes.png" alt="Sistema de adquisición de clientes con Meta Ads" loading="lazy">
+    </div>
+    <div class="ig-txt rv rv-d1">
+      <span class="ig-k" style="background:rgba(34,211,168,.08);color:var(--green)">Adquisición</span>
+      <h3>No perseguimos clics. <span class="gr">Pescamos clientes.</span></h3>
+      <p>La diferencia entre gastar en publicidad y construir un sistema es simple: el sistema atrae al cliente correcto, en el momento correcto, con el mensaje correcto.</p>
+      <p style="margin-top:14px">Eso es lo que montamos para tu negocio: un motor de adquisición que trae clientes reales, no solo métricas bonitas.</p>
+      <div style="margin-top:26px">
+        <a href="https://api.whatsapp.com/send/?phone=5491124829594&text=Hola%2C%20quiero%20un%20sistema%20de%20adquisici%C3%B3n%20de%20clientes" target="_blank" rel="noopener" class="btn btn-sm"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg>Quiero captar clientes</a>
+      </div>
+    </div>
   </div>
 </div>
 </section>
@@ -791,6 +943,9 @@ document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
 
 // ── FAQ ──
 document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const item=q.parentElement;document.querySelectorAll('.faq-item').forEach(i=>{if(i!==item)i.classList.remove('open')});item.classList.toggle('open')})});
+
+// ── TABS CANALES (Google / Meta) ──
+function iTab(btn,id){const w=btn.closest('.itabs');w.querySelectorAll('.itab-b').forEach(b=>b.classList.remove('on'));w.querySelectorAll('.itab-p').forEach(p=>p.classList.remove('on'));btn.classList.add('on');const el=document.getElementById(id);if(el)el.classList.add('on')}
 </script>
 </body>
 </html>
