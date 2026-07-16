@@ -10,8 +10,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YachSell — Agencia publicitaria</title>
-<meta name="description" content="Agencia publicitaria especializada en sistemas de adquisición de clientes. Google Ads, Meta Ads, TikTok Ads, LinkedIn Ads.">
+<title>YachSell — Freelance Paid Media · Argentina para España</title>
+<meta name="description" content="Freelance de paid media de Argentina especializado en el mercado de España. Gestión de Google, Meta, TikTok y LinkedIn Ads para ecommerce, empresas de servicios y B2B. Auditoría y propuesta gratis. Tarifas fijas, 1 factura sin IVA al mes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 :root{
 --bg:#030308;--bg-1:#07071a;--bg-2:#0c0c22;
 --bg-card:rgba(10,10,30,.65);--bg-glass:rgba(10,10,30,.5);
---text:#eef0ff;--text-2:#9ea2c4;--text-3:#5c5f80;
+--text:#ffffff;--text-2:#d5d8f0;--text-3:#9498ba;
 --cyan:#00e5ff;--purple:#a855f7;--magenta:#f472b6;--green:#22d3a8;--orange:#fb923c;
 --grad:linear-gradient(135deg,#00e5ff,#a855f7 50%,#f472b6);
 --grad2:linear-gradient(135deg,#00e5ff 0%,#22d3a8 100%);
@@ -64,6 +64,14 @@ canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none}
 .btn-sm{padding:13px 26px;font-size:.88rem}
 .btn-ghost{display:inline-flex;align-items:center;gap:8px;padding:16px 36px;border-radius:60px;font-weight:600;font-size:.95rem;border:1px solid rgba(0,229,255,.15);color:var(--cyan);background:rgba(0,229,255,.03);cursor:pointer;transition:all .3s}
 .btn-ghost:hover{background:rgba(0,229,255,.08);border-color:var(--cyan);box-shadow:var(--glow)}
+
+/* CTA que lleva a PRICING (no contacto directo) */
+.btn-cta{display:inline-flex;align-items:center;gap:10px;padding:16px 34px;border-radius:60px;font-weight:700;font-size:1rem;border:1px solid var(--border-h);cursor:pointer;transition:all .35s;background:linear-gradient(135deg,rgba(0,229,255,.16),rgba(168,85,247,.16));color:#fff;position:relative;overflow:hidden;box-shadow:0 4px 24px rgba(0,229,255,.12)}
+.btn-cta::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);transition:left .6s}
+.btn-cta:hover::after{left:100%}
+.btn-cta:hover{transform:translateY(-3px);border-color:var(--cyan);box-shadow:0 12px 40px rgba(0,229,255,.25)}
+.btn-cta svg{width:20px;height:20px;fill:none;stroke:var(--cyan);stroke-width:2;flex-shrink:0}
+.btn-cta.lg{padding:22px 52px;font-size:1.1rem}
 
 /* ── SECTIONS ── */
 section{padding:120px 0;position:relative;z-index:1}
@@ -155,6 +163,52 @@ section{padding:120px 0;position:relative;z-index:1}
 .pain-card h3{font-size:.95rem;font-weight:700;margin-bottom:10px}
 .pain-card p{font-size:.82rem;color:var(--text-2);line-height:1.7}
 
+/* ── SEGMENTS ── */
+.seg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:52px}
+.seg-card{padding:30px 22px;border-radius:var(--r-lg);background:var(--bg-card);backdrop-filter:blur(12px);border:1px solid var(--border);transition:all .45s;position:relative;overflow:hidden}
+.seg-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);opacity:0;transition:.4s}
+.seg-card:hover{border-color:var(--border-h);transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.seg-card:hover::before{opacity:1}
+.seg-ic{width:50px;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;background:rgba(0,229,255,.05);border:1px solid rgba(0,229,255,.1)}
+.seg-ic svg{width:26px;height:26px}
+.seg-card h4{font-size:1rem;font-weight:800;margin-bottom:8px}
+.seg-card p{font-size:.8rem;color:var(--text-2);line-height:1.6}
+
+/* ── METHOD (CLAUDE FIRST) ── */
+.mth-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
+.mth-card{padding:32px 26px;border-radius:var(--r-lg);background:var(--bg-2);border:1px solid var(--border);transition:.45s;position:relative;overflow:hidden}
+.mth-card::before{content:'';position:absolute;top:0;left:0;bottom:0;width:2px;background:var(--grad);opacity:0;transition:.4s}
+.mth-card:hover{border-color:var(--border-h);transform:translateY(-5px)}
+.mth-card:hover::before{opacity:1}
+.mth-n{font-family:'JetBrains Mono',monospace;font-weight:800;font-size:.8rem;color:var(--cyan);margin-bottom:14px;letter-spacing:1px}
+.mth-card h4{font-size:1.02rem;font-weight:800;margin-bottom:10px}
+.mth-card p{font-size:.82rem;color:var(--text-2);line-height:1.65}
+
+/* ── SCALE (agencias) ── */
+.scale-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.scale-i{text-align:center;padding:26px 16px;border-radius:var(--r);background:rgba(255,255,255,.02);border:1px solid var(--border);transition:.3s}
+.scale-i:hover{border-color:var(--border-h)}
+.scale-v{font-size:1.7rem;font-weight:900;font-family:'JetBrains Mono',monospace;background:var(--grad2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.scale-l{font-size:.66rem;color:var(--text-3);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-top:6px}
+
+/* ── COMPARISON TABLE ── */
+.cmp-wrap{margin-top:52px;overflow-x:auto;border:1px solid var(--border);border-radius:var(--r-lg);background:var(--bg-card);backdrop-filter:blur(12px);-webkit-overflow-scrolling:touch}
+.cmp{width:100%;border-collapse:collapse;min-width:880px}
+.cmp th,.cmp td{padding:14px 14px;border-bottom:1px solid var(--border);font-size:.8rem;text-align:center}
+.cmp thead th{background:var(--bg-2);font-weight:800;font-size:.82rem;padding:20px 14px}
+.cmp tbody td:first-child,.cmp thead th:first-child{text-align:left;color:var(--text-2);min-width:250px;font-weight:600}
+.cmp .col-me{background:rgba(34,211,168,.07)}
+.cmp thead .col-me{color:var(--green);border-bottom:2px solid var(--green)}
+.cmp tbody tr:hover td{background:rgba(255,255,255,.02)}
+.cmp tbody tr:hover td.col-me{background:rgba(34,211,168,.12)}
+.cmp .yes{color:var(--green);font-weight:800}
+.cmp .no{color:#f4577b;font-weight:800}
+.cmp .mid{color:var(--orange);font-weight:800}
+.cmp .cell-sub{display:block;font-size:.62rem;color:var(--text-3);font-weight:500;margin-top:3px}
+.brandlogo{font-weight:900;font-size:1rem;letter-spacing:-.5px}
+.bl-up{color:#14a800}.bl-fi{color:#1dbf73}.bl-ob{color:var(--cyan)}.bl-de{color:#7c5cff}
+.cmp-note{text-align:center;font-size:.7rem;color:var(--text-3);margin-top:16px}
+
 /* ── SOLUTION ── */
 .sol{position:relative;overflow:hidden}
 .sol .orb-bg{width:500px;height:500px;bottom:-20%;left:-15%}
@@ -229,10 +283,11 @@ section{padding:120px 0;position:relative;z-index:1}
 /* ── PRICING ── */
 .price{background:var(--bg-1);position:relative;overflow:hidden}
 .price .orb-bg{width:500px;height:500px;bottom:-15%;right:-10%}
-.price-intro{text-align:center;color:var(--text-2);max-width:580px;margin:0 auto 56px;font-size:.88rem}
+.price-intro{text-align:center;color:var(--text-2);max-width:620px;margin:0 auto 56px;font-size:.9rem}
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .pc-w{padding:34px 26px;border-radius:var(--r-lg);background:var(--bg-card);backdrop-filter:blur(12px);border:1px solid var(--border);transition:all .45s;display:flex;flex-direction:column;position:relative;overflow:hidden}
 .pc-w.pop{border-color:rgba(34,211,168,.25);box-shadow:0 0 40px rgba(34,211,168,.06)}
+.pc-w.pop::after{content:'Recomendado';position:absolute;top:16px;right:-34px;transform:rotate(45deg);background:var(--green);color:#04120e;font-size:.55rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;padding:5px 40px}
 .pc-w:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.3)}
 .pc-tag{font-size:.55rem;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px}
 .pc-w h3{font-size:1.15rem;font-weight:800;margin-bottom:4px}
@@ -244,7 +299,10 @@ section{padding:120px 0;position:relative;z-index:1}
 .pf{margin-bottom:24px;flex:1;list-style:none}
 .pf li{display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.78rem;color:var(--text-2)}
 .pf li::before{content:'✓';color:var(--green);font-weight:800;flex-shrink:0}
-.pc-w .btn{width:100%;justify-content:center;margin-top:auto}
+.pc-w .btn{display:none}
+.price-wa{text-align:center;margin-top:48px}
+.price-wa .btn{padding:22px 56px;font-size:1.12rem}
+.price-note{text-align:center;font-size:.78rem;color:var(--text-3);margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto}
 
 /* ── TEAM / ABOUT ── */
 .about{position:relative;overflow:hidden}
@@ -288,7 +346,7 @@ section{padding:120px 0;position:relative;z-index:1}
 .faq-q::after{content:'+';font-size:1.3rem;color:var(--text-3);transition:transform .35s,color .35s;flex-shrink:0}
 .faq-item.open .faq-q::after{transform:rotate(45deg);color:var(--cyan)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s ease}
-.faq-item.open .faq-a{max-height:220px;padding-bottom:22px}
+.faq-item.open .faq-a{max-height:240px;padding-bottom:22px}
 .faq-a p{font-size:.84rem;color:var(--text-2);line-height:1.7}
 
 /* ── CTA FINAL ── */
@@ -296,12 +354,12 @@ section{padding:120px 0;position:relative;z-index:1}
 .cta-f .orb-bg{width:800px;height:800px;top:50%;left:50%;transform:translate(-50%,-50%)}
 .cta-f .ct{text-align:center;max-width:760px;position:relative;z-index:1}
 .cta-f p{color:var(--text-2);font-size:1.05rem;line-height:1.8;margin-bottom:12px}
-.cta-big{display:inline-flex;align-items:center;gap:14px;padding:24px 56px;border-radius:60px;font-weight:800;font-size:1.15rem;border:none;cursor:pointer;transition:all .4s;background:var(--wa);color:#fff;position:relative;overflow:hidden;margin-top:28px;box-shadow:0 8px 48px rgba(37,211,102,.3)}
+.cta-big{display:inline-flex;align-items:center;gap:14px;padding:24px 56px;border-radius:60px;font-weight:800;font-size:1.15rem;border:1px solid var(--border-h);cursor:pointer;transition:all .4s;background:linear-gradient(135deg,rgba(0,229,255,.18),rgba(168,85,247,.18));color:#fff;position:relative;overflow:hidden;margin-top:28px;box-shadow:0 8px 48px rgba(0,229,255,.14)}
 .cta-big::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.12) 0%,transparent 50%);pointer-events:none}
 .cta-big::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);transition:left .6s}
 .cta-big:hover::after{left:100%}
-.cta-big:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 16px 60px rgba(37,211,102,.5);background:#2ae672}
-.cta-big svg{width:28px;height:28px;fill:#fff}
+.cta-big:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 16px 60px rgba(0,229,255,.28);border-color:var(--cyan)}
+.cta-big svg{width:26px;height:26px;fill:none;stroke:var(--cyan);stroke-width:2}
 
 /* ── FOOTER ── */
 .footer{padding:48px 0 32px;border-top:1px solid var(--border);background:var(--bg-1)}
@@ -333,7 +391,6 @@ section{padding:120px 0;position:relative;z-index:1}
 .nav-links{display:none;position:fixed;inset:0;background:rgba(3,3,8,.97);backdrop-filter:blur(24px);flex-direction:column;padding:100px 32px 40px;gap:20px;z-index:150;align-items:flex-start}
 .nav-links.open{display:flex}
 .nav-links a{font-size:1.2rem;padding:12px 0}
-.nav-cta{display:none}
 .mob-tog{display:flex}
 .hero .ct{grid-template-columns:1fr;text-align:center}
 .hero-txt{max-width:100%}.hero-txt .tag{margin:0 auto 24px}
@@ -342,6 +399,9 @@ section{padding:120px 0;position:relative;z-index:1}
 .hero-visual{max-width:420px;margin:0 auto}
 .fb{display:none}
 .pain-grid{grid-template-columns:1fr}
+.seg-grid{grid-template-columns:1fr 1fr}
+.mth-grid{grid-template-columns:1fr}
+.scale-grid{grid-template-columns:1fr 1fr}
 .sol-grid{grid-template-columns:1fr}
 .sol-visual{order:-1}
 .pres-cards{grid-template-columns:1fr}
@@ -354,9 +414,11 @@ section{padding:120px 0;position:relative;z-index:1}
 section{padding:80px 0}
 .ct{padding:0 16px}
 .hero h1{font-size:2rem}
-.hero-btns{flex-direction:column}.hero-btns .btn,.hero-btns .btn-ghost{width:100%;justify-content:center}
+.hero-btns{flex-direction:column}.hero-btns .btn,.hero-btns .btn-ghost,.hero-btns .btn-cta{width:100%;justify-content:center}
 .hero-proof{gap:20px}
 .hp::after{display:none}
+.seg-grid{grid-template-columns:1fr}
+.scale-grid{grid-template-columns:1fr 1fr}
 .res-nums{grid-template-columns:1fr}
 .about-feats{grid-template-columns:1fr!important}
 .footer .ct{flex-direction:column;text-align:center}
@@ -365,6 +427,7 @@ section{padding:80px 0}
 .cta-big{font-size:.95rem;padding:18px 32px}
 .sol-channels{grid-template-columns:1fr}
 .pres-cards{grid-template-columns:1fr!important}
+.btn-cta{width:100%;justify-content:center}
 }
 
 /* ═══ SHOWCASE DE IMÁGENES + TABS (add-on) ═══ */
@@ -433,12 +496,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="nav-r">
     <div class="nav-links" id="navLinks">
       <a href="#servicios" onclick="cN()">Servicios</a>
-      <a href="#resultados" onclick="cN()">Resultados</a>
+      <a href="#comparativa" onclick="cN()">Por qué yo</a>
+      <a href="#metodo" onclick="cN()">Metodología</a>
       <a href="#planes" onclick="cN()">Planes</a>
-      <a href="#contacto" onclick="cN()">Contacto</a>
-      <a href="https://api.whatsapp.com/send/?phone=5491124829594" target="_blank" rel="noopener" class="nav-cta" onclick="cN()">
+      <a href="https://api.whatsapp.com/send/?phone=5491124829594&text=Hola%2C%20quiero%20hablar%20sobre%20gesti%C3%B3n%20freelance%20de%20paid%20media" target="_blank" rel="noopener" class="nav-cta" onclick="cN()">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        Consulta
+        Hablemos
       </a>
     </div>
     <div class="mob-tog" id="mobTog"><span></span><span></span><span></span></div>
@@ -454,20 +517,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="grid-bg"></div>
 <div class="ct">
   <div class="hero-txt rv">
-    <div class="tag">Agencia de Publicidad</div>
-    <h1><span class="line">Creamos y optimizamos pautas para generar nuevos clientes cada mes</span></h1>
-    <p class="hero-p">Somos un equipo Latam especializado en Google Ads, Meta Ads, TikTok Ads y LinkedIn Ads.</p>
+    <div class="tag">Ofrecemos el mejor servicio paid media freelance</div>
+    <h1><span class="line">Creamos y optimizamos tus pautas</span> <span class="line gr">para generar resultados mes a mes</span></h1>
+    <p class="hero-p">Somos un equipo freelance de Argentina especializado en pautas digitales: Google Ads, Meta Ads y TikTok Ads. Con portafolio activo y trabajando siempre bajo las tendencias vigentes del mercado. Auditoría y propuesta gratis, honorarios fijos y trato directo.</p>
     <div class="hero-btns">
-      <a href="https://api.whatsapp.com/send/?phone=5491124829594&text=Hola%2C%20quiero%20una%20consulta%20sobre%20paid%20media" target="_blank" rel="noopener" class="btn">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        Solicitar consulta gratuita
+      <a href="#planes" class="btn-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        Comienza con una auditoría gratis
       </a>
-      <a href="#servicios" class="btn-ghost">Cómo trabajamos</a>
+      <a href="#metodo" class="btn-ghost">Cómo trabajo</a>
     </div>
     <div class="hero-proof">
-      <div class="hp"><div class="hp-v" data-count="120">0</div><div class="hp-l">Clientes gestionados</div></div>
-      <div class="hp"><div class="hp-v">4</div><div class="hp-l">Continentes</div></div>
-      <div class="hp"><div class="hp-v" data-count="8">0</div><div class="hp-l">Años de experiencia</div></div>
+      <div class="hp"><div class="hp-v">AR→ES</div><div class="hp-l">Enfocado en España</div></div>
+      <div class="hp"><div class="hp-v">4</div><div class="hp-l">Plataformas de Ads</div></div>
+      <div class="hp"><div class="hp-v">0€</div><div class="hp-l">Auditoría + propuesta</div></div>
     </div>
   </div>
   <div class="hero-visual rv rv-d2">
@@ -475,7 +538,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="fb fb1"><div class="fb-l">ROAS</div><div class="fb-v" style="color:var(--green)">4.2x</div></div>
       <div class="fb fb2"><div class="fb-l">CPL</div><div class="fb-v" style="color:var(--cyan)">-38%</div></div>
       <div class="fb fb3"><div class="fb-l">Conv.</div><div class="fb-v" style="color:var(--purple)">+62%</div></div>
-      <img src="principal.png" alt="YachSell: equipo captando clientes en Google Ads, Meta, LinkedIn y TikTok Ads" fetchpriority="high" width="1699" height="955">
+      <img src="principal.png" alt="YachSell: freelance de paid media gestionando Google Ads, Meta, LinkedIn y TikTok Ads" fetchpriority="high" width="1699" height="955">
     </div>
   </div>
 </div>
@@ -483,6 +546,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ═══ MARQUEE ═══ -->
 <div class="mq"><div class="mq-t" id="mqT"></div></div>
+
 <!-- ═══ CANALES: GOOGLE ADS + META ADS ═══ -->
 <section class="ishow">
 <div class="orb orb-c orb-bg" style="width:600px;height:600px;top:-15%;right:-10%"></div>
@@ -490,7 +554,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="sc rv">
     <div class="tag">Meta Ads + Google Ads</div>
     <h2 class="sh">Dos motores de captación, <span class="gr">un mismo objetivo</span></h2>
-    <p class="sp">Google capta la demanda que ya existe. Meta genera demanda nueva. Los combinamos según lo que tu negocio necesita.</p>
+    <p class="sp">Google capta la demanda que ya existe. Meta genera demanda nueva. Los combino según lo que tu negocio necesita.</p>
   </div>
 
   <div class="itabs rv rv-d1">
@@ -518,10 +582,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="ig-txt">
           <span class="ig-k" style="background:rgba(0,229,255,.08);color:var(--cyan)">Intención de compra</span>
           <h3>Apareces justo cuando <span class="gr">te están buscando</span></h3>
-          <p>Cuando alguien busca lo que ofreces, tu anuncio aparece primero. Captamos demanda activa: leads más calientes y listos para comprar.</p>
+          <p>Cuando alguien busca lo que ofreces, tu anuncio aparece primero. Capto demanda activa: leads más calientes y listos para comprar.</p>
           <ul class="ig-list">
             <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Búsqueda, Display, Shopping y YouTube</b> — presencia en todo el ecosistema Google.</span></li>
-            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Segmentación por intención real</b> — impactamos a quien ya quiere comprar.</span></li>
+            <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Segmentación por intención real</b> — impacto a quien ya quiere comprar.</span></li>
             <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Medición clic a venta</b> — cada euro invertido, rastreado hasta el resultado.</span></li>
           </ul>
         </div>
@@ -539,7 +603,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="ig-txt">
           <span class="ig-k" style="background:rgba(168,85,247,.08);color:var(--purple)">Generación de demanda</span>
           <h3>Del scroll al carrito en <span class="gr">Facebook e Instagram</span></h3>
-          <p>Despertamos interés donde tu cliente pasa el día. Creatividades que detienen el pulgar y convierten audiencia fría en compradores.</p>
+          <p>Despierto interés donde tu cliente pasa el día. Creatividades que detienen el pulgar y convierten audiencia fría en compradores.</p>
           <ul class="ig-list">
             <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Feed, Reels y Stories</b> — presencia en los formatos que más consumen.</span></li>
             <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Frío, retargeting y lookalikes</b> — embudo completo, no anuncios sueltos.</span></li>
@@ -551,41 +615,82 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 </section>
+
 <!-- ═══ PAIN POINTS ═══ -->
 <section class="pain">
 <div class="orb orb-c orb-bg"></div>
 <div class="ct">
   <div class="sc rv">
     <div class="tag">El problema</div>
-    <h2 class="sh">Invertir en publicidad <span class="gr">sin sistema es quemar dinero</span></h2>
-    <p class="sp">La mayoría de empresas paga por clics que no generan clientes. Campañas sin estrategia, sin medición y sin optimización real.</p>
+    <h2 class="sh">Pagar una agencia cara <span class="gr">no garantiza clientes</span></h2>
+    <p class="sp">La mayoría paga estructura, no resultados. Cuentas rotativas, contratos con permanencia y reportes bonitos sin impacto real en ventas.</p>
   </div>
   <div class="pain-grid">
-    <div class="pain-card rv"><div class="pain-icon">📉</div><h3>Campañas sin retorno claro</h3><p>Gastas en publicidad pero no sabes qué canal genera clientes reales ni cuánto cuesta cada uno.</p></div>
-    <div class="pain-card rv rv-d1"><div class="pain-icon">⏳</div><h3>Tiempo perdido en pruebas</h3><p>Cada mes pruebas algo nuevo sin un plan claro. Sin estructura, los resultados tardan o no llegan.</p></div>
-    <div class="pain-card rv rv-d2"><div class="pain-icon">🔄</div><h3>Agencias que no se implican</h3><p>Reportes bonitos pero sin impacto real en ventas. Necesitas un equipo que trabaje codo a codo contigo.</p></div>
+    <div class="pain-card rv"><div class="pain-icon">💸</div><h3>Tarifas de agencia infladas</h3><p>Pagas estructura, oficinas y capas de mandos intermedios. Un freelance especializado te da el mismo trabajo sin ese sobrecoste.</p></div>
+    <div class="pain-card rv rv-d1"><div class="pain-icon">🔄</div><h3>Rotación y cuentas junior</h3><p>La agencia te asigna al becario de turno. Cada cambio de persona pierde contexto y reinicia la curva de aprendizaje que pagas tú.</p></div>
+    <div class="pain-card rv rv-d2"><div class="pain-icon">📄</div><h3>Contratos con permanencia</h3><p>Te atan con cláusulas y costes ocultos. Conmigo trabajas con tarifas fijas, sin permanencia y 1 factura clara al mes.</p></div>
   </div>
 </div>
 </section>
 
-<!-- ═══ AMPLIFICAR MENSAJE ═══ -->
-<section class="ishow alt">
-<div class="orb orb-p orb-bg" style="width:550px;height:550px;top:-10%;left:-12%"></div>
+<!-- ═══ SEGMENTOS / PARA QUIÉN ═══ -->
+<section id="segmentos">
+<div class="orb orb-p orb-bg" style="width:550px;height:550px;top:-10%;right:-12%"></div>
 <div class="ct">
-  <div class="ig rev">
-    <div class="ig-media rv">
-      <div class="ig-chip c1"><div class="l">Plataformas</div><div class="v" style="color:var(--purple)">Meta·Google·TikTok</div></div>
-      <img src="amplificar-mensaje.png" alt="Amplificamos tu mensaje en Meta, Google, LinkedIn y TikTok Ads" loading="lazy">
+  <div class="sc rv">
+    <div class="tag">Para quién trabajo</div>
+    <h2 class="sh">Especializado en <span class="gr">negocios que venden en España</span></h2>
+    <p class="sp">Conozco el mercado español y adapto estrategia, oferta y copy a cada modelo. Estos son los perfiles con los que mejor funciono.</p>
+  </div>
+  <div class="seg-grid">
+    <div class="seg-card rv">
+      <div class="seg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg></div>
+      <h4>Ecommerce</h4>
+      <p>Tiendas que necesitan ventas rentables y escalar ROAS en Google Shopping y Meta, no solo tráfico.</p>
     </div>
-    <div class="ig-txt rv rv-d1">
-      <span class="ig-k" style="background:rgba(244,114,182,.08);color:var(--magenta)">La solución</span>
-      <h3>Amplificamos tu mensaje <span class="gr">en los canales correctos</span></h3>
-      <p>El problema no es la publicidad, es la falta de sistema. Nosotros ponemos tu oferta frente a la audiencia adecuada, en la plataforma adecuada, con la segmentación adecuada.</p>
-      <ul class="ig-list">
-        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--magenta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Meta, Google, TikTok y LinkedIn</b> — tu mensaje donde está tu cliente.</span></li>
-        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--magenta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Segmentación quirúrgica</b> — sin desperdiciar euros en quien no compra.</span></li>
-        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--magenta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Mensaje que conecta</b> — comunicación pensada para convertir, no solo para verse.</span></li>
-      </ul>
+    <div class="seg-card rv rv-d1">
+      <div class="seg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <h4>Empresas de servicios</h4>
+      <p>Negocios que viven de leads: clínicas, estudios, academias, locales. Captación con foco en el lead que sí cierra.</p>
+    </div>
+    <div class="seg-card rv rv-d2">
+      <div class="seg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--magenta)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3"/></svg></div>
+      <h4>Empresas B2B</h4>
+      <p>Ciclos largos y ticket alto. Google Search de intención y LinkedIn Ads para llegar al decisor correcto.</p>
+    </div>
+    <div class="seg-card rv rv-d3">
+      <div class="seg-ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+      <h4>Agencias que escalan</h4>
+      <p>Capacidad operativa freelance para gestionar tus cuentas multicliente sin ampliar estructura interna.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ METODOLOGÍA CLAUDE FIRST ═══ -->
+<section id="metodo" class="pain">
+<div class="orb orb-c orb-bg"></div>
+<div class="ct">
+  <div class="sc rv">
+    <div class="tag">Metodología Claude First</div>
+    <h2 class="sh">IA y automatización <span class="gr">al servicio de tus resultados</span></h2>
+    <p class="sp">Trabajo con metodología Claude First: herramientas automatizadas para medición y trazabilidad de datos. Me complemento rápido con tu empresa y tu área de marketing.</p>
+  </div>
+  <div class="mth-grid">
+    <div class="mth-card rv">
+      <div class="mth-n">01 / IA</div>
+      <h4>Claude First en cada decisión</h4>
+      <p>Uso Claude, GPT y herramientas de IA para analizar cuentas, detectar oportunidades y acelerar la optimización. Más velocidad, menos suposiciones.</p>
+    </div>
+    <div class="mth-card rv rv-d1">
+      <div class="mth-n">02 / DATA</div>
+      <h4>Medición y trazabilidad automatizada</h4>
+      <p>Cada euro rastreado del clic al resultado. Dashboards y tracking automatizado para que sepas qué campaña trae clientes reales, sin métricas vanidosas.</p>
+    </div>
+    <div class="mth-card rv rv-d2">
+      <div class="mth-n">03 / INTEGRACIÓN</div>
+      <h4>Me integro con tu equipo, rápido</h4>
+      <p>Onboarding ágil. Me complemento con tu empresa y tu área de marketing en días, no meses. Comunicación directa por WhatsApp y calls, sin burocracia.</p>
     </div>
   </div>
 </div>
@@ -596,16 +701,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="orb orb-p orb-bg"></div>
 <div class="ct">
   <div class="sc rv">
-    <div class="tag">Cómo lo resolvemos</div>
-    <h2 class="sh">Un sistema completo de <span class="gr">adquisición de clientes</span></h2>
-    <p class="sp">No gestionamos campañas sueltas. Montamos un sistema integral conectado a tus objetivos de negocio.</p>
+    <div class="tag">Cómo lo resuelvo</div>
+    <h2 class="sh">Gestión freelance con <span class="gr">criterio de media buyer</span></h2>
+    <p class="sp">No lanzo campañas sueltas. Monto un sistema conectado a tus objetivos de negocio, gestionado por un especialista, no por una plantilla de agencia.</p>
   </div>
   <div class="sol-grid">
     <div class="sol-list rv">
-      <div class="sol-item"><div class="sol-num">01</div><div><h3>Diagnóstico y estrategia</h3><p>Analizamos tu negocio, mercado y competencia para definir la estrategia de adquisición.</p></div></div>
-      <div class="sol-item rv-d1"><div class="sol-num">02</div><div><h3>Campañas multicanal</h3><p>Diseñamos, lanzamos y optimizamos campañas en los canales que mejor funcionan para tu caso.</p></div></div>
-      <div class="sol-item rv-d2"><div class="sol-num">03</div><div><h3>Seguimiento y optimización</h3><p>Medimos cada paso del embudo. Ajustamos en base a datos reales, no suposiciones.</p></div></div>
-      <div class="sol-item rv-d3"><div class="sol-num">04</div><div><h3>Escalado de resultados</h3><p>Cuando encontramos lo que funciona, lo escalamos para maximizar tu retorno.</p></div></div>
+      <div class="sol-item"><div class="sol-num">01</div><div><h3>Auditoría y propuesta gratis</h3><p>Reviso tus campañas actuales y te entrego un diagnóstico con propuesta accionable. Sin costo y sin compromiso.</p></div></div>
+      <div class="sol-item rv-d1"><div class="sol-num">02</div><div><h3>Estrategia y estructura</h3><p>Defino canales, segmentación y estructura de cuenta según tu mercado, ticket y objetivo real.</p></div></div>
+      <div class="sol-item rv-d2"><div class="sol-num">03</div><div><h3>Gestión y optimización</h3><p>Optimizo con datos y metodología Claude First. Ajusto sobre lo que convierte, no sobre corazonadas.</p></div></div>
+      <div class="sol-item rv-d3"><div class="sol-num">04</div><div><h3>Escalado de resultados</h3><p>Cuando encuentro lo que funciona, lo escalo con criterio para maximizar tu retorno sin quemar presupuesto.</p></div></div>
     </div>
     <div class="sol-visual rv rv-d2">
       <div class="sol-channels">
@@ -629,15 +734,87 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div style="text-align:center;margin-top:56px" class="rv">
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&text=Hola%2C%20quiero%20saber%20más%20sobre%20vuestros%20servicios" target="_blank" rel="noopener" class="btn">
-      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-      Hablemos de tu proyecto
+    <a href="#planes" class="btn-cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+      Auditamos tus pautas gratis
     </a>
   </div>
 </div>
 </section>
 
+<!-- ═══ OFERTA IRRESISTIBLE / COMPARATIVA ═══ -->
+<section id="comparativa" class="ishow">
+<div class="orb orb-p orb-bg" style="width:600px;height:600px;top:-10%;left:-10%"></div>
+<div class="ct">
+  <div class="sc rv">
+    <div class="tag">La oferta irresistible</div>
+    <h2 class="sh">Un freelance de España, <span class="gr">no un perfil random de una plataforma</span></h2>
+    <p class="sp">Si estás comparando propuestas en Fiverr, Upwork u otras plataformas, mira lo que realmente estás pagando y arriesgando frente a trabajar directo conmigo.</p>
+  </div>
+  <div class="cmp-wrap rv rv-d1">
+    <table class="cmp">
+      <thead>
+        <tr>
+          <th>Qué comparas</th>
+          <th class="col-me"><span class="brandlogo" style="color:var(--green)">YachSell</span></th>
+          <th><span class="brandlogo bl-up">Upwork</span></th>
+          <th><span class="brandlogo bl-fi">Fiverr</span></th>
+          <th><span class="brandlogo bl-ob">Oberstaff</span></th>
+          <th><span class="brandlogo bl-de">Deel</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Auditoría + propuesta gratis</td><td class="col-me yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="mid">~</td><td class="no">✕</td></tr>
+        <tr><td>Financiar la curva de aprendizaje</td><td class="col-me yes">✓ <span class="cell-sub">No la pagas</span></td><td class="no">✕ <span class="cell-sub">La pagas tú</span></td><td class="no">✕</td><td class="mid">~</td><td class="no">✕</td></tr>
+        <tr><td>Riesgos de cuentas mal gestionadas</td><td class="col-me yes">✓ <span class="cell-sub">Bajo, buenas prácticas</span></td><td class="no">✕ <span class="cell-sub">Perfil sin filtrar</span></td><td class="no">✕</td><td class="mid">~</td><td class="mid">~</td></tr>
+        <tr><td>Contratos y burocracia</td><td class="col-me yes">✓ <span class="cell-sub">Sin contratos rígidos</span></td><td class="no">✕</td><td class="no">✕</td><td class="mid">~</td><td class="no">✕ <span class="cell-sub">Contrato de empleo</span></td></tr>
+        <tr><td>Riesgos de permanencia</td><td class="col-me yes">✓ <span class="cell-sub">Sin permanencia</span></td><td class="mid">~</td><td class="mid">~</td><td class="no">✕</td><td class="no">✕</td></tr>
+        <tr><td>Costes ocultos</td><td class="col-me yes">✓ <span class="cell-sub">Cero, 1 factura sin IVA</span></td><td class="no">✕ <span class="cell-sub">Comisión plataforma</span></td><td class="no">✕ <span class="cell-sub">Comisión plataforma</span></td><td class="mid">~</td><td class="no">✕</td></tr>
+        <tr><td>Comisiones caras</td><td class="col-me yes">✓ <span class="cell-sub">Sin comisión</span></td><td class="no">✕ <span class="cell-sub">Hasta 10%+</span></td><td class="no">✕ <span class="cell-sub">Hasta 20%</span></td><td class="mid">~</td><td class="no">✕</td></tr>
+        <tr><td>Tarifas extra</td><td class="col-me yes">✓ <span class="cell-sub">Tarifa fija, nada más</span></td><td class="no">✕</td><td class="no">✕</td><td class="mid">~</td><td class="no">✕</td></tr>
+        <tr><td>Filtrar aplicaciones de profesionales</td><td class="col-me yes">✓ <span class="cell-sub">Trato directo conmigo</span></td><td class="no">✕ <span class="cell-sub">Cientos de perfiles</span></td><td class="no">✕</td><td class="mid">~</td><td class="mid">~</td></tr>
+        <tr><td>Claude / GPT / herramientas IA</td><td class="col-me yes">✓ <span class="cell-sub">Metodología Claude First</span></td><td class="mid">~ <span class="cell-sub">Según freelancer</span></td><td class="mid">~</td><td class="mid">~</td><td class="no">✕</td></tr>
+        <tr><td>Riesgos de abandono</td><td class="col-me yes">✓ <span class="cell-sub">Relación directa</span></td><td class="no">✕</td><td class="no">✕ <span class="cell-sub">Alto</span></td><td class="mid">~</td><td class="mid">~</td></tr>
+        <tr><td>Entiende el mercado español</td><td class="col-me yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="mid">~</td><td class="no">✕</td></tr>
+        <tr><td>Experiencia comprobable en España</td><td class="col-me yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+        <tr><td>Portafolio activo con clientes de España</td><td class="col-me yes">✓</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td><td class="no">✕</td></tr>
+        <tr><td>Trato directo por WhatsApp</td><td class="col-me yes">✓</td><td class="mid">~</td><td class="mid">~</td><td class="mid">~</td><td class="no">✕</td></tr>
+        <tr><td>Precio competitivo (Argentina, en €)</td><td class="col-me yes">✓ <span class="cell-sub">Desde 100€/mes</span></td><td class="no">✕</td><td class="mid">~</td><td class="mid">~</td><td class="no">✕</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="cmp-note">Comparativa orientativa según el modelo de cada plataforma. Marcas de terceros a título ilustrativo.</p>
+  <div style="text-align:center;margin-top:40px" class="rv">
+    <a href="#planes" class="btn-cta">
+      <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      Trabajemos ahora
+    </a>
+  </div>
+</div>
+</section>
 
+<!-- ═══ AMPLIFICAR MENSAJE ═══ -->
+<section class="ishow alt">
+<div class="orb orb-p orb-bg" style="width:550px;height:550px;top:-10%;left:-12%"></div>
+<div class="ct">
+  <div class="ig rev">
+    <div class="ig-media rv">
+      <div class="ig-chip c1"><div class="l">Plataformas</div><div class="v" style="color:var(--purple)">Meta·Google·TikTok</div></div>
+      <img src="amplificar-mensaje.png" alt="Amplifico tu mensaje en Meta, Google, LinkedIn y TikTok Ads" loading="lazy">
+    </div>
+    <div class="ig-txt rv rv-d1">
+      <span class="ig-k" style="background:rgba(244,114,182,.08);color:var(--magenta)">La solución</span>
+      <h3>Amplifico tu mensaje <span class="gr">en los canales correctos</span></h3>
+      <p>El problema no es la publicidad, es la falta de sistema. Pongo tu oferta frente a la audiencia adecuada, en la plataforma adecuada, con la segmentación adecuada.</p>
+      <ul class="ig-list">
+        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--magenta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Meta, Google, TikTok y LinkedIn</b> — tu mensaje donde está tu cliente.</span></li>
+        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--magenta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Segmentación quirúrgica</b> — sin desperdiciar euros en quien no compra.</span></li>
+        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--magenta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Mensaje que conecta</b> — comunicación pensada para convertir, no solo para verse.</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
 
 <!-- ═══ PRESENCIA Y CONTENIDO ═══ -->
 <section class="pres">
@@ -703,7 +880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="ig-txt rv rv-d1">
       <span class="ig-k" style="background:rgba(0,229,255,.08);color:var(--cyan)">Estrategia</span>
       <h3>Cada canal cumple un rol, <span class="gr">todos apuntan a lo mismo</span></h3>
-      <p>No lanzamos campañas sueltas. Google capta la demanda existente, Meta la genera, el contenido sostiene la confianza. Una sola dirección: más clientes.</p>
+      <p>No lanzo campañas sueltas. Google capta la demanda existente, Meta la genera, el contenido sostiene la confianza. Una sola dirección: más clientes.</p>
       <ul class="ig-list">
         <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Crecimiento medible</b> — decisiones sobre datos, no corazonadas.</span></li>
         <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Comunicación coherente</b> — mismo mensaje en cada punto de contacto.</span></li>
@@ -719,15 +896,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="orb orb-c orb-bg"></div>
 <div class="ct">
   <div class="sc rv">
-    <div class="tag">Resultados</div>
-    <h2 class="sh">Números que hablan <span class="gr">por nosotros</span></h2>
-    <p class="sp">Portafolio activo con casos de éxito en múltiples mercados e industrias. Resultados medibles, no promesas.</p>
+    <div class="tag">Lo que obtienes</div>
+    <h2 class="sh">Freelance especializado, <span class="gr">números que importan</span></h2>
+    <p class="sp">Portafolio activo con clientes de España. Foco en resultados medibles, no en promesas ni métricas vanidosas.</p>
   </div>
   <div class="res-nums">
-    <div class="rn rv"><div class="rn-v" style="color:var(--cyan)" data-count="120">0</div><div class="rn-l">Clientes gestionados</div></div>
-    <div class="rn rv rv-d1"><div class="rn-v" style="color:var(--green)">+$2M</div><div class="rn-l">Inversión gestionada</div></div>
-    <div class="rn rv rv-d2"><div class="rn-v" style="color:var(--purple)">3.8x</div><div class="rn-l">ROAS medio</div></div>
-    <div class="rn rv rv-d3"><div class="rn-v" style="color:var(--orange)" data-count="15">0</div><div class="rn-l">Países con resultados</div></div>
+    <div class="rn rv"><div class="rn-v" style="color:var(--cyan)">4</div><div class="rn-l">Plataformas de Ads</div></div>
+    <div class="rn rv rv-d1"><div class="rn-v" style="color:var(--green)">0€</div><div class="rn-l">Auditoría + propuesta</div></div>
+    <div class="rn rv rv-d2"><div class="rn-v" style="color:var(--purple)">100€</div><div class="rn-l">Tarifa desde, al mes</div></div>
+    <div class="rn rv rv-d3"><div class="rn-v" style="color:var(--orange)">1</div><div class="rn-l">Factura sin IVA / mes</div></div>
   </div>
   <div class="res-markets rv rv-d1" style="margin-top:48px">
     <div class="rm"><img class="rm-flag" src="https://flagcdn.com/w40/es.png" alt="ES" width="20" height="15"> España</div><div class="rm"><img class="rm-flag" src="https://flagcdn.com/w40/mx.png" alt="MX" width="20" height="15"> México</div><div class="rm"><img class="rm-flag" src="https://flagcdn.com/w40/us.png" alt="US" width="20" height="15"> Estados Unidos</div><div class="rm"><img class="rm-flag" src="https://flagcdn.com/w40/ar.png" alt="AR" width="20" height="15"> Argentina</div><div class="rm"><img class="rm-flag" src="https://flagcdn.com/w40/cl.png" alt="CL" width="20" height="15"> Chile</div><div class="rm"><img class="rm-flag" src="https://flagcdn.com/w40/co.png" alt="CO" width="20" height="15"> Colombia</div><div class="rm"><img class="rm-flag" src="https://flagcdn.com/w40/de.png" alt="DE" width="20" height="15"> Alemania</div><div class="rm"><img class="rm-flag" src="https://flagcdn.com/w40/gb.png" alt="GB" width="20" height="15"> Reino Unido</div>
@@ -739,62 +916,101 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="price" id="planes">
 <div class="orb orb-p orb-bg"></div>
 <div class="ct">
-  <div class="sc rv"><div class="tag">Planes</div><h2 class="sh">Planes para <span class="gr">cada objetivo</span></h2></div>
-  <p class="price-intro rv">Adaptamos cada propuesta a las necesidades reales de tu negocio. Los precios son orientativos.</p>
+  <div class="sc rv"><div class="tag">Planes</div><h2 class="sh">Tarifas fijas, <span class="gr">sin sorpresas</span></h2></div>
+  <p class="price-intro rv">Precios competitivos de Argentina, en euros. Tarifas fijas, 1 factura sin IVA al mes, sin permanencia. La auditoría y la propuesta inicial son siempre gratis.</p>
   <div class="price-grid">
     <div class="pc-w rv">
-      <div class="pc-tag" style="color:var(--cyan)">Starter</div><h3>Google o Meta Ads</h3>
-      <div class="pc-price">USD 150<span>/mes</span></div><div class="pc-sub">Captación de clientes vía Google o Meta Ads</div>
-      <p>Para empresas que quieren empezar con una estructura clara y resultados medibles.</p>
+      <div class="pc-tag" style="color:var(--cyan)">1 cuenta</div><h3>Google o Meta Ads</h3>
+      <div class="pc-price">100€<span>/mes</span></div><div class="pc-sub">Gestión de 1 cuenta publicitaria</div>
+      <p>Para empezar con estructura clara y resultados medibles en un canal.</p>
       <div class="pc-inc">Incluye</div>
-      <ul class="pf"><li>Gestión de campañas en Google o Meta Ads</li><li>Estructura optimizada a resultados</li><li>Página web de Alta conversión</li><li>Reporting semanal</li></ul>
-      <a href="https://api.whatsapp.com/send/?phone=5491124829594&text=Hola%2C%20me%20interesa%20el%20Plan%20Starter" target="_blank" rel="noopener" class="btn btn-sm"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg>Empezar con Starter</a>
+      <ul class="pf"><li>Gestión de Google o Meta Ads</li><li>Auditoría + propuesta inicial gratis</li><li>Estructura optimizada a resultados</li><li>Reporting y trazabilidad de datos</li><li>1 factura al mes, sin IVA</li><li>Sin permanencia</li></ul>
+      <a href="https://api.whatsapp.com/send/?phone=5491124829594&text=Hola%2C%20me%20interesa%20la%20gesti%C3%B3n%20de%201%20cuenta%20(Google%20o%20Meta%20Ads)%20-%20100%E2%82%AC%2Fmes" target="_blank" rel="noopener" class="btn btn-sm"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg>Contactar vía WhatsApp</a>
     </div>
     <div class="pc-w pop rv rv-d1">
-      <div class="pc-tag" style="color:var(--green)">Esencial</div><h3>Pautas Multicanal</h3>
-      <div class="pc-price">USD 200<span>/mes</span></div><div class="pc-sub">Captación de clientes vía Meta Ads + Google ads</div>
-      <p>Para empresas que necesitan presencia activa en múltiples canales</p>
+      <div class="pc-tag" style="color:var(--green)">2 cuentas</div><h3>Google y Meta Ads</h3>
+      <div class="pc-price">150€<span>/mes</span></div><div class="pc-sub">Gestión de Google + Meta Ads</div>
+      <p>Para negocios que necesitan presencia activa en los dos motores de captación.</p>
       <div class="pc-inc">Incluye</div>
-      <ul class="pf"><li>Gestión publicitaria en Google y Meta Ads</li><li>Creación de contenido comercial</li><li>Página web de alta conversion</li><li>Reporting semanal</li></ul>
-      <a href="https://api.whatsapp.com/send/?phone=5491124829594&text=Hola%2C%20me%20interesa%20el%20Plan%20Esencial" target="_blank" rel="noopener" class="btn btn-sm"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg>Empezar con Esencial</a>
+      <ul class="pf"><li>Gestión de Google y Meta Ads</li><li>Todo lo del plan de 1 cuenta</li><li>Coordinación multicanal</li><li>Metodología Claude First</li><li>Trato directo por WhatsApp</li><li>Sin permanencia</li></ul>
+      <a href="https://api.whatsapp.com/send/?phone=5491124829594&text=Hola%2C%20me%20interesa%20la%20gesti%C3%B3n%20de%202%20cuentas%20(Google%20y%20Meta%20Ads)%20-%20150%E2%82%AC%2Fmes" target="_blank" rel="noopener" class="btn btn-sm"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg>Contactar vía WhatsApp</a>
     </div>
     <div class="pc-w rv rv-d2">
-      <div class="pc-tag" style="color:var(--magenta)">Enterprise</div><h3>Para agencias</h3>
-      <div class="pc-price">Planes medida</div><div class="pc-sub">Gestión publicitaria multicuenta</div>
-      <p>Para empresas y agencias que necesitan capacidad operativa sin ampliar estructura interna.</p>
+      <div class="pc-tag" style="color:var(--magenta)">Enterprise</div><h3>Multicuenta para agencias</h3>
+      <div class="pc-price">Desde 100€<span>/cuenta</span></div><div class="pc-sub">Capacidad operativa para escalar</div>
+      <p>Para agencias que necesitan gestionar más cuentas sin ampliar estructura interna.</p>
       <div class="pc-inc">Incluye</div>
-      <ul class="pf"><li>Paid media multicuenta avanzado</li><li>Automatización con IA</li><li>Gestión multicanal</li><li>Soporte directo</li><li>Desde USD 100/cuenta publicitaria</li></ul>
-      <a href="https://api.whatsapp.com/send/?phone=5491124829594&text=Hola%2C%20me%20interesa%20el%20Plan%20Enterprise" target="_blank" rel="noopener" class="btn btn-sm"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg>Solicitar Enterprise</a>
+      <ul class="pf"><li>Gestión multicuenta</li><li>Capacidad de escalado de cuentas</li><li>Tarifas por cuenta, precios competitivos</li><li>Integración con tu equipo de marketing</li><li>Automatización y medición con IA</li><li>Soporte directo</li></ul>
+      <a href="https://api.whatsapp.com/send/?phone=5491124829594&text=Hola%2C%20me%20interesa%20el%20plan%20Enterprise%20multicuenta%20para%20agencias" target="_blank" rel="noopener" class="btn btn-sm"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg>Contactar vía WhatsApp</a>
     </div>
+  </div>
+  <div class="price-wa rv">
+    <a href="https://api.whatsapp.com/send/?phone=5491124829594&text=Hola%2C%20vi%20los%20planes%20y%20quiero%20mi%20auditor%C3%ADa%20gratis" target="_blank" rel="noopener" class="btn">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      Hablemos por WhatsApp
+    </a>
+    <p class="price-note">Los honorarios son de gestión y van aparte de tu inversión publicitaria. En la auditoría gratuita te recomendamos el presupuesto de medios adecuado a tu caso.</p>
   </div>
 </div>
 </section>
 
-<!-- ═══ ABOUT / TEAM ═══ -->
+<!-- ═══ GESTIÓN MULTICANAL / ESCALADO ═══ -->
+<section class="ishow alt">
+<div class="orb orb-m orb-bg" style="width:550px;height:550px;top:-10%;right:-12%"></div>
+<div class="ct">
+  <div class="ig rev">
+    <div class="ig-media rv">
+      <div class="ig-chip c1"><div class="l">Canales</div><div class="v" style="color:var(--cyan)">5+</div></div>
+      <img src="gestion-multicanal.png" alt="Gestión de todos tus canales desde un solo freelance" loading="lazy">
+    </div>
+    <div class="ig-txt rv rv-d1">
+      <span class="ig-k" style="background:rgba(168,85,247,.08);color:var(--purple)">Empresas y agencias</span>
+      <h3>Capacidad de <span class="gr">escalar cuentas</span> sin ampliar estructura</h3>
+      <p>Google Ads, Meta, TikTok, LinkedIn y tu landing, coordinados por un solo interlocutor. Para agencias, sumo capacidad operativa freelance lista para escalar tus cuentas multicliente.</p>
+      <ul class="ig-list">
+        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Todas las plataformas</b> — Google, Meta, TikTok y LinkedIn Ads.</span></li>
+        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Escalado multicuenta</b> — más cuentas gestionadas sin sumar plantilla.</span></li>
+        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Un interlocutor directo</b> — sin rotación, sin perder contexto.</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="scale-grid rv rv-d1">
+    <div class="scale-i"><div class="scale-v">4</div><div class="scale-l">Plataformas de Ads</div></div>
+    <div class="scale-i"><div class="scale-v">Multi</div><div class="scale-l">Cuentas en paralelo</div></div>
+    <div class="scale-i"><div class="scale-v">Claude</div><div class="scale-l">First · IA + data</div></div>
+    <div class="scale-i"><div class="scale-v">100€</div><div class="scale-l">Desde, por cuenta</div></div>
+  </div>
+</div>
+</section>
+
+<!-- ═══ ABOUT / QUIÉN SOY ═══ -->
 <section class="about" id="equipo">
 <div class="orb orb-p orb-bg"></div>
 <div class="ct">
   <div class="sc rv">
-    <div class="tag">Quiénes somos</div>
-    <h2 class="sh">Equipo especializado, <span class="gr">costes competitivos</span></h2>
-    <p class="sp">Profesionales de Argentina y Latam con experiencia en mercados globales. Resultados de primer nivel con costes operativos competitivos.</p>
+    <div class="tag">Quién soy</div>
+    <h2 class="sh">Freelance de Argentina, <span class="gr">especializado en España</span></h2>
+    <p class="sp">No una agencia. Un especialista freelance de paid media que trabaja directo contigo, con tarifas fijas y precios competitivos de Argentina.</p>
   </div>
   <div class="about-hero">
     <div class="rv">
-      <p class="about-statement">Trabajamos <strong>codo a codo</strong> con cada empresa. No aplicamos plantillas. Nos integramos con tu equipo, entendemos tus objetivos y construimos la estrategia desde ahí.</p>
-      <p class="about-statement">Somos profesionales de <strong>Argentina y Latam</strong> con experiencia directa gestionando campañas en mercados internacionales. Resultados de primer nivel con costes operativos que marcan la diferencia.</p>
+      <p class="about-statement">Somos <strong>freelance de Argentina</strong>, especializados en el mercado de España. Trabajo directo, sin capas de agencia ni intermediarios. Me integro con tu empresa y tu área de marketing, entiendo tus objetivos y construyo la estrategia desde ahí.</p>
+      <p class="about-statement">Trabajo con <strong>tarifas fijas</strong>, precios competitivos de Argentina y <strong>1 factura sin IVA al mes</strong>. Sin permanencias, sin costes ocultos. La auditoría y la propuesta inicial, siempre gratis.</p>
       <div class="about-locations">
         <div class="about-loc"><img src="https://flagcdn.com/w40/ar.png" alt="AR"> Argentina</div>
         <div class="about-loc"><img src="https://flagcdn.com/w40/es.png" alt="ES"> España</div>
         <div class="about-loc"><img src="https://flagcdn.com/w40/mx.png" alt="MX"> México</div>
         <div class="about-loc"><img src="https://flagcdn.com/w40/us.png" alt="US"> USA</div>
       </div>
-      <a href="https://api.whatsapp.com/send/?phone=5491124829594&text=Hola%2C%20quiero%20conocer%20más%20sobre%20YachSell" target="_blank" rel="noopener" class="btn btn-sm"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg>Hablemos de tu proyecto</a>
+      <a href="#planes" class="btn-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Comienza con una auditoría gratis
+      </a>
     </div>
     <div class="rv rv-d2" style="display:flex;flex-direction:column;gap:12px">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
         <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px 20px;text-align:center;transition:all .4s;position:relative;overflow:hidden" class="stat-card"><div style="font-size:2rem;font-weight:900;font-family:'JetBrains Mono',monospace;background:var(--grad2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px">+8</div><div style="font-size:.62rem;color:var(--text-3);text-transform:uppercase;letter-spacing:1px;font-weight:600">Años de experiencia</div></div>
-        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px 20px;text-align:center;transition:all .4s" class="stat-card"><div style="font-size:2rem;font-weight:900;font-family:'JetBrains Mono',monospace;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px">4</div><div style="font-size:.62rem;color:var(--text-3);text-transform:uppercase;letter-spacing:1px;font-weight:600">Continentes</div></div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px 20px;text-align:center;transition:all .4s" class="stat-card"><div style="font-size:2rem;font-weight:900;font-family:'JetBrains Mono',monospace;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px">4</div><div style="font-size:.62rem;color:var(--text-3);text-transform:uppercase;letter-spacing:1px;font-weight:600">Plataformas de Ads</div></div>
       </div>
       <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px 24px;display:flex;align-items:center;gap:16px;transition:all .4s" class="stat-card">
         <div style="font-size:2.2rem;font-weight:900;font-family:'JetBrains Mono',monospace;color:var(--cyan)">B2B</div>
@@ -805,35 +1021,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="about-feats">
-    <div class="af rv"><div class="af-inner"><div class="af-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><h4>Equipo dedicado</h4><p>Un equipo asignado a tu cuenta. Sin rotación, sin perder contexto.</p></div></div>
-    <div class="af rv rv-d1"><div class="af-inner"><div class="af-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><h4>Comunicación directa</h4><p>Sin intermediarios. Hablamos contigo por WhatsApp, calls y herramientas ágiles.</p></div></div>
-    <div class="af rv rv-d2"><div class="af-inner"><div class="af-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><h4>Experiencia global</h4><p>Campañas activas en Europa, USA, México y toda Latinoamérica.</p></div></div>
-    <div class="af rv rv-d3"><div class="af-inner"><div class="af-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><h4>Costes competitivos</h4><p>Talento de primer nivel desde Latam. Resultados premium, inversión inteligente.</p></div></div>
-    <div class="af rv rv-d4"><div class="af-inner"><div class="af-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 118 2.83"/><path d="M22 12A10 10 0 0012 2v10z"/></svg></div><h4>Reporting transparente</h4><p>Datos reales, sin métricas vanidosas. Sabes exactamente qué retorno genera cada euro.</p></div></div>
-    <div class="af rv rv-d4"><div class="af-inner"><div class="af-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Compromiso real</h4><p>Nos implicamos con tus objetivos. Tu crecimiento es nuestro resultado.</p></div></div>
-  </div>
-</div>
-</section>
-
-<!-- ═══ GESTIÓN MULTICANAL ═══ -->
-<section class="ishow alt">
-<div class="orb orb-m orb-bg" style="width:550px;height:550px;top:-10%;right:-12%"></div>
-<div class="ct">
-  <div class="ig rev">
-    <div class="ig-media rv">
-      <div class="ig-chip c1"><div class="l">Canales</div><div class="v" style="color:var(--cyan)">5+</div></div>
-      <img src="gestion-multicanal.png" alt="Gestión de todos tus canales desde un solo equipo" loading="lazy">
-    </div>
-    <div class="ig-txt rv rv-d1">
-      <span class="ig-k" style="background:rgba(168,85,247,.08);color:var(--purple)">Un solo equipo</span>
-      <h3>Gestionamos <span class="gr">todos tus canales</span> desde un mismo lugar</h3>
-      <p>Google Ads, Meta, TikTok, LinkedIn y tu landing page, coordinados por un equipo dedicado. Sin agencias fragmentadas ni mensajes que no cuadran.</p>
-      <ul class="ig-list">
-        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Todas las plataformas</b> — Google, Meta, TikTok y LinkedIn Ads.</span></li>
-        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Landing de alta conversión</b> — el destino también trabaja para ti.</span></li>
-        <li><svg class="ck" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><b>Un interlocutor directo</b> — sin rotación, sin perder contexto.</span></li>
-      </ul>
-    </div>
+    <div class="af rv"><div class="af-inner"><div class="af-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><h4>Trato directo</h4><p>Hablas conmigo, no con un account manager. Sin rotación, sin perder contexto.</p></div></div>
+    <div class="af rv rv-d1"><div class="af-inner"><div class="af-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><h4>Comunicación por WhatsApp</h4><p>Sin intermediarios ni burocracia. Respuestas rápidas por WhatsApp y calls.</p></div></div>
+    <div class="af rv rv-d2"><div class="af-inner"><div class="af-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div><h4>Experiencia en España</h4><p>Portafolio activo con clientes de España. Conozco el mercado, la oferta y el copy que funciona.</p></div></div>
+    <div class="af rv rv-d3"><div class="af-inner"><div class="af-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><h4>Tarifas fijas y competitivas</h4><p>Precios de Argentina, en euros. 1 factura sin IVA al mes, sin permanencia ni costes ocultos.</p></div></div>
+    <div class="af rv rv-d4"><div class="af-inner"><div class="af-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 118 2.83"/><path d="M22 12A10 10 0 0012 2v10z"/></svg></div><h4>Reporting transparente</h4><p>Datos reales y trazabilidad automatizada. Sabes exactamente qué retorno genera cada euro.</p></div></div>
+    <div class="af rv rv-d4"><div class="af-inner"><div class="af-icon"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h4>Compromiso real</h4><p>Me implico con tus objetivos. Tu crecimiento es mi resultado, no un reporte bonito.</p></div></div>
   </div>
 </div>
 </section>
@@ -843,11 +1036,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="ct">
   <div class="sc rv"><div class="tag">Preguntas frecuentes</div><h2 class="sh">Resolvemos <span class="gr">tus dudas</span></h2></div>
   <div class="faq-list rv">
-    <div class="faq-item"><div class="faq-q">¿Trabajas con empresas de cualquier sector?</div><div class="faq-a"><p>Sí. Nuestro sistema se adapta a cualquier empresa B2B o B2C que necesite captar clientes a través de publicidad digital. Tenemos experiencia en servicios, ecommerce, software, retail y más.</p></div></div>
-    <div class="faq-item"><div class="faq-q">¿Qué inversión en publicidad necesito además de la gestión?</div><div class="faq-a"><p>Depende de tu mercado y objetivos. En la consulta gratuita analizamos tu caso y te recomendamos un rango de inversión adecuado. No hay mínimo obligatorio.</p></div></div>
-    <div class="faq-item"><div class="faq-q">¿Cómo es la comunicación con el equipo?</div><div class="faq-a"><p>Directa y ágil. Trabajamos codo a codo con tu equipo por WhatsApp, videollamadas y herramientas colaborativas. Sin intermediarios ni burocracia.</p></div></div>
-    <div class="faq-item"><div class="faq-q">¿Cuánto tiempo lleva ver resultados?</div><div class="faq-a"><p>Las primeras campañas se activan en la primer semana. Los primeros resultados suelen verse en los primeros 2-3 días posterior al lanzamiento. La optimización es continua para mejorar el rendimiento cada cadía.</p></div></div>
-    <div class="faq-item"><div class="faq-q">¿Trabajas con mercados internacionales?</div><div class="faq-a"><p>Sí. Tenemos experiencia activa gestionando campañas en Europa, USA, México y toda Latinoamérica. Adaptamos estrategia y copy a cada mercado.</p></div></div>
+    <div class="faq-item"><div class="faq-q">¿Eres una agencia?</div><div class="faq-a"><p>No. Soy freelance de paid media de Argentina, especializado en el mercado de España. Trabajo directo contigo, con tarifas fijas y sin las capas ni sobrecostes de una agencia.</p></div></div>
+    <div class="faq-item"><div class="faq-q">¿La auditoría y la propuesta son realmente gratis?</div><div class="faq-a"><p>Sí. Reviso tus campañas actuales y te entrego un diagnóstico con propuesta accionable sin costo y sin compromiso. Si decides trabajar conmigo, arrancamos; si no, te queda el análisis.</p></div></div>
+    <div class="faq-item"><div class="faq-q">¿Con qué empresas trabajas?</div><div class="faq-a"><p>Ecommerce, empresas de servicios y B2B que venden en España, además de agencias que necesitan capacidad para escalar sus cuentas. Adapto estrategia, oferta y copy a cada modelo.</p></div></div>
+    <div class="faq-item"><div class="faq-q">¿Cómo funcionan las tarifas y la facturación?</div><div class="faq-a"><p>Tarifas fijas y competitivas: 100€/mes por 1 cuenta, 150€/mes por Google y Meta, y Enterprise multicuenta desde 100€ por cuenta. 1 factura sin IVA al mes, sin permanencia. Los honorarios son de gestión y van aparte de tu inversión publicitaria.</p></div></div>
+    <div class="faq-item"><div class="faq-q">¿Cómo es la comunicación?</div><div class="faq-a"><p>Directa por WhatsApp, videollamadas y herramientas ágiles. Me integro rápido con tu equipo de marketing con metodología Claude First y medición automatizada. Sin intermediarios.</p></div></div>
   </div>
 </div>
 </section>
@@ -862,11 +1055,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
     <div class="ig-txt rv rv-d1">
       <span class="ig-k" style="background:rgba(34,211,168,.08);color:var(--green)">Adquisición</span>
-      <h3>No perseguimos clics. <span class="gr">Pescamos clientes.</span></h3>
+      <h3>No persigo clics. <span class="gr">Pesco clientes.</span></h3>
       <p>La diferencia entre gastar en publicidad y construir un sistema es simple: el sistema atrae al cliente correcto, en el momento correcto, con el mensaje correcto.</p>
-      <p style="margin-top:14px">Eso es lo que montamos para tu negocio: un motor de adquisición que trae clientes reales, no solo métricas bonitas.</p>
+      <p style="margin-top:14px">Eso es lo que monto para tu negocio: un motor de adquisición que trae clientes reales, no solo métricas bonitas.</p>
       <div style="margin-top:26px">
-        <a href="https://api.whatsapp.com/send/?phone=5491124829594&text=Hola%2C%20quiero%20un%20sistema%20de%20adquisici%C3%B3n%20de%20clientes" target="_blank" rel="noopener" class="btn btn-sm"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg>Quiero captar clientes</a>
+        <a href="#planes" class="btn-cta">
+          <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.12 2.12 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          Auditamos tus pautas gratis
+        </a>
       </div>
     </div>
   </div>
@@ -879,11 +1075,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="grid-bg"></div>
 <div class="ct rv">
   <div class="tag">Empezar</div>
-  <h2 class="sh">¿Listo para captar <span class="gr">más clientes?</span></h2>
-  <p>Hablemos sobre tu negocio. Te decimos si podemos ayudarte y cómo lo haríamos. Sin compromiso.</p>
-  <a href="https://api.whatsapp.com/send/?phone=5491124829594&text=Hola%2C%20quiero%20una%20consulta%20gratuita%20sobre%20paid%20media" target="_blank" rel="noopener" class="cta-big">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg>
-    Solicitar consulta gratuita por WhatsApp
+  <h2 class="sh">¿Listo para <span class="gr">trabajar ahora?</span></h2>
+  <p>Mira los planes, elige el tuyo y empezamos con una auditoría gratis de tus pautas. Tarifas fijas, sin permanencia, trato directo.</p>
+  <a href="#planes" class="cta-big">
+    <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    Trabajemos ahora — ver planes
   </a>
 </div>
 </section>
@@ -892,13 +1088,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="footer">
 <div class="ct">
   <div class="footer-logo"><em>Yach</em>Sell</div>
-  <div class="footer-links"><a href="#servicios">Servicios</a><a href="#resultados">Resultados</a><a href="#planes">Planes</a><a href="https://api.whatsapp.com/send/?phone=5491124829594" target="_blank" rel="noopener">WhatsApp</a></div>
-  <div class="footer-copy">&copy; 2026 YachSell. Todos los derechos reservados.</div>
+  <div class="footer-links"><a href="#servicios">Servicios</a><a href="#comparativa">Por qué yo</a><a href="#planes">Planes</a><a href="https://api.whatsapp.com/send/?phone=5491124829594" target="_blank" rel="noopener">WhatsApp</a></div>
+  <div class="footer-copy">&copy; 2026 YachSell. Freelance Paid Media · Argentina para España.</div>
 </div>
 </footer>
 
 <!-- WA FLOAT -->
-<a href="https://api.whatsapp.com/send/?phone=5491124829594" target="_blank" rel="noopener" class="waf">
+<a href="https://api.whatsapp.com/send/?phone=5491124829594&text=Hola%2C%20quiero%20una%20auditor%C3%ADa%20gratis%20de%20mis%20pautas" target="_blank" rel="noopener" class="waf">
 <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg>
 <span class="waf-t">Hablemos</span>
 </a>
@@ -923,7 +1119,7 @@ function cN(){nl.classList.remove('open');tog.classList.remove('on')}
 addEventListener('scroll',()=>{document.getElementById('nav').classList.toggle('scrolled',scrollY>50)});
 
 // ── MARQUEE ──
-const mi=['Google Ads','Meta Ads','TikTok Ads','LinkedIn Ads','Performance','Captación de Clientes','B2B','B2C','Ecommerce','Automatización','IA','ROAS','Mercados Globales','Contenido Comercial'];
+const mi=['Freelance Paid Media','Argentina → España','Google Ads','Meta Ads','TikTok Ads','LinkedIn Ads','Ecommerce','Empresas de Servicios','B2B','Claude First','Automatización','IA','Auditoría Gratis','Tarifas Fijas','Sin Permanencia'];
 document.getElementById('mqT').innerHTML=mi.map(t=>`<span class="mq-i"><span class="dot"></span>${t}</span>`).join('').repeat(2);
 
 // ── CHART ──
