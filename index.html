@@ -22,7 +22,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:locale" content="es_LA">
 <meta property="og:url" content="https://www.yachsell.com/">
 <meta property="og:title" content="YachSell | Marketing de performance, IA y CRM">
-<meta property="og:description" content="Paid Media, agentes de IA, landing pages con SEO y CRM automatizado. Auditoría de oportunidades gratis por WhatsApp.">
+<meta property="og:description" content="Marketing de Performance y operaciones automatizadas: crecé resultados sin aumentar el backlog de tu equipo. Auditoría gratis por WhatsApp.">
 <meta property="og:image" content="https://www.yachsell.com/01_dashboard_publicidad.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="800">
@@ -42,7 +42,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  "name": "YachSell",
  "url": "https://www.yachsell.com/",
  "image": "https://www.yachsell.com/01_dashboard_publicidad.png",
- "description": "Agencia de marketing 360° especializada en Paid Media, agentes de inteligencia artificial, landing pages con SEO, automatización comercial y CRM.",
+ "slogan": "Crecé resultados sin aumentar el backlog de tu equipo",
+ "description": "Agencia de Marketing de Performance y operaciones automatizadas especializada en Paid Media, agentes de inteligencia artificial, landing pages con SEO, automatización comercial y CRM.",
  "telephone": "+54 9 11 2482-9594",
  "address": {
   "@type": "PostalAddress",
@@ -657,6 +658,29 @@ footer{border-top:1px solid var(--border);padding:56px 0 120px}
  html{scroll-behavior:auto}
  .rv{opacity:1;transform:none}
 }
+
+/* ── Header flotante con destellos ── */
+@property --ang{syntax:'<angle>';initial-value:0deg;inherits:false}
+.hdr-in{position:relative;border:1px solid rgba(255,255,255,.42)!important;box-shadow:0 0 0 1px rgba(255,255,255,.06),0 10px 40px -10px rgba(0,0,0,.7),0 0 28px -4px rgba(0,229,255,.28),0 0 60px -10px rgba(168,85,247,.35)}
+.hdr-in::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1.6px;background:conic-gradient(from var(--ang),transparent 0 62%,rgba(255,255,255,.95) 72%,#00e5ff 78%,#a855f7 86%,#f472b6 92%,transparent 98%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:hdrspin 4.5s linear infinite;pointer-events:none}
+.hdr-in::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(1.5px 1.5px at 12% 30%,#fff,transparent),radial-gradient(1.2px 1.2px at 38% 78%,#fff,transparent),radial-gradient(1.5px 1.5px at 63% 22%,#fff,transparent),radial-gradient(1.2px 1.2px at 86% 70%,#fff,transparent);animation:twinkle 3.2s ease-in-out infinite;opacity:.6}
+@keyframes hdrspin{to{--ang:360deg}}
+@keyframes twinkle{0%,100%{opacity:.15}50%{opacity:.8}}
+.nav>a,.nav .dd-btn{border:1px solid transparent}
+.nav>a:hover,.nav .dd-btn:hover,.dd.open .dd-btn{border-color:rgba(255,255,255,.55);box-shadow:0 0 14px -2px rgba(255,255,255,.35)}
+.hdr-cta .btn-wa{position:relative;box-shadow:0 0 0 1.5px rgba(255,255,255,.85),0 0 22px -2px rgba(37,211,102,.75);overflow:hidden}
+.hdr-cta .btn-wa::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-20deg);animation:shine 3.4s ease-in-out infinite}
+@keyframes shine{0%,55%{left:-60%}100%{left:130%}}
+.mega.mega-s{grid-template-columns:1fr 1fr;width:min(560px,92vw);left:50%}
+.mega-s a{display:flex!important;align-items:center;gap:12px;padding:12px!important}
+.mega-s .si{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;flex-shrink:0}
+.mega-s .si svg{width:18px;height:18px;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.mega-s b{display:block;font-size:.9rem}
+.mega-s small{display:block;font-size:.76rem;color:var(--text-3)}
+.mega-s .mf{grid-column:1/-1;border-top:1px solid var(--border);margin-top:4px;padding-top:6px}
+.mega-s .mf a{color:var(--cyan);font-weight:600;font-size:.84rem}
+.mega{background:rgba(9,9,26,.99)!important;border-color:rgba(255,255,255,.18)!important}
+@media (prefers-reduced-motion:reduce){.hdr-in::before,.hdr-in::after,.hdr-cta .btn-wa::after{animation:none}}
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important}.msg{display:block!important}</style></noscript>
 </head>
@@ -682,9 +706,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      <div class="mf"><a href="/servicios/">Ver los 19 servicios →</a><a href="/sectores/">Soluciones por sector →</a></div>
     </div>
    </div>
-   <a href="#sistema">Sistema 360°</a>
+   <a href="#sistema">Sistema</a>
    <a href="#planes">Planes</a>
-   <a href="#sectores">Sectores</a>
+   <div class="dd dd-s"><button class="dd-btn" aria-expanded="false" aria-controls="megaS">Sectores <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button><div class="mega mega-s" id="megaS"><a href="/sectores/inmobiliarias/"><span class="si" style="background:rgba(0,229,255,.1)"><svg viewBox="0 0 24 24" stroke="#00e5ff"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></span><span><b>Inmobiliarias</b><small>Compradores, propietarios y visitas</small></span></a><a href="/sectores/ecommerce/"><span class="si" style="background:rgba(168,85,247,.12)"><svg viewBox="0 0 24 24" stroke="#a855f7"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg></span><span><b>Ecommerce</b><small>Shopping, catálogo y recompra</small></span></a><a href="/sectores/empresas-b2b/"><span class="si" style="background:rgba(244,114,182,.12)"><svg viewBox="0 0 24 24" stroke="#f472b6"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3"/></svg></span><span><b>Empresas B2B</b><small>Leads y reuniones con decisores</small></span></a><a href="/sectores/call-centers/"><span class="si" style="background:rgba(251,146,60,.12)"><svg viewBox="0 0 24 24" stroke="#fb923c"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg></span><span><b>Call centers</b><small>Leads calificados e IA 24/7</small></span></a><a href="/sectores/clinicas/"><span class="si" style="background:rgba(34,211,168,.12)"><svg viewBox="0 0 24 24" stroke="#22d3a8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span><span><b>Clínicas y salud</b><small>Turnos por WhatsApp</small></span></a><a href="/sectores/servicios-profesionales/"><span class="si" style="background:rgba(251,146,60,.12)"><svg viewBox="0 0 24 24" stroke="#fb923c"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></span><span><b>Servicios profesionales</b><small>Estudios y consultoras</small></span></a><a href="/sectores/high-ticket/"><span class="si" style="background:rgba(0,229,255,.1)"><svg viewBox="0 0 24 24" stroke="#00e5ff"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M2 9h20"/></svg></span><span><b>Ventas high ticket</b><small>Calificación y cierre</small></span></a><a href="/sectores/agencias/"><span class="si" style="background:rgba(168,85,247,.12)"><svg viewBox="0 0 24 24" stroke="#a855f7"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></span><span><b>Agencias</b><small>Marca blanca y soporte</small></span></a><div class="mf"><a href="/sectores/">Ver todos los sectores →</a></div></div></div>
    <a href="#metodo">Método</a>
    <a href="#faq">FAQ</a>
   </nav>
@@ -707,7 +731,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <hr>
  <div class="sheet-grp">Agencia</div>
  <a class="sl" href="#nosotros">Quiénes somos</a>
- <a class="sl" href="#sistema">Sistema 360°</a>
+ <a class="sl" href="#sistema">Sistema de crecimiento</a>
  <a class="sl" href="#planes">Planes y precios</a>
  <a class="sl" href="#sectores">Sectores</a>
  <a class="sl" href="#metodo">Método</a>
@@ -721,9 +745,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="hero">
  <div class="ct">
   <div>
-   <div class="pill rv"><b>360°</b> Marketing · IA · Automatización comercial</div>
+   <div class="pill rv"><b>PERFORMANCE</b> Marketing de Performance · Operaciones automatizadas</div>
    <h1 class="rv d1">De la publicidad a la venta. <span class="grad">Todo conectado.</span></h1>
-   <p class="hero-p rv d2">Agencia de marketing de performance 360° especializada en Paid Media, agentes de inteligencia artificial, automatización comercial y CRM. Captamos oportunidades, automatizamos el seguimiento y te ayudamos a convertir leads en clientes.</p>
+   <p class="hero-p rv d2">Marketing de Performance y operaciones automatizadas: Paid Media, agentes de inteligencia artificial y CRM trabajando como un solo sistema. <strong style="color:#fff">Crecé tus resultados sin aumentar el backlog de tu equipo.</strong></p>
    <div class="hero-btns rv d3">
     <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20una%20auditor%C3%ADa%20gratis%20de%20oportunidades%20para%20mi%20negocio" target="_blank" rel="noopener" class="btn btn-wa btn-lg" data-wa="hero"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Auditoría gratis por WhatsApp</a>
     <a href="#servicios" class="btn btn-ghost btn-lg">Explorar servicios <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
@@ -751,7 +775,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="inst-txt rv">
    <div class="eyebrow">Quiénes somos</div>
    <h2 class="h2">Tu socio estratégico desde el primer anuncio hasta el <span class="grad">cierre comercial</span>.</h2>
-   <p><strong>YachSell es una agencia de marketing 360°</strong> que une publicidad digital, inteligencia artificial y procesos comerciales en un solo sistema de crecimiento.</p>
+   <p><strong>YachSell es una agencia de Marketing de Performance</strong> con operaciones automatizadas que une publicidad digital, inteligencia artificial y procesos comerciales en un solo sistema de crecimiento.</p>
    <p>No administramos campañas sueltas: diseñamos el recorrido completo del cliente, desde el anuncio que capta su atención hasta el seguimiento que cierra la venta. Operamos desde Argentina para empresas de LATAM, Brasil y mercados internacionales.</p>
    <div class="facts">
     <div class="fact"><div class="fv grad">4</div><div class="fl">líneas de servicio integradas en un mismo sistema</div></div>
@@ -789,7 +813,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="sistema" style="padding-top:40px">
  <div class="ct">
   <div class="sh rv">
-   <div class="eyebrow">Sistema de Crecimiento 360°</div>
+   <div class="eyebrow">Operaciones automatizadas</div>
    <h2 class="h2">Seis etapas conectadas para que <span class="grad">ningún lead se pierda</span>.</h2>
    <p class="lead">Tocá cada etapa para ver qué hacemos en ella.</p>
   </div>
@@ -1181,7 +1205,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer>
  <div class="ct">
   <div class="ft">
-   <div><a href="#inicio" class="logo"><em>Yach</em>Sell</a><p>Agencia de marketing 360°: Paid Media, agentes de IA, landing pages con SEO y CRM con marketing automatizado.</p></div>
+   <div><a href="#inicio" class="logo"><em>Yach</em>Sell</a><p>Marketing de Performance y operaciones automatizadas: Paid Media, agentes de IA, landing pages con SEO y CRM. Crecé resultados sin aumentar el backlog de tu equipo.</p></div>
    <div><h4>Servicios</h4><ul><li><a href="/servicios/marketing-de-performance/">Marketing de performance</a></li><li><a href="/servicios/google-ads/">Google Ads</a></li><li><a href="/servicios/meta-ads/">Meta Ads</a></li><li><a href="/servicios/agentes-ia/">Agentes de IA</a></li><li><a href="/servicios/landing-page-seo/">Landing + SEO</a></li><li><a href="/servicios/crm-a-medida/">CRM a medida</a></li><li><a href="/servicios/">Todos los servicios</a></li></ul></div>
    <div><h4>Sectores</h4><ul><li><a href="/sectores/inmobiliarias/">Inmobiliarias</a></li><li><a href="/sectores/ecommerce/">Ecommerce</a></li><li><a href="/sectores/empresas-b2b/">Soluciones B2B</a></li><li><a href="/sectores/call-centers/">Call centers</a></li><li><a href="/sectores/clinicas/">Clínicas</a></li><li><a href="/sectores/high-ticket/">High ticket</a></li><li><a href="/sectores/">Todos los sectores</a></li></ul></div>
    <div><h4>Contacto</h4><ul><li><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20mi%20auditor%C3%ADa%20gratis%20de%20oportunidades" target="_blank" rel="noopener" data-wa="footer">WhatsApp</a></li><li><a href="https://www.yachsell.com">www.yachsell.com</a></li></ul></div>
@@ -1210,11 +1234,13 @@ bg.addEventListener('click',function(){var o=sh.classList.toggle('open');bg.clas
 sh.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeSheet)});
 
 // Mega menú
-var dd=d.getElementById('dd'),ddb=dd.querySelector('.dd-btn'),hov=w.matchMedia('(hover:hover)').matches,tmo;
-function setDD(o){dd.classList.toggle('open',o);ddb.setAttribute('aria-expanded',o)}
-ddb.addEventListener('click',function(e){e.stopPropagation();setDD(!dd.classList.contains('open'))});
-if(hov){dd.addEventListener('mouseenter',function(){clearTimeout(tmo);setDD(true)});dd.addEventListener('mouseleave',function(){tmo=setTimeout(function(){setDD(false)},160)})}
-d.addEventListener('click',function(e){if(!dd.contains(e.target))setDD(false)});
+var dds=[].slice.call(d.querySelectorAll('.dd')),hov=w.matchMedia('(hover:hover)').matches;
+function setDD(o,x){dds.forEach(function(k){var on=(x?k===x:false)&&o;k.classList.toggle('open',on);k.querySelector('.dd-btn').setAttribute('aria-expanded',on)})}
+dds.forEach(function(k){var b=k.querySelector('.dd-btn'),tmo;
+ b.addEventListener('click',function(e){e.stopPropagation();setDD(!k.classList.contains('open'),k)});
+ if(hov){k.addEventListener('mouseenter',function(){clearTimeout(tmo);setDD(true,k)});k.addEventListener('mouseleave',function(){tmo=setTimeout(function(){if(k.classList.contains('open'))setDD(false)},160)})}
+});
+d.addEventListener('click',function(e){if(!dds.some(function(k){return k.contains(e.target)}))setDD(false)});
 d.addEventListener('keydown',function(e){if(e.key==='Escape'){setDD(false);closeSheet()}});
 
 // Enlaces a servicios (scroll)
