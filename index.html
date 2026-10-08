@@ -283,6 +283,8 @@ radial-gradient(50vmax 40vmax at 60% 110%,rgba(244,114,182,.10),transparent 60%)
 .mega .mi-ic svg{width:18px;height:18px;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .mega b{display:block;font-size:.92rem;margin-bottom:3px}
 .mega span{display:block;font-size:.8rem;color:var(--text-3);line-height:1.45}
+.mega .mf{grid-column:1/-1;display:flex;justify-content:space-between;gap:10px;border-top:1px solid var(--border);margin-top:4px;padding:10px 4px 0}
+.mega .mf a{padding:8px 10px;font-size:.84rem;font-weight:600;color:var(--cyan)}
 .mega .mi-p{font-family:var(--mono);font-size:.7rem;color:var(--cyan);margin-top:8px}
 .hdr-cta{display:flex;align-items:center;gap:8px}
 .hdr-cta .btn{padding:11px 18px;font-size:.88rem}
@@ -431,7 +433,7 @@ section{position:relative;padding:110px 0}
 .chk li::before{content:"";flex-shrink:0;width:16px;height:16px;margin-top:2px;border-radius:5px;background:rgba(0,229,255,.14) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300e5ff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center/11px no-repeat}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{font-size:.8rem;padding:7px 12px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text-2);transition:border-color .2s,color .2s}
-a.chip:hover{border-color:var(--wa);color:#fff}
+a.chip:hover{border-color:var(--border-h);color:#fff}
 .p-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;margin-top:32px;padding-top:26px;border-top:1px solid var(--border)}
 .price-tag small{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3)}
 .price-tag b{font-size:2rem;font-weight:900;letter-spacing:-.03em}
@@ -450,7 +452,7 @@ a.chip:hover{border-color:var(--wa);color:#fff}
 .cat-col a b{display:block;font-size:.9rem;font-weight:600}
 .cat-col a span{display:block;font-size:.78rem;color:var(--text-3);line-height:1.4;margin-top:2px}
 .cat-col a svg{width:16px;height:16px;fill:none;stroke:var(--text-3);stroke-width:2;flex-shrink:0;margin-top:3px;transition:transform .2s,stroke .2s}
-.cat-col a:hover svg{transform:translate(2px,-2px);stroke:var(--wa)}
+.cat-col a:hover svg{transform:translate(2px,-2px);stroke:var(--cyan)}
 
 /* ── Pricing ── */
 .prc{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -491,7 +493,7 @@ a.chip:hover{border-color:var(--wa);color:#fff}
 .sc .sc-ic svg{width:22px;height:22px;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .sc h3{font-size:1.08rem;font-weight:700}
 .sc p{font-size:.9rem;color:var(--text-3);margin-top:6px;flex:1}
-.sc .sc-l{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:.84rem;font-weight:600;color:var(--wa)}
+.sc .sc-l{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:.84rem;font-weight:600;color:var(--cyan)}
 .sc .sc-l svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2.2;transition:transform .2s}
 .sc:hover .sc-l svg{transform:translateX(4px)}
 
@@ -596,7 +598,7 @@ footer{border-top:1px solid var(--border);padding:56px 0 120px}
  .tab{padding:10px 14px;font-size:.85rem}
  .p-body{padding:26px 22px}
  .p-cols{grid-template-columns:1fr}
- .p-foot .btn{width:100%}
+ .p-foot>div{width:100%}.p-foot .btn{flex:1}
  .prc,.cat,.plans,.sec,.met,.modes{grid-template-columns:1fr}
  .plan{grid-template-columns:1fr}
  .plan .btn{width:100%}
@@ -640,6 +642,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
      <a href="#ia" data-tab="ia"><div class="mi-ic" style="background:rgba(168,85,247,.12)"><svg viewBox="0 0 24 24" stroke="#a855f7"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></div><b>Agentes de IA</b><span>Prospección, atención y calificación 24/7</span><div class="mi-p">Desde USD 200</div></a>
      <a href="#web" data-tab="web"><div class="mi-ic" style="background:rgba(244,114,182,.12)"><svg viewBox="0 0 24 24" stroke="#f472b6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h8"/></svg></div><b>Landing + SEO</b><span>Con WhatsApp automático de citas</span><div class="mi-p">Desde USD 150</div></a>
      <a href="#crm" data-tab="crm"><div class="mi-ic" style="background:rgba(34,211,168,.12)"><svg viewBox="0 0 24 24" stroke="#22d3a8"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/></svg></div><b>CRM + automatización</b><span>Pipeline, nurturing y seguimiento</span><div class="mi-p">Desde USD 200</div></a>
+     <div class="mf"><a href="/servicios/">Ver los 17 servicios →</a><a href="/sectores/">Soluciones por sector →</a></div>
     </div>
    </div>
    <a href="#sistema">Sistema 360°</a>
@@ -662,6 +665,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <a class="sl" href="#ia" data-tab="ia">Agentes de IA <small>USD 200+</small></a>
  <a class="sl" href="#web" data-tab="web">Landing + SEO + WhatsApp <small>USD 150+</small></a>
  <a class="sl" href="#crm" data-tab="crm">CRM + automatización <small>USD 200+</small></a>
+ <a class="sl" href="/servicios/">Todos los servicios <small>17</small></a>
+ <a class="sl" href="/sectores/">Soluciones por sector <small>7</small></a>
  <hr>
  <div class="sheet-grp">Agencia</div>
  <a class="sl" href="#nosotros">Quiénes somos</a>
@@ -821,10 +826,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li>Optimización y reporte periódico</li>
      </ul></div>
      <div><h4>Especialidades</h4><div class="chips">
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20Google%20Ads" target="_blank" rel="noopener" data-wa="chip_google_ads">Google Ads</a>
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20Meta%20Ads" target="_blank" rel="noopener" data-wa="chip_meta_ads">Meta Ads</a>
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20TikTok%20Ads" target="_blank" rel="noopener" data-wa="chip_tiktok_ads">TikTok Ads</a>
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20LinkedIn%20Ads" target="_blank" rel="noopener" data-wa="chip_linkedin_ads">LinkedIn Ads</a>
+      <a class="chip" href="/servicios/google-ads/">Google Ads</a>
+      <a class="chip" href="/servicios/meta-ads/">Meta Ads</a>
+      <a class="chip" href="/servicios/tiktok-ads/">TikTok Ads</a>
+      <a class="chip" href="/servicios/linkedin-ads/">LinkedIn Ads</a>
       <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20campa%C3%B1as%20de%20remarketing" target="_blank" rel="noopener" data-wa="chip_remarketing">Remarketing</a>
       <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20campa%C3%B1as%20de%20cat%C3%A1logo%20para%20ecommerce" target="_blank" rel="noopener" data-wa="chip_catalogo">Catálogo ecommerce</a>
      </div>
@@ -832,7 +837,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="p-foot">
      <div class="price-tag"><small>Desde</small><b><span>USD</span>100</b></div>
-     <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20cotizaci%C3%B3n%20de%20Publicidad%20online%20%28Google%20y%20Meta%20Ads%29" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_ads"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Solicitar cotización</a>
+     <div style="display:flex;flex-wrap:wrap;gap:10px"><a href="/servicios/google-ads/" class="btn btn-ghost">Ver detalle</a><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20cotizaci%C3%B3n%20de%20Publicidad%20online%20%28Google%20y%20Meta%20Ads%29" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_ads"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Solicitar cotización</a></div>
     </div>
    </div>
   </article>
@@ -853,17 +858,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li>Conexión con tu CRM</li>
      </ul></div>
      <div><h4>Especialidades</h4><div class="chips">
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20un%20agente%20de%20IA%20para%20prospecci%C3%B3n" target="_blank" rel="noopener" data-wa="chip_ia_prospeccion">IA de prospección</a>
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20un%20chatbot%20de%20WhatsApp%20con%20IA" target="_blank" rel="noopener" data-wa="chip_chatbot_wa">Chatbots WhatsApp</a>
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20IA%20para%20redes%20sociales" target="_blank" rel="noopener" data-wa="chip_ia_redes">IA para redes sociales</a>
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20lead%20nurturing%20automatizado" target="_blank" rel="noopener" data-wa="chip_nurturing">Lead nurturing</a>
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20un%20agente%20de%20IA%20para%20atenci%C3%B3n%20al%20cliente" target="_blank" rel="noopener" data-wa="chip_ia_atencion">Atención al cliente</a>
+      <a class="chip" href="/servicios/ia-prospeccion/">IA de prospección</a>
+      <a class="chip" href="/servicios/chatbots-whatsapp/">Chatbots WhatsApp</a>
+      <a class="chip" href="/servicios/ia-redes-sociales/">IA para redes sociales</a>
+      <a class="chip" href="/servicios/lead-nurturing/">Lead nurturing</a>
+      <a class="chip" href="/servicios/agentes-ia/">Atención al cliente</a>
      </div>
      <h4 style="margin-top:22px">Ideal para</h4><div class="chips"><span class="chip">Alto volumen de consultas</span><span class="chip">Clínicas</span><span class="chip">High ticket</span></div></div>
     </div>
     <div class="p-foot">
      <div class="price-tag"><small>Desde</small><b><span>USD</span>200</b></div>
-     <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20cotizaci%C3%B3n%20de%20un%20Agente%20de%20IA" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_ia"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Solicitar cotización</a>
+     <div style="display:flex;flex-wrap:wrap;gap:10px"><a href="/servicios/agentes-ia/" class="btn btn-ghost">Ver detalle</a><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20cotizaci%C3%B3n%20de%20un%20Agente%20de%20IA" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_ia"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Solicitar cotización</a></div>
     </div>
    </div>
   </article>
@@ -884,16 +889,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li>Alta en Google Search Console</li>
      </ul></div>
      <div><h4>Especialidades</h4><div class="chips">
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20una%20landing%20page" target="_blank" rel="noopener" data-wa="chip_landing">Landing pages</a>
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20posicionamiento%20SEO" target="_blank" rel="noopener" data-wa="chip_seo">SEO</a>
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20inbound%20marketing" target="_blank" rel="noopener" data-wa="chip_inbound">Inbound marketing</a>
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20agendamiento%20autom%C3%A1tico%20por%20WhatsApp" target="_blank" rel="noopener" data-wa="chip_citas_wa">Citas por WhatsApp</a>
+      <a class="chip" href="/servicios/landing-page-seo/">Landing pages</a>
+      <a class="chip" href="/servicios/landing-page-seo/">SEO</a>
+      <a class="chip" href="/servicios/inbound-marketing/">Inbound marketing</a>
+      <a class="chip" href="/servicios/chatbots-whatsapp/">Citas por WhatsApp</a>
      </div>
      <h4 style="margin-top:22px">Ideal para</h4><div class="chips"><span class="chip">Lanzamientos</span><span class="chip">Servicios profesionales</span><span class="chip">Campañas pagas</span></div></div>
     </div>
     <div class="p-foot">
      <div class="price-tag"><small>Desde</small><b><span>USD</span>150</b></div>
-     <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20cotizaci%C3%B3n%20de%20Landing%20page%20con%20SEO%20y%20WhatsApp%20autom%C3%A1tico%20de%20citas" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_web"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Solicitar cotización</a>
+     <div style="display:flex;flex-wrap:wrap;gap:10px"><a href="/servicios/landing-page-seo/" class="btn btn-ghost">Ver detalle</a><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20cotizaci%C3%B3n%20de%20Landing%20page%20con%20SEO%20y%20WhatsApp%20autom%C3%A1tico%20de%20citas" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_web"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Solicitar cotización</a></div>
     </div>
    </div>
   </article>
@@ -914,17 +919,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li>Capacitación del equipo</li>
      </ul></div>
      <div><h4>Especialidades</h4><div class="chips">
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20un%20CRM%20a%20medida" target="_blank" rel="noopener" data-wa="chip_crm_medida">CRM a medida</a>
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20implementaci%C3%B3n%20de%20GoHighLevel" target="_blank" rel="noopener" data-wa="chip_gohighlevel">GoHighLevel</a>
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20implementaci%C3%B3n%20de%20Zoho%20CRM" target="_blank" rel="noopener" data-wa="chip_zoho">Zoho CRM</a>
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20automatizaci%C3%B3n%20de%20marketing" target="_blank" rel="noopener" data-wa="chip_automatizacion">Automatización de marketing</a>
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20outbound%20marketing" target="_blank" rel="noopener" data-wa="chip_outbound">Outbound</a>
+      <a class="chip" href="/servicios/crm-a-medida/">CRM a medida</a>
+      <a class="chip" href="/servicios/gohighlevel/">GoHighLevel</a>
+      <a class="chip" href="/servicios/zoho-crm/">Zoho CRM</a>
+      <a class="chip" href="/servicios/automatizacion-marketing/">Automatización de marketing</a>
+      <a class="chip" href="/servicios/outbound-marketing/">Outbound</a>
      </div>
      <h4 style="margin-top:22px">Ideal para</h4><div class="chips"><span class="chip">Equipos de venta</span><span class="chip">B2B</span><span class="chip">Ciclos largos</span></div></div>
     </div>
     <div class="p-foot">
      <div class="price-tag"><small>Desde</small><b><span>USD</span>200</b></div>
-     <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20cotizaci%C3%B3n%20de%20CRM%20con%20marketing%20automatizado" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_crm"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Solicitar cotización</a>
+     <div style="display:flex;flex-wrap:wrap;gap:10px"><a href="/servicios/crm-a-medida/" class="btn btn-ghost">Ver detalle</a><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20cotizaci%C3%B3n%20de%20CRM%20con%20marketing%20automatizado" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_crm"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Solicitar cotización</a></div>
     </div>
    </div>
   </article>
@@ -937,32 +942,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="sh rv">
    <div class="eyebrow">Catálogo completo</div>
    <h2 class="h2">Todos los servicios, <span class="grad">uno por uno</span>.</h2>
-   <p class="lead">Elegí el que necesitás y consultalo directo por WhatsApp.</p>
+   <p class="lead">Elegí el servicio que necesitás y conocé el detalle completo.</p>
   </div>
   <div class="cat">
    <div class="cat-col rv"><h3><i style="background:var(--cyan)"></i>Paid Media</h3>
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20Google%20Ads" target="_blank" rel="noopener" data-wa="cat_google_ads"><div><b>Google Ads</b><span>Búsqueda, PMax, Display, Shopping y YouTube</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20Meta%20Ads" target="_blank" rel="noopener" data-wa="cat_meta_ads"><div><b>Meta Ads</b><span>Facebook e Instagram, del frío al cierre</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20TikTok%20Ads" target="_blank" rel="noopener" data-wa="cat_tiktok_ads"><div><b>TikTok Ads</b><span>Alcance y conversión en video corto</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20LinkedIn%20Ads" target="_blank" rel="noopener" data-wa="cat_linkedin_ads"><div><b>LinkedIn Ads</b><span>Decisores B2B por cargo e industria</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/google-ads/"><div><b>Google Ads</b><span>Búsqueda, PMax, Display, Shopping y YouTube</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/meta-ads/"><div><b>Meta Ads</b><span>Facebook e Instagram, del frío al cierre</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/tiktok-ads/"><div><b>TikTok Ads</b><span>Alcance y conversión en video corto</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/linkedin-ads/"><div><b>LinkedIn Ads</b><span>Decisores B2B por cargo e industria</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
    </div>
    <div class="cat-col rv d1"><h3><i style="background:var(--magenta)"></i>Marketing y contenidos</h3>
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20gesti%C3%B3n%20de%20redes%20sociales" target="_blank" rel="noopener" data-wa="cat_redes"><div><b>Redes sociales</b><span>Contenido y gestión con foco comercial</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20inbound%20marketing" target="_blank" rel="noopener" data-wa="cat_inbound"><div><b>Inbound marketing</b><span>Atraer y educar hasta la compra</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20outbound%20marketing" target="_blank" rel="noopener" data-wa="cat_outbound"><div><b>Outbound marketing</b><span>Prospección activa de cuentas objetivo</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20landing%20page%20con%20SEO" target="_blank" rel="noopener" data-wa="cat_landing"><div><b>Landing pages + SEO</b><span>Páginas que posicionan y convierten</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/redes-sociales/"><div><b>Redes sociales</b><span>Contenido y gestión con foco comercial</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/inbound-marketing/"><div><b>Inbound marketing</b><span>Atraer y educar hasta la compra</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/outbound-marketing/"><div><b>Outbound marketing</b><span>Prospección activa de cuentas objetivo</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/landing-page-seo/"><div><b>Landing pages + SEO</b><span>Páginas que posicionan y convierten</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
    </div>
    <div class="cat-col rv d2"><h3><i style="background:var(--purple)"></i>Inteligencia artificial</h3>
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20agentes%20de%20IA" target="_blank" rel="noopener" data-wa="cat_agentes_ia"><div><b>Agentes de IA</b><span>Atención y ventas automatizadas 24/7</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20IA%20de%20prospecci%C3%B3n" target="_blank" rel="noopener" data-wa="cat_ia_prospeccion"><div><b>IA de prospección</b><span>Detecta y contacta oportunidades</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20chatbots%20de%20WhatsApp" target="_blank" rel="noopener" data-wa="cat_chatbots"><div><b>Chatbots WhatsApp</b><span>Respuestas, menús y agendamiento</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20lead%20nurturing" target="_blank" rel="noopener" data-wa="cat_nurturing"><div><b>Lead nurturing</b><span>Seguimiento automático hasta la venta</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/agentes-ia/"><div><b>Agentes de IA</b><span>Atención y ventas automatizadas 24/7</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/ia-prospeccion/"><div><b>IA de prospección</b><span>Detecta y contacta oportunidades</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/chatbots-whatsapp/"><div><b>Chatbots WhatsApp</b><span>Respuestas, menús y agendamiento</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/lead-nurturing/"><div><b>Lead nurturing</b><span>Seguimiento automático hasta la venta</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
    </div>
    <div class="cat-col rv d3"><h3><i style="background:var(--green)"></i>CRM y procesos</h3>
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20un%20CRM%20a%20medida" target="_blank" rel="noopener" data-wa="cat_crm"><div><b>CRM a medida</b><span>Pipeline adaptado a tu proceso</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20GoHighLevel" target="_blank" rel="noopener" data-wa="cat_gohighlevel"><div><b>GoHighLevel</b><span>Embudos, CRM y automatización</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20Zoho%20CRM" target="_blank" rel="noopener" data-wa="cat_zoho"><div><b>Zoho CRM</b><span>Implementación e integraciones</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20automatizaci%C3%B3n%20de%20marketing" target="_blank" rel="noopener" data-wa="cat_automatizacion"><div><b>Automatización</b><span>Email, WhatsApp y tareas sin intervención</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/crm-a-medida/"><div><b>CRM a medida</b><span>Pipeline adaptado a tu proceso</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/gohighlevel/"><div><b>GoHighLevel</b><span>Embudos, CRM y automatización</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/zoho-crm/"><div><b>Zoho CRM</b><span>Implementación e integraciones</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/automatizacion-marketing/"><div><b>Automatización</b><span>Email, WhatsApp y tareas sin intervención</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
    </div>
   </div>
  </div>
@@ -1028,12 +1033,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <h2 class="h2">Estrategias pensadas para <span class="grad">cómo vende tu industria</span>.</h2>
   </div>
   <div class="sec">
-   <a class="sc rv" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20tengo%20una%20inmobiliaria%20y%20quiero%20una%20auditor%C3%ADa%20gratis" target="_blank" rel="noopener" data-wa="sector_inmobiliarias"><div class="sc-ic" style="background:rgba(0,229,255,.1)"><svg viewBox="0 0 24 24" stroke="#00e5ff"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></div><h3>Inmobiliarias</h3><p>Captación de compradores y propietarios, calificación automática y agenda de visitas.</p><span class="sc-l">Consultar <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
-   <a class="sc rv d1" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20tengo%20un%20ecommerce%20y%20quiero%20una%20auditor%C3%ADa%20gratis" target="_blank" rel="noopener" data-wa="sector_ecommerce"><div class="sc-ic" style="background:rgba(168,85,247,.12)"><svg viewBox="0 0 24 24" stroke="#a855f7"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg></div><h3>Ecommerce</h3><p>Campañas de catálogo, remarketing y automatizaciones de carrito y recompra.</p><span class="sc-l">Consultar <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
-   <a class="sc rv d2" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20tengo%20una%20empresa%20B2B%20y%20quiero%20una%20auditor%C3%ADa%20gratis" target="_blank" rel="noopener" data-wa="sector_b2b"><div class="sc-ic" style="background:rgba(244,114,182,.12)"><svg viewBox="0 0 24 24" stroke="#f472b6"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3"/></svg></div><h3>Empresas B2B</h3><p>Generación de demanda, LinkedIn Ads, outbound y pipeline para ciclos de venta largos.</p><span class="sc-l">Consultar <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
-   <a class="sc rv" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20tengo%20una%20cl%C3%ADnica%20y%20quiero%20una%20auditor%C3%ADa%20gratis" target="_blank" rel="noopener" data-wa="sector_clinicas"><div class="sc-ic" style="background:rgba(34,211,168,.12)"><svg viewBox="0 0 24 24" stroke="#22d3a8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Clínicas y salud</h3><p>Turnos automáticos por WhatsApp, recordatorios y campañas por especialidad.</p><span class="sc-l">Consultar <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
-   <a class="sc rv d1" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20tengo%20un%20negocio%20de%20servicios%20profesionales%20y%20quiero%20una%20auditor%C3%ADa%20gratis" target="_blank" rel="noopener" data-wa="sector_servicios"><div class="sc-ic" style="background:rgba(251,146,60,.12)"><svg viewBox="0 0 24 24" stroke="#fb923c"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div><h3>Servicios profesionales</h3><p>Estudios, consultoras y profesionales: más consultas calificadas y menos tiempo perdido.</p><span class="sc-l">Consultar <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
-   <a class="sc rv d2" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20vendo%20productos%20o%20servicios%20high%20ticket%20y%20quiero%20una%20auditor%C3%ADa%20gratis" target="_blank" rel="noopener" data-wa="sector_high_ticket"><div class="sc-ic" style="background:rgba(0,229,255,.1)"><svg viewBox="0 0 24 24" stroke="#00e5ff"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3L8 9l4 13 4-13-3-6M2 9h20"/></svg></div><h3>Ventas high ticket</h3><p>Educación, desarrollos, autos y servicios premium: leads filtrados y llamadas agendadas.</p><span class="sc-l">Consultar <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+   <a class="sc rv" href="/sectores/inmobiliarias/"><div class="sc-ic" style="background:rgba(0,229,255,.1)"><svg viewBox="0 0 24 24" stroke="#00e5ff"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></div><h3>Inmobiliarias</h3><p>Captación de compradores y propietarios, calificación automática y agenda de visitas.</p><span class="sc-l">Ver solución <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+   <a class="sc rv d1" href="/sectores/ecommerce/"><div class="sc-ic" style="background:rgba(168,85,247,.12)"><svg viewBox="0 0 24 24" stroke="#a855f7"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg></div><h3>Ecommerce</h3><p>Campañas de catálogo, remarketing y automatizaciones de carrito y recompra.</p><span class="sc-l">Ver solución <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+   <a class="sc rv d2" href="/sectores/empresas-b2b/"><div class="sc-ic" style="background:rgba(244,114,182,.12)"><svg viewBox="0 0 24 24" stroke="#f472b6"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3"/></svg></div><h3>Empresas B2B</h3><p>Generación de demanda, LinkedIn Ads, outbound y pipeline para ciclos de venta largos.</p><span class="sc-l">Ver solución <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+   <a class="sc rv" href="/sectores/clinicas/"><div class="sc-ic" style="background:rgba(34,211,168,.12)"><svg viewBox="0 0 24 24" stroke="#22d3a8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Clínicas y salud</h3><p>Turnos automáticos por WhatsApp, recordatorios y campañas por especialidad.</p><span class="sc-l">Ver solución <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+   <a class="sc rv d1" href="/sectores/servicios-profesionales/"><div class="sc-ic" style="background:rgba(251,146,60,.12)"><svg viewBox="0 0 24 24" stroke="#fb923c"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div><h3>Servicios profesionales</h3><p>Estudios, consultoras y profesionales: más consultas calificadas y menos tiempo perdido.</p><span class="sc-l">Ver solución <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
+   <a class="sc rv d2" href="/sectores/high-ticket/"><div class="sc-ic" style="background:rgba(0,229,255,.1)"><svg viewBox="0 0 24 24" stroke="#00e5ff"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3L8 9l4 13 4-13-3-6M2 9h20"/></svg></div><h3>Ventas high ticket</h3><p>Educación, desarrollos, autos y servicios premium: leads filtrados y llamadas agendadas.</p><span class="sc-l">Ver solución <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span></a>
   </div>
  </div>
 </section>
@@ -1122,8 +1127,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <div class="ct">
   <div class="ft">
    <div><a href="#inicio" class="logo"><em>Yach</em>Sell</a><p>Agencia de marketing 360°: Paid Media, agentes de IA, landing pages con SEO y CRM con marketing automatizado.</p></div>
-   <div><h4>Servicios</h4><ul><li><a href="#ads" data-tab="ads">Publicidad online</a></li><li><a href="#ia" data-tab="ia">Agentes de IA</a></li><li><a href="#web" data-tab="web">Landing + SEO</a></li><li><a href="#crm" data-tab="crm">CRM + automatización</a></li></ul></div>
-   <div><h4>Agencia</h4><ul><li><a href="#nosotros">Quiénes somos</a></li><li><a href="#planes">Planes</a></li><li><a href="#sectores">Sectores</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+   <div><h4>Servicios</h4><ul><li><a href="/servicios/google-ads/">Google Ads</a></li><li><a href="/servicios/meta-ads/">Meta Ads</a></li><li><a href="/servicios/agentes-ia/">Agentes de IA</a></li><li><a href="/servicios/landing-page-seo/">Landing + SEO</a></li><li><a href="/servicios/crm-a-medida/">CRM a medida</a></li><li><a href="/servicios/">Todos los servicios</a></li></ul></div>
+   <div><h4>Sectores</h4><ul><li><a href="/sectores/inmobiliarias/">Inmobiliarias</a></li><li><a href="/sectores/ecommerce/">Ecommerce</a></li><li><a href="/sectores/empresas-b2b/">Empresas B2B</a></li><li><a href="/sectores/clinicas/">Clínicas</a></li><li><a href="/sectores/high-ticket/">High ticket</a></li><li><a href="/sectores/">Todos los sectores</a></li></ul></div>
    <div><h4>Contacto</h4><ul><li><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20mi%20auditor%C3%ADa%20gratis%20de%20oportunidades" target="_blank" rel="noopener" data-wa="footer">WhatsApp</a></li><li><a href="https://www.yachsell.com">www.yachsell.com</a></li></ul></div>
   </div>
   <div class="ft-b"><span>© <span id="yr">2026</span> YachSell. Todos los derechos reservados.</span><span>Argentina · Brasil · LATAM · Internacional</span></div>
