@@ -491,3 +491,5 @@ footer{border-top:1px solid var(--border);padding:56px 0 120px}
  .ctab{padding:44px 20px}
  .ctab .btn{width:100%}
 }
+
+picture{display:contents}

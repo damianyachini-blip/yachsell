@@ -1,0 +1,34 @@
+# YachSell
+
+> Agencia de marketing de performance 360°: Paid Media, agentes de IA, CRM y automatización comercial para empresas B2B, ecommerce, call centers y ventas high ticket. Opera desde Argentina para LATAM, Brasil y mercados internacionales. Contacto por WhatsApp: +54 9 11 2482-9594. Auditoría de oportunidades gratis. Modalidades: fee fijo o porcentaje de ventas.
+
+## Servicios
+- [Marketing de performance](https://www.yachsell.com/servicios/marketing-de-performance/): Agencia de marketing de performance: campañas en Google, Meta, LinkedIn y TikTok medidas por leads, ventas y CPA. Fee fijo o % de ventas.
+- [Google Ads](https://www.yachsell.com/servicios/google-ads/): Gestión profesional de Google Ads: Búsqueda, Performance Max, Display, Shopping y YouTube. Campañas orientadas a ventas y leads calificados. Desde USD 100.
+- [Meta Ads](https://www.yachsell.com/servicios/meta-ads/): Meta Ads en Facebook e Instagram: prospección, retargeting, catálogo y leads, con píxel y API de Conversiones. Desde USD 100.
+- [TikTok Ads](https://www.yachsell.com/servicios/tiktok-ads/): Campañas de TikTok Ads para alcance y conversión: estrategia creativa nativa, Spark Ads, píxel y eventos de TikTok. Gestión desde USD 100.
+- [LinkedIn Ads](https://www.yachsell.com/servicios/linkedin-ads/): Campañas de LinkedIn Ads para empresas B2B: segmentación por cargo, industria y empresa, Lead Gen Forms y account-based marketing. Desde USD 100.
+- [Gestión de redes sociales](https://www.yachsell.com/servicios/redes-sociales/): Gestión de redes sociales con foco comercial: estrategia, calendario, diseño, publicación y respuesta automática con IA.
+- [Inbound marketing](https://www.yachsell.com/servicios/inbound-marketing/): Estrategia de inbound marketing: contenidos SEO, lead magnets, automatizaciones de email y WhatsApp y nurturing para convertir visitas en clientes.
+- [Outbound marketing](https://www.yachsell.com/servicios/outbound-marketing/): Outbound marketing para empresas B2B: listas de prospectos, secuencias por email y LinkedIn, personalización con IA y agenda de reuniones calificadas.
+- [Landing page con SEO](https://www.yachsell.com/servicios/landing-page-seo/): Diseño de landing pages rápidas, optimizadas para SEO y conectadas a WhatsApp con agendamiento automático de citas. Desde USD 150.
+- [Generación de leads B2B](https://www.yachsell.com/servicios/generacion-leads-b2b/): Soluciones B2B de generación de leads: LinkedIn Ads, Google Ads, prospección con IA y CRM para conseguir reuniones con decisores.
+- [Agentes de IA](https://www.yachsell.com/servicios/agentes-ia/): Implementación de agentes de inteligencia artificial que atienden, califican leads y agendan citas 24/7 en WhatsApp, Instagram y web. Desde USD 200.
+- [IA de prospección](https://www.yachsell.com/servicios/ia-prospeccion/): Prospección B2B con IA: empresas objetivo, datos enriquecidos, mensajes personalizados y seguimiento automático. Desde USD 200.
+- [Chatbots de WhatsApp](https://www.yachsell.com/servicios/chatbots-whatsapp/): Chatbot de WhatsApp con IA: respuestas automáticas, calificación de consultas, agenda de citas y derivación a asesores. Desde USD 200.
+- [IA para redes sociales](https://www.yachsell.com/servicios/ia-redes-sociales/): IA para Instagram y Facebook: respuesta automática a DM y comentarios, captura de leads desde redes y apoyo en contenido. Desde USD 200.
+- [Lead nurturing](https://www.yachsell.com/servicios/lead-nurturing/): Lead nurturing con automatización e IA: secuencias por WhatsApp y email, segmentación y reactivación de leads fríos. Desde USD 200.
+- [CRM a medida](https://www.yachsell.com/servicios/crm-a-medida/): CRM a medida: pipeline de ventas, integración con anuncios, web y WhatsApp, seguimiento automatizado y tableros. Desde USD 200.
+- [GoHighLevel](https://www.yachsell.com/servicios/gohighlevel/): GoHighLevel en español: CRM, embudos, calendarios, WhatsApp y automatizaciones configurados para tu negocio. Desde USD 200.
+- [Zoho CRM](https://www.yachsell.com/servicios/zoho-crm/): Implementación y configuración de Zoho CRM: módulos, pipelines, automatizaciones, integración con WhatsApp, formularios y campañas. Desde USD 200.
+- [Automatización de marketing](https://www.yachsell.com/servicios/automatizacion-marketing/): Automatización de marketing y ventas: flujos de email y WhatsApp, asignación de leads, recordatorios e integraciones. Desde USD 200.
+
+## Soluciones por sector
+- [Inmobiliarias](https://www.yachsell.com/sectores/inmobiliarias/): Marketing para inmobiliarias: campañas en Meta y Google, captación de propietarios, IA que califica compradores y agenda visitas.
+- [Ecommerce](https://www.yachsell.com/sectores/ecommerce/): Marketing para ecommerce: Google Shopping, Performance Max, catálogo en Meta, recuperación de carritos y automatización de recompra.
+- [Empresas B2B](https://www.yachsell.com/sectores/empresas-b2b/): Soluciones B2B para empresas: LinkedIn Ads, Google Ads, prospección con IA, call center, CRM y nurturing para generar reuniones.
+- [Call centers](https://www.yachsell.com/sectores/call-centers/): Soluciones para call centers y contact centers: generación de leads, precalificación con agentes de IA 24/7, CRM y reactivación de contactos.
+- [Clínicas y salud](https://www.yachsell.com/sectores/clinicas/): Marketing para clínicas y consultorios: campañas por especialidad, turnos por WhatsApp con IA y recordatorios que reducen ausencias.
+- [Servicios profesionales](https://www.yachsell.com/sectores/servicios-profesionales/): Marketing para estudios jurídicos, contables y consultoras: landing con SEO, Google Ads, IA que filtra consultas y agenda.
+- [Ventas high ticket](https://www.yachsell.com/sectores/high-ticket/): Marketing para ventas high ticket: campañas de calificación, IA que filtra y agenda llamadas, nurturing y pipeline comercial.
+- [Agencias](https://www.yachsell.com/sectores/agencias/): Servicios para agencias de marketing: gestión de Paid Media, agentes de IA, CRM y automatizaciones como equipo complementario o en marca blanca.
