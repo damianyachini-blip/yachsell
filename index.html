@@ -436,38 +436,43 @@ section{position:relative;padding:110px 0}
 @keyframes tp{0%,100%{opacity:.3}50%{opacity:1}}
 .ph-note{text-align:center;font-size:.74rem;color:var(--text-3);margin-top:14px}
 
-/* ── Servicios (tabs) ── */
-.tabs{display:flex;gap:8px;padding:6px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--border);width:max-content;max-width:100%;overflow-x:auto;scrollbar-width:none;margin-bottom:28px}
-.tabs::-webkit-scrollbar{display:none}
-.tab{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;font-size:.9rem;font-weight:600;color:var(--text-3);white-space:nowrap;transition:all .25s}
-.tab svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-.tab:hover{color:#fff}
-.tab[aria-selected="true"]{background:#fff;color:#05050d}
-.panels{display:grid;gap:22px;max-width:1080px;margin:0 auto}
-.panel{display:grid;grid-template-columns:1fr 1.15fr;gap:0;border-radius:var(--r-xl);overflow:hidden;background:var(--card);border:1px solid var(--border);scroll-margin-top:96px}
-@keyframes pin{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-.p-media{position:relative;background:radial-gradient(circle at 50% 40%,rgba(168,85,247,.18),transparent 70%),var(--bg-2);display:flex;align-items:center;justify-content:center;padding:56px 22px 22px}
-.p-media img{width:100%;height:auto;max-height:440px;object-fit:contain;border-radius:16px}
-.p-media .p-badge{position:absolute;left:18px;top:18px;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;padding:7px 12px;border-radius:999px;background:rgba(5,5,13,.75);border:1px solid var(--border);backdrop-filter:blur(8px)}
-.p-media .p-sub{position:absolute;right:16px;bottom:16px;width:38%;border-radius:16px;overflow:hidden;border:2px solid rgba(255,255,255,.12);box-shadow:0 20px 40px -10px rgba(0,0,0,.7)}
-.p-body{padding:42px}
-.p-body h3{font-size:clamp(1.5rem,2.6vw,2.05rem);font-weight:800;letter-spacing:-.03em;line-height:1.15}
-.p-body>p{color:var(--text-2);margin-top:12px}
-.p-cols{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:28px}
-.p-cols h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:12px;font-weight:700}
-.chk{list-style:none;display:grid;gap:9px}
-.chk li{display:flex;gap:10px;font-size:.9rem;color:var(--text-2);line-height:1.45}
-.chk li::before{content:"";flex-shrink:0;width:16px;height:16px;margin-top:2px;border-radius:5px;background:rgba(0,229,255,.14) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300e5ff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center/11px no-repeat}
+/* ── Servicios ── */
+.svc-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:1120px;margin:0 auto 30px}
+.svc-nav a{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:18px;background:var(--card);border:1px solid var(--border);transition:border-color .25s,transform .25s var(--ease),background .25s}
+.svc-nav a:hover{border-color:rgba(255,255,255,.45);transform:translateY(-2px);background:var(--card-2)}
+.sn-i{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;flex-shrink:0}
+.sn-i svg{width:19px;height:19px;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.svc-nav b{display:block;font-size:.92rem;line-height:1.25}
+.svc-nav small{display:block;font-family:var(--mono);font-size:.7rem;color:var(--text-3);margin-top:2px}
+.svc-list{display:grid;gap:26px;max-width:1120px;margin:0 auto}
+.svc{display:grid;grid-template-columns:1.1fr 1fr;gap:44px;align-items:center;padding:26px;border-radius:30px;background:var(--card);border:1px solid var(--border);scroll-margin-top:100px;transition:border-color .3s}
+.svc:hover{border-color:rgba(255,255,255,.16)}
+.svc:nth-child(even){grid-template-columns:1fr 1.1fr}
+.svc:nth-child(even) .svc-media{order:2}
+.svc-media{border-radius:22px;padding:8px;background:linear-gradient(145deg,rgba(0,229,255,.35),rgba(168,85,247,.35) 55%,rgba(244,114,182,.3));box-shadow:0 30px 70px -30px rgba(168,85,247,.55)}
+.svc-media img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;border-radius:16px;background:#06061a}
+.svc-body{padding:6px 10px 6px 0}
+.svc:nth-child(even) .svc-body{padding:6px 0 6px 10px}
+.svc-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.svc-n{font-family:var(--mono);font-weight:700;font-size:.82rem;padding:5px 10px;border-radius:999px;border:1px solid currentColor}
+.svc-cat{font-family:var(--mono);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.svc-body h3{font-size:clamp(1.45rem,2.4vw,1.95rem);font-weight:800;letter-spacing:-.03em;line-height:1.15}
+.svc-body>p{color:var(--text-2);margin-top:10px;font-size:.97rem}
+.svc-ben{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin:20px 0 18px}
+.svc-ben li{display:flex;gap:9px;font-size:.9rem;color:var(--text-2);line-height:1.4}
+.svc-ben li::before{content:"";flex-shrink:0;width:18px;height:18px;margin-top:1px;border-radius:6px;background:rgba(0,229,255,.14) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300e5ff' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E") center/11px no-repeat}
+.svc-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:22px;padding-top:20px;border-top:1px solid var(--border)}
+.svc-cta{display:flex;gap:10px;flex-wrap:wrap}
+.svc-cta .btn{padding:12px 18px;font-size:.88rem}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{font-size:.8rem;padding:7px 12px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text-2);transition:border-color .2s,color .2s}
 a.chip:hover{border-color:var(--border-h);color:#fff}
-.p-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;margin-top:32px;padding-top:26px;border-top:1px solid var(--border)}
 .price-tag small{display:block;font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3)}
 .price-tag b{font-size:2rem;font-weight:900;letter-spacing:-.03em}
 .price-tag b span{font-size:1rem;color:var(--text-3);font-weight:600;margin-right:4px}
-.plats{display:flex;gap:8px;margin-top:18px}
-.plats span{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:rgba(255,255,255,.05);border:1px solid var(--border)}
-.plats svg{width:19px;height:19px}
+.plats{display:flex;gap:8px;margin-top:16px}
+.plats span{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:rgba(255,255,255,.05);border:1px solid var(--border)}
+.plats svg{width:18px;height:18px}
 
 /* ── Catálogo ── */
 .cat{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -608,9 +613,10 @@ footer{border-top:1px solid var(--border);padding:56px 0 120px}
  .met{grid-template-columns:repeat(2,1fr)}
  .sys{grid-template-columns:repeat(3,1fr);row-gap:30px}
  .sys::before{display:none}
- .panel{grid-template-columns:1fr}
- .p-media{padding:52px 16px 16px}
- .p-media img{max-height:320px}
+ .svc,.svc:nth-child(even){grid-template-columns:1fr;gap:24px}
+ .svc:nth-child(even) .svc-media{order:0}
+ .svc-body,.svc:nth-child(even) .svc-body{padding:0 4px}
+ .svc-nav{grid-template-columns:repeat(2,1fr)}
  .modes{grid-template-columns:1fr 1fr}.modes-h{grid-column:1/-1;padding:6px 4px}
  .ft{grid-template-columns:1fr 1fr}
 }
@@ -634,9 +640,11 @@ footer{border-top:1px solid var(--border);padding:56px 0 120px}
  .sys-d .sd-n{font-size:1.8rem}
  .tabs{border-radius:18px;width:100%}
  .tab{padding:10px 14px;font-size:.85rem}
- .p-body{padding:26px 22px}
- .p-cols{grid-template-columns:1fr}
- .p-foot>div{width:100%}.p-foot .btn{flex:1}
+ .svc{padding:14px;border-radius:24px}
+ .svc-media{padding:6px;border-radius:18px}
+ .svc-ben{grid-template-columns:1fr}
+ .svc-cta{width:100%}.svc-cta .btn{flex:1}
+ .svc-nav a{padding:12px}.sn-i{width:34px;height:34px}
  .prc,.cat,.plans,.sec,.sol,.met,.modes{grid-template-columns:1fr}
  .plan{grid-template-columns:1fr}
  .plan .btn{width:100%}
@@ -880,128 +888,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
 
-  <div class="panels">
-  <!-- ADS -->
-  <article class="panel rv" id="ads">
-   <div class="p-media"><picture><source srcset="google-ads-dashboard.webp" type="image/webp"><img width="1254" height="1254" src="google-ads-dashboard.png" alt="Panel de rendimiento de campañas de Google Ads" loading="lazy" decoding="async"></picture><span class="p-badge">PAID MEDIA</span></div>
-   <div class="p-body">
-    <h3>Publicidad online: Google Ads, Meta Ads y más</h3>
-    <p>Estrategia, creación y optimización continua de campañas para captar clientes con intención real de compra. Estructura, segmentación, creatividades y medición pensadas para rentabilidad, no para métricas de vanidad.</p>
+  <nav class="svc-nav rv" aria-label="Líneas de servicio"><a href="#ads" data-tab="ads"><span class="sn-i" style="background:rgba(0,229,255,.12)"><svg viewBox="0 0 24 24" stroke="#00e5ff"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg></span><span><b>Publicidad online</b><small>Desde USD 100</small></span></a><a href="#ia" data-tab="ia"><span class="sn-i" style="background:rgba(168,85,247,.14)"><svg viewBox="0 0 24 24" stroke="#a855f7"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></span><span><b>Agentes de IA</b><small>Desde USD 200</small></span></a><a href="#web" data-tab="web"><span class="sn-i" style="background:rgba(244,114,182,.14)"><svg viewBox="0 0 24 24" stroke="#f472b6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h8"/></svg></span><span><b>Landing + SEO</b><small>Desde USD 150</small></span></a><a href="#crm" data-tab="crm"><span class="sn-i" style="background:rgba(34,211,168,.14)"><svg viewBox="0 0 24 24" stroke="#22d3a8"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/></svg></span><span><b>CRM + automatización</b><small>Desde USD 200</small></span></a></nav>
+  <div class="svc-list">
+  <article class="svc rv" id="ads">
+   <div class="svc-media"><picture><source srcset="01_dashboard_publicidad.webp" type="image/webp"><img width="1200" height="800" src="01_dashboard_publicidad.png" alt="Panel de performance con leads, oportunidades y conversiones por canal" loading="lazy" decoding="async"></picture></div>
+   <div class="svc-body">
+    <div class="svc-top"><span class="svc-n" style="color:#00e5ff">01</span><span class="svc-cat" style="color:#00e5ff">Paid Media</span></div>
+    <h3>Publicidad online</h3>
+    <p>Google Ads, Meta Ads, TikTok y LinkedIn con estrategia, creatividades y optimización continua orientadas a ventas, no a métricas de vanidad.</p>
     <div class="plats"><span title="Google Ads"><svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 001 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></span><span title="Meta Ads"><svg viewBox="0 0 24 24"><defs><linearGradient id="mgx" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0088FE"/><stop offset="50%" stop-color="#A033FF"/><stop offset="100%" stop-color="#FF5C87"/></linearGradient></defs><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.563V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" fill="url(#mgx)"/></svg></span><span title="TikTok Ads"><svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.3 0 .59.04.86.12V9.01a6.27 6.27 0 00-.86-.06 6.35 6.35 0 00-6.35 6.35 6.35 6.35 0 006.35 6.35c3.51 0 6.35-2.85 6.35-6.35V9.18a8.16 8.16 0 004.78 1.53V7.28a4.83 4.83 0 01-1.03-.59z" fill="#FF004F"/><path d="M16.37 2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.06-.86 2.89 2.89 0 004.94-2.03V2h3.45z" fill="#00F2EA"/></svg></span><span title="LinkedIn Ads"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="#0A66C2"/></svg></span></div>
-    <div class="p-cols">
-     <div><h4>Qué incluye</h4><ul class="chk">
-      <li>Auditoría y estructura de cuenta</li>
-      <li>Búsqueda, Performance Max, Display y YouTube</li>
-      <li>Feed, Reels y Stories en Meta</li>
-      <li>Prospección, retargeting y lookalikes</li>
-      <li>Conversiones con GTM, píxel y API</li>
-      <li>Optimización y reporte periódico</li>
-     </ul></div>
-     <div><h4>Especialidades</h4><div class="chips">
-      <a class="chip" href="/servicios/google-ads/">Google Ads</a>
-      <a class="chip" href="/servicios/meta-ads/">Meta Ads</a>
-      <a class="chip" href="/servicios/tiktok-ads/">TikTok Ads</a>
-      <a class="chip" href="/servicios/linkedin-ads/">LinkedIn Ads</a>
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20campa%C3%B1as%20de%20remarketing" target="_blank" rel="noopener" data-wa="chip_remarketing">Remarketing</a>
-      <a class="chip" href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20campa%C3%B1as%20de%20cat%C3%A1logo%20para%20ecommerce" target="_blank" rel="noopener" data-wa="chip_catalogo">Catálogo ecommerce</a>
-     </div>
-     <h4 style="margin-top:22px">Ideal para</h4><div class="chips"><span class="chip">Ecommerce</span><span class="chip">Servicios</span><span class="chip">B2B</span><span class="chip">Inmobiliarias</span></div></div>
-    </div>
-    <div class="p-foot">
+    <ul class="svc-ben"><li>Google, Meta, TikTok y LinkedIn Ads</li><li>Segmentación por intención de compra</li><li>Conversiones medidas con GTM y API</li><li>Optimización por CPA y ROAS</li></ul>
+    <div class="chips"><a class="chip" href="/servicios/marketing-de-performance/">Marketing de performance</a><a class="chip" href="/servicios/google-ads/">Google Ads</a><a class="chip" href="/servicios/meta-ads/">Meta Ads</a><a class="chip" href="/servicios/tiktok-ads/">TikTok Ads</a><a class="chip" href="/servicios/linkedin-ads/">LinkedIn Ads</a></div>
+    <div class="svc-foot">
      <div class="price-tag"><small>Desde</small><b><span>USD</span>100</b></div>
-     <div style="display:flex;flex-wrap:wrap;gap:10px"><a href="/servicios/google-ads/" class="btn btn-ghost">Ver detalle</a><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20cotizaci%C3%B3n%20de%20Publicidad%20online%20%28Google%20y%20Meta%20Ads%29" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_ads"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Solicitar cotización</a></div>
+     <div class="svc-cta"><a href="/servicios/marketing-de-performance/" class="btn btn-ghost">Ver detalle</a><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20cotizaci%C3%B3n%20de%20Publicidad%20online%20%28Google%20y%20Meta%20Ads%29" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_ads"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Cotizar</a></div>
     </div>
    </div>
   </article>
-
-  <!-- IA -->
-  <article class="panel rv" id="ia">
-   <div class="p-media"><picture><source srcset="03_agente_ia_24h.webp" type="image/webp"><img width="1200" height="800" src="03_agente_ia_24h.png" alt="Agente de IA que atiende, califica leads y agenda citas 24/7 en WhatsApp, web y redes" loading="lazy" decoding="async"></picture><span class="p-badge">AGENTES DE IA</span></div>
-   <div class="p-body">
-    <h3>Agentes de IA para prospectar, atender y vender</h3>
-    <p>Diseñamos e implementamos agentes de inteligencia artificial entrenados con la información de tu negocio. Atienden consultas, califican leads, agendan citas y hacen seguimiento automático en los canales donde están tus clientes.</p>
-    <div class="p-cols">
-     <div><h4>Qué incluye</h4><ul class="chk">
-      <li>Diseño del flujo conversacional</li>
-      <li>Entrenamiento con tu información comercial</li>
-      <li>Integración con WhatsApp, Instagram y web</li>
-      <li>Calificación y derivación a humano</li>
-      <li>Agendamiento y recordatorios</li>
-      <li>Conexión con tu CRM</li>
-     </ul></div>
-     <div><h4>Especialidades</h4><div class="chips">
-      <a class="chip" href="/servicios/ia-prospeccion/">IA de prospección</a>
-      <a class="chip" href="/servicios/chatbots-whatsapp/">Chatbots WhatsApp</a>
-      <a class="chip" href="/servicios/ia-redes-sociales/">IA para redes sociales</a>
-      <a class="chip" href="/servicios/lead-nurturing/">Lead nurturing</a>
-      <a class="chip" href="/servicios/agentes-ia/">Atención al cliente</a>
-     </div>
-     <h4 style="margin-top:22px">Ideal para</h4><div class="chips"><span class="chip">Alto volumen de consultas</span><span class="chip">Clínicas</span><span class="chip">High ticket</span></div></div>
-    </div>
-    <div class="p-foot">
+  <article class="svc rv" id="ia">
+   <div class="svc-media"><picture><source srcset="03_agente_ia_24h.webp" type="image/webp"><img width="1200" height="800" src="03_agente_ia_24h.png" alt="Agente de IA que atiende, califica leads y agenda citas 24/7 en WhatsApp, web y redes" loading="lazy" decoding="async"></picture></div>
+   <div class="svc-body">
+    <div class="svc-top"><span class="svc-n" style="color:#a855f7">02</span><span class="svc-cat" style="color:#a855f7">Inteligencia artificial</span></div>
+    <h3>Agentes de IA</h3>
+    <p>Agentes entrenados con la información de tu negocio que atienden, califican y agendan en WhatsApp, Instagram y web, las 24 horas.</p>
+    
+    <ul class="svc-ben"><li>Respuesta en segundos, 24/7</li><li>Califica presupuesto y urgencia</li><li>Agenda citas con recordatorio</li><li>Deriva a tu equipo con historial</li></ul>
+    <div class="chips"><a class="chip" href="/servicios/ia-prospeccion/">IA de prospección</a><a class="chip" href="/servicios/chatbots-whatsapp/">Chatbots WhatsApp</a><a class="chip" href="/servicios/ia-redes-sociales/">IA para redes</a><a class="chip" href="/servicios/lead-nurturing/">Lead nurturing</a></div>
+    <div class="svc-foot">
      <div class="price-tag"><small>Desde</small><b><span>USD</span>200</b></div>
-     <div style="display:flex;flex-wrap:wrap;gap:10px"><a href="/servicios/agentes-ia/" class="btn btn-ghost">Ver detalle</a><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20cotizaci%C3%B3n%20de%20un%20Agente%20de%20IA" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_ia"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Solicitar cotización</a></div>
+     <div class="svc-cta"><a href="/servicios/agentes-ia/" class="btn btn-ghost">Ver detalle</a><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20cotizaci%C3%B3n%20de%20un%20Agente%20de%20IA" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_ia"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Cotizar</a></div>
     </div>
    </div>
   </article>
-
-  <!-- WEB -->
-  <article class="panel rv" id="web">
-   <div class="p-media"><picture><source srcset="04_analitica_conversiones.webp" type="image/webp"><img width="1200" height="800" src="04_analitica_conversiones.png" alt="Panel de analítica de conversiones de una landing page con SEO" loading="lazy" decoding="async"></picture><span class="p-badge">WEB + SEO</span></div>
-   <div class="p-body">
-    <h3>Landing page con SEO + WhatsApp automático de citas</h3>
-    <p>Páginas rápidas, claras y orientadas a conversión, optimizadas para Google y conectadas a WhatsApp con respuesta y agendamiento automático. Tu tráfico pago y orgánico llega a un lugar preparado para convertir.</p>
-    <div class="p-cols">
-     <div><h4>Qué incluye</h4><ul class="chk">
-      <li>Diseño UX/UI responsive, mobile first</li>
-      <li>Copy orientado a conversión</li>
-      <li>SEO técnico y on-page</li>
-      <li>WhatsApp con agendamiento automático</li>
-      <li>GTM, píxeles y eventos de conversión</li>
-      <li>Alta en Google Search Console</li>
-     </ul></div>
-     <div><h4>Especialidades</h4><div class="chips">
-      <a class="chip" href="/servicios/landing-page-seo/">Landing pages</a>
-      <a class="chip" href="/servicios/landing-page-seo/">SEO</a>
-      <a class="chip" href="/servicios/inbound-marketing/">Inbound marketing</a>
-      <a class="chip" href="/servicios/chatbots-whatsapp/">Citas por WhatsApp</a>
-     </div>
-     <h4 style="margin-top:22px">Ideal para</h4><div class="chips"><span class="chip">Lanzamientos</span><span class="chip">Servicios profesionales</span><span class="chip">Campañas pagas</span></div></div>
-    </div>
-    <div class="p-foot">
+  <article class="svc rv" id="web">
+   <div class="svc-media"><picture><source srcset="04_analitica_conversiones.webp" type="image/webp"><img width="1200" height="800" src="04_analitica_conversiones.png" alt="Panel de analítica de conversiones de una landing page con SEO" loading="lazy" decoding="async"></picture></div>
+   <div class="svc-body">
+    <div class="svc-top"><span class="svc-n" style="color:#f472b6">03</span><span class="svc-cat" style="color:#f472b6">Web + SEO</span></div>
+    <h3>Landing page con SEO + WhatsApp de citas</h3>
+    <p>Páginas rápidas y orientadas a conversión, optimizadas para Google y conectadas a WhatsApp con respuesta y agenda automática.</p>
+    
+    <ul class="svc-ben"><li>Diseño mobile first de conversión</li><li>SEO técnico y on-page</li><li>WhatsApp con agenda automática</li><li>GTM, píxeles y eventos</li></ul>
+    <div class="chips"><a class="chip" href="/servicios/landing-page-seo/">Landing pages</a><a class="chip" href="/servicios/inbound-marketing/">Inbound marketing</a><a class="chip" href="/servicios/chatbots-whatsapp/">Citas por WhatsApp</a></div>
+    <div class="svc-foot">
      <div class="price-tag"><small>Desde</small><b><span>USD</span>150</b></div>
-     <div style="display:flex;flex-wrap:wrap;gap:10px"><a href="/servicios/landing-page-seo/" class="btn btn-ghost">Ver detalle</a><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20cotizaci%C3%B3n%20de%20Landing%20page%20con%20SEO%20y%20WhatsApp%20autom%C3%A1tico%20de%20citas" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_web"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Solicitar cotización</a></div>
+     <div class="svc-cta"><a href="/servicios/landing-page-seo/" class="btn btn-ghost">Ver detalle</a><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20cotizaci%C3%B3n%20de%20Landing%20page%20con%20SEO%20y%20WhatsApp%20autom%C3%A1tico%20de%20citas" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_web"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Cotizar</a></div>
     </div>
    </div>
   </article>
-
-  <!-- CRM -->
-  <article class="panel rv" id="crm">
-   <div class="p-media"><picture><source srcset="02_pipeline_crm.webp" type="image/webp"><img width="1200" height="800" src="02_pipeline_crm.png" alt="Pipeline comercial en CRM con captación conectada desde Google, Meta y LinkedIn" loading="lazy" decoding="async"></picture><span class="p-badge">CRM + AUTOMATIZACIÓN</span></div>
-   <div class="p-body">
+  <article class="svc rv" id="crm">
+   <div class="svc-media"><picture><source srcset="02_pipeline_crm.webp" type="image/webp"><img width="1200" height="800" src="02_pipeline_crm.png" alt="Pipeline comercial en CRM con captación conectada desde Google, Meta y LinkedIn" loading="lazy" decoding="async"></picture></div>
+   <div class="svc-body">
+    <div class="svc-top"><span class="svc-n" style="color:#22d3a8">04</span><span class="svc-cat" style="color:#22d3a8">CRM y procesos</span></div>
     <h3>CRM con marketing automatizado</h3>
-    <p>Ordenamos tu proceso comercial en un CRM: cada lead con su origen, etapa y próximo paso. Sumamos automatizaciones de email, WhatsApp y tareas para que el seguimiento no dependa de la memoria de nadie.</p>
-    <div class="p-cols">
-     <div><h4>Qué incluye</h4><ul class="chk">
-      <li>Diseño del pipeline de ventas</li>
-      <li>Implementación y configuración</li>
-      <li>Integración con anuncios, web y WhatsApp</li>
-      <li>Secuencias automáticas de seguimiento</li>
-      <li>Tableros de métricas comerciales</li>
-      <li>Capacitación del equipo</li>
-     </ul></div>
-     <div><h4>Especialidades</h4><div class="chips">
-      <a class="chip" href="/servicios/crm-a-medida/">CRM a medida</a>
-      <a class="chip" href="/servicios/gohighlevel/">GoHighLevel</a>
-      <a class="chip" href="/servicios/zoho-crm/">Zoho CRM</a>
-      <a class="chip" href="/servicios/automatizacion-marketing/">Automatización de marketing</a>
-      <a class="chip" href="/servicios/outbound-marketing/">Outbound</a>
-     </div>
-     <h4 style="margin-top:22px">Ideal para</h4><div class="chips"><span class="chip">Equipos de venta</span><span class="chip">B2B</span><span class="chip">Ciclos largos</span></div></div>
-    </div>
-    <div class="p-foot">
+    <p>Cada lead con su origen, etapa y próximo paso. Automatizamos el seguimiento para que ninguna oportunidad dependa de la memoria de nadie.</p>
+    
+    <ul class="svc-ben"><li>Pipeline de ventas a medida</li><li>Integrado con ads, web y WhatsApp</li><li>Seguimiento automático</li><li>Tableros comerciales</li></ul>
+    <div class="chips"><a class="chip" href="/servicios/crm-a-medida/">CRM a medida</a><a class="chip" href="/servicios/gohighlevel/">GoHighLevel</a><a class="chip" href="/servicios/zoho-crm/">Zoho CRM</a><a class="chip" href="/servicios/automatizacion-marketing/">Automatización</a><a class="chip" href="/servicios/outbound-marketing/">Outbound</a></div>
+    <div class="svc-foot">
      <div class="price-tag"><small>Desde</small><b><span>USD</span>200</b></div>
-     <div style="display:flex;flex-wrap:wrap;gap:10px"><a href="/servicios/crm-a-medida/" class="btn btn-ghost">Ver detalle</a><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20cotizaci%C3%B3n%20de%20CRM%20con%20marketing%20automatizado" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_crm"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Solicitar cotización</a></div>
+     <div class="svc-cta"><a href="/servicios/crm-a-medida/" class="btn btn-ghost">Ver detalle</a><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20cotizaci%C3%B3n%20de%20CRM%20con%20marketing%20automatizado" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_crm"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Cotizar</a></div>
     </div>
    </div>
   </article>
