@@ -408,8 +408,8 @@ footer{border-top:1px solid var(--border);padding:56px 0 120px}
 .sp-hero h1{font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.08;font-weight:900;letter-spacing:-.04em;padding-bottom:.06em}
 .sp-hero .hero-p{margin:20px 0 30px}
 .sp-img{border-radius:var(--r-xl);overflow:hidden;border:1px solid var(--border);box-shadow:0 40px 100px -30px rgba(168,85,247,.45);background:var(--bg-2)}
-.sp-img img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1}
-.sp-img.wide img{aspect-ratio:16/10}
+.sp-img img{display:block;width:100%;height:auto;object-fit:contain;aspect-ratio:auto}
+.sp-img.wide img{aspect-ratio:auto}
 .price-chip{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:10px 16px;border-radius:999px;border:1px solid var(--border);background:rgba(255,255,255,.04);font-size:.86rem;color:var(--text-2)}
 .price-chip b{font-family:var(--mono);color:var(--cyan)}
 .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -478,7 +478,7 @@ footer{border-top:1px solid var(--border);padding:56px 0 120px}
  .sp-hero{padding-top:120px}
  .cards4,.sysl,.hubg{grid-template-columns:repeat(2,1fr)}
  .pbox{position:static}
- .sp-img img{aspect-ratio:16/10}
+ .sp-img img{aspect-ratio:auto}
 }
 @media (max-width:720px){
  .sp-hero{padding:104px 0 50px}
