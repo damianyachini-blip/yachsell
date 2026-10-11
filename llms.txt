@@ -28,7 +28,7 @@
 - [Ecommerce](https://www.yachsell.com/sectores/ecommerce/): Marketing para ecommerce: Google Shopping, Performance Max, catálogo en Meta, recuperación de carritos y automatización de recompra.
 - [Empresas B2B](https://www.yachsell.com/sectores/empresas-b2b/): Soluciones B2B para empresas: LinkedIn Ads, Google Ads, prospección con IA, call center, CRM y nurturing para generar reuniones.
 - [Call centers](https://www.yachsell.com/sectores/call-centers/): Soluciones para call centers y contact centers: generación de leads, precalificación con agentes de IA 24/7, CRM y reactivación de contactos.
-- [Clínicas y salud](https://www.yachsell.com/sectores/clinicas/): Marketing para clínicas y consultorios: campañas por especialidad, turnos por WhatsApp con IA y recordatorios que reducen ausencias.
-- [Servicios profesionales](https://www.yachsell.com/sectores/servicios-profesionales/): Marketing para estudios jurídicos, contables y consultoras: landing con SEO, Google Ads, IA que filtra consultas y agenda.
+- [Clínicas y salud](https://www.yachsell.com/sectores/clinicas/): Marketing para clínicas y consultorios: campañas por especialidad, citas por WhatsApp con IA y recordatorios que reducen ausencias.
+- [Servicios profesionales](https://www.yachsell.com/sectores/servicios-profesionales/): Marketing para despachos de abogados, asesorías y consultoras: landing con SEO, Google Ads, IA que filtra consultas y agenda.
 - [Ventas high ticket](https://www.yachsell.com/sectores/high-ticket/): Marketing para ventas high ticket: campañas de calificación, IA que filtra y agenda llamadas, nurturing y pipeline comercial.
 - [Agencias](https://www.yachsell.com/sectores/agencias/): Servicios para agencias de marketing: gestión de Paid Media, agentes de IA, CRM y automatizaciones como equipo complementario o en marca blanca.
