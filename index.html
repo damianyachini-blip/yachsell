@@ -81,7 +81,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "GPT Ads",
   "Publicidad en ChatGPT",
   "Marketing para clínicas dentales",
-  "Marketing para clínicas estéticas"
+  "Marketing para clínicas estéticas",
+  "Business Intelligence",
+  "Looker Studio",
+  "Power BI"
  ],
  "contactPoint": {
   "@type": "ContactPoint",
@@ -176,6 +179,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      "unitCode": "MON"
     },
     "url": "https://www.yachsell.com/sectores/clinicas-esteticas/"
+   },
+   {
+    "@type": "Offer",
+    "itemOffered": {
+     "@type": "Service",
+     "name": "Business Intelligence e integraciones BI"
+    },
+    "url": "https://www.yachsell.com/servicios/business-intelligence/"
    }
   ]
  }
@@ -275,6 +286,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    "acceptedAnswer": {
     "@type": "Answer",
     "text": "Toca cualquier botón de WhatsApp de esta página. Te pedimos algunos datos de tu negocio y empezamos con la auditoría gratuita de oportunidades."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "¿Ofrecen Business Intelligence y dashboards?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sí. Conectamos tus anuncios, Google Analytics 4, tu ecommerce y tu CRM en dashboards automáticos en Looker Studio o Power BI, con ROAS real, costo por venta y forecast. Es un proyecto a medida de pago único."
    }
   }
  ]
@@ -472,7 +491,7 @@ section{position:relative;padding:110px 0}
 .ph-note{text-align:center;font-size:.74rem;color:var(--text-3);margin-top:14px}
 
 /* ── Servicios ── */
-.svc-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:1120px;margin:0 auto 30px}
+.svc-nav{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;max-width:1120px;margin:0 auto 30px}
 .svc-nav a{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:18px;background:var(--card);border:1px solid var(--border);transition:border-color .25s,transform .25s var(--ease),background .25s}
 .svc-nav a:hover{border-color:rgba(255,255,255,.45);transform:translateY(-2px);background:var(--card-2)}
 .sn-i{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;flex-shrink:0}
@@ -724,8 +743,30 @@ footer{border-top:1px solid var(--border);padding:56px 0 120px}
 .mega-s .mf a{color:var(--cyan);font-weight:600;font-size:.84rem}
 .mega{background:rgba(9,9,26,.99)!important;border-color:rgba(255,255,255,.18)!important}
 @media (prefers-reduced-motion:reduce){.hdr-in::before,.hdr-in::after,.hdr-cta .btn-wa::after{animation:none}}
+
+/* ── v4: acabado premium ── */
+.sprog{position:fixed;top:0;left:0;right:0;height:2px;z-index:200;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--cyan),var(--purple),var(--magenta));box-shadow:0 0 12px rgba(0,229,255,.55);pointer-events:none}
+.rv{filter:blur(8px);transition:opacity .9s var(--ease),transform .9s var(--ease),filter .9s var(--ease)}
+.rv.vis{filter:none}
+.amb::before{animation:aurora 24s ease-in-out infinite alternate;will-change:transform}
+@keyframes aurora{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-3%,2%,0) scale(1.07)}100%{transform:translate3d(2%,-2%,0) scale(1.03)}}
+.hero h1 .grad{background-size:220% 100%;animation:gshift 7s ease-in-out infinite alternate}
+@keyframes gshift{from{background-position:0% 50%}to{background-position:100% 50%}}
+.svc,.soc,.sc,.pillar,.plan,.fact,.mode,.cat-col{position:relative;isolation:isolate}
+.svc::before,.soc::before,.sc::before,.pillar::before,.plan::before,.fact::before,.mode::before,.cat-col::before{content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;pointer-events:none;opacity:0;transition:opacity .35s;background:radial-gradient(460px circle at var(--mx,50%) var(--my,0%),rgba(0,229,255,.11),rgba(168,85,247,.07) 35%,transparent 62%)}
+.svc:hover::before,.soc:hover::before,.sc:hover::before,.pillar:hover::before,.plan:hover::before,.fact:hover::before,.mode:hover::before,.cat-col:hover::before{opacity:1}
+.svc:hover,.plan:hover,.soc:hover{border-color:rgba(255,255,255,.2)}
+.stack{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:26px;padding-top:22px;border-top:1px solid var(--border)}
+.stack small{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);margin-right:6px}
+.stack span{font-size:.78rem;font-weight:600;color:var(--text-2);padding:6px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);transition:border-color .25s,color .25s}
+.stack span:hover{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-wa{position:relative;overflow:hidden}
+.btn-wa::before{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .7s var(--ease);pointer-events:none}
+.btn-wa:hover::before{left:130%}
+@media (max-width:1080px){.svc-nav{grid-template-columns:repeat(2,1fr)}}
+@media (prefers-reduced-motion:reduce){.rv{filter:none!important}.sprog{display:none}.hero h1 .grad,.amb::before{animation:none}}
 </style>
-<noscript><style>.rv{opacity:1!important;transform:none!important}.msg{display:block!important}</style></noscript>
+<noscript><style>.rv{opacity:1!important;transform:none!important;filter:none!important}.msg{display:block!important}</style></noscript>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -756,8 +797,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <a href="#faq">FAQ</a>
   </nav>
   <div class="hdr-cta">
-   <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20mi%20auditor%C3%ADa%20gratis%20de%20oportunidades" target="_blank" rel="noopener" class="btn btn-wa" data-wa="header"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Auditoría gratis</a>
-   <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20mi%20auditor%C3%ADa%20gratis%20de%20oportunidades" target="_blank" rel="noopener" class="wa-ic-btn" data-wa="header_movil" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg></a>
+   <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20que%20analicemos%20mi%20caso" target="_blank" rel="noopener" class="btn btn-wa" data-wa="header"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Analicemos tu caso</a>
+   <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20que%20analicemos%20mi%20caso" target="_blank" rel="noopener" class="wa-ic-btn" data-wa="header_movil" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg></a>
    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="sheet"><span></span><span></span><span></span></button>
   </div>
  </div>
@@ -769,7 +810,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <a class="sl" href="#ia" data-tab="ia">Agentes de IA <small>Setup USD 100+</small></a>
  <a class="sl" href="#web" data-tab="web">Landing + SEO + WhatsApp <small>Desarrollo USD 150 + setup USD 100</small></a>
  <a class="sl" href="#crm" data-tab="crm">CRM + automatización <small>Setup USD 100+</small></a>
- <a class="sl" href="/servicios/">Todos los servicios <small>20</small></a>
+ <a class="sl" href="/servicios/">Todos los servicios <small>23</small></a>
  <a class="sl" href="/sectores/">Soluciones por sector <small>10</small></a>
  <hr>
  <div class="sheet-grp">Agencia</div>
@@ -779,7 +820,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <a class="sl" href="#sectores">Sectores</a>
  <a class="sl" href="#metodo">Método</a>
  <a class="sl" href="#faq">Preguntas frecuentes</a>
- <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20mi%20auditor%C3%ADa%20gratis%20de%20oportunidades" target="_blank" rel="noopener" class="btn btn-wa btn-lg" data-wa="menu_movil"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Auditoría gratis por WhatsApp</a>
+ <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20que%20analicemos%20mi%20caso" target="_blank" rel="noopener" class="btn btn-wa btn-lg" data-wa="menu_movil"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Analicemos tu caso</a>
 </div>
 
 <main id="inicio">
@@ -790,7 +831,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div>
    <div class="pill rv"><b>PERFORMANCE</b> Marketing de Performance · Operaciones automatizadas</div>
    <h1 class="rv d1">De la publicidad a la venta. <span class="grad">Todo conectado.</span></h1>
-   <p class="hero-p rv d2">Marketing de Performance y operaciones automatizadas: Paid Media, agentes de inteligencia artificial y CRM trabajando como un solo sistema. <strong style="color:#fff">Crece tus resultados sin aumentar el backlog de tu equipo.</strong></p>
+   <p class="hero-p rv d2">Paid Media, agentes de IA, CRM y Business Intelligence operando como un solo sistema, medido de punta a punta. <strong style="color:#fff">Crece tus resultados sin aumentar el backlog de tu equipo.</strong></p>
    <div class="hero-btns rv d3">
     <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20una%20auditor%C3%ADa%20gratis%20de%20oportunidades%20para%20mi%20negocio" target="_blank" rel="noopener" class="btn btn-wa btn-lg" data-wa="hero"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Auditoría gratis por WhatsApp</a>
     <a href="#servicios" class="btn btn-ghost btn-lg">Explorar servicios <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
@@ -800,6 +841,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Planes a medida: tú eliges</span>
     <span><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>España y Unión Europea · Mercosur y LATAM · Internacional</span>
    </div>
+   <div class="stack rv d3"><small>Trabajamos con</small><span>Google Ads</span><span>Meta Ads</span><span>ChatGPT Ads</span><span>TikTok Ads</span><span>LinkedIn Ads</span><span>GA4</span><span>GoHighLevel</span><span>Zoho CRM</span><span>Looker Studio</span></div>
   </div>
   <div class="hero-vis rv d2">
    <div class="hero-img"><picture><source srcset="principal.webp" type="image/webp"><img width="1672" height="941" src="principal.png" alt="YachSell: captación de clientes con Google Ads, Meta, LinkedIn y TikTok Ads" fetchpriority="high"></picture></div>
@@ -821,9 +863,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <p><strong>YachSell es una agencia de Marketing de Performance</strong> con operaciones automatizadas que une publicidad digital, inteligencia artificial y procesos comerciales en un solo sistema de crecimiento.</p>
    <p>No administramos campañas sueltas: diseñamos el recorrido completo del cliente, desde el anuncio que capta su atención hasta el seguimiento que cierra la venta. Operamos desde Argentina para empresas de LATAM, Brasil y mercados internacionales.</p>
    <div class="facts">
-    <div class="fact"><div class="fv grad">4</div><div class="fl">líneas de servicio integradas en un mismo sistema</div></div>
+    <div class="fact"><div class="fv grad" data-to="5">5</div><div class="fl">líneas de servicio integradas: Paid Media, IA, web, CRM y BI</div></div>
     <div class="fact"><div class="fv grad">24/7</div><div class="fl">atención y calificación de leads con agentes de IA</div></div>
-    <div class="fact"><div class="fv grad">2</div><div class="fl">modalidades: implementación, gestión, consultoría y capacitación</div></div>
+    <div class="fact"><div class="fv grad">Semanal</div><div class="fl">reporte de resultados en toda la gestión publicitaria</div></div>
     <div class="fact"><div class="fv grad">$0</div><div class="fl">costo de la auditoría inicial de oportunidades</div></div>
    </div>
   </div>
@@ -918,12 +960,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <div class="ct">
   <div class="sh c rv">
    <div class="eyebrow">Servicios</div>
-   <h2 class="h2">Cuatro líneas de servicio. <span class="grad">Un solo objetivo: vender más.</span></h2>
-   <p class="lead">Contrata una línea o combínalas. Cada servicio se diseña según tu negocio, tu mercado y tu ticket de venta.</p>
+   <h2 class="h2">Cinco líneas de servicio. <span class="grad">Un solo objetivo: vender más.</span></h2>
+   <p class="lead">Contrata una línea o combínalas. Cada servicio se diseña según tu negocio, tu mercado y tu ticket de venta, y se mide con los mismos datos.</p>
   </div>
 
 
-  <nav class="svc-nav rv" aria-label="Líneas de servicio"><a href="#ads" data-tab="ads"><span class="sn-i" style="background:rgba(0,229,255,.12)"><svg viewBox="0 0 24 24" stroke="#00e5ff"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg></span><span><b>Publicidad online</b><small>Desde USD 150/mes</small></span></a><a href="#ia" data-tab="ia"><span class="sn-i" style="background:rgba(168,85,247,.14)"><svg viewBox="0 0 24 24" stroke="#a855f7"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></span><span><b>Agentes de IA</b><small>Setup desde USD 100</small></span></a><a href="#web" data-tab="web"><span class="sn-i" style="background:rgba(244,114,182,.14)"><svg viewBox="0 0 24 24" stroke="#f472b6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h8"/></svg></span><span><b>Landing + SEO</b><small>Desarrollo desde USD 150</small></span></a><a href="#crm" data-tab="crm"><span class="sn-i" style="background:rgba(34,211,168,.14)"><svg viewBox="0 0 24 24" stroke="#22d3a8"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/></svg></span><span><b>CRM + automatización</b><small>Setup desde USD 100</small></span></a></nav>
+  <nav class="svc-nav rv" aria-label="Líneas de servicio"><a href="#ads" data-tab="ads"><span class="sn-i" style="background:rgba(0,229,255,.12)"><svg viewBox="0 0 24 24" stroke="#00e5ff"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg></span><span><b>Publicidad online</b><small>Desde USD 150/mes</small></span></a><a href="#ia" data-tab="ia"><span class="sn-i" style="background:rgba(168,85,247,.14)"><svg viewBox="0 0 24 24" stroke="#a855f7"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9 16h6"/></svg></span><span><b>Agentes de IA</b><small>Setup desde USD 100</small></span></a><a href="#web" data-tab="web"><span class="sn-i" style="background:rgba(244,114,182,.14)"><svg viewBox="0 0 24 24" stroke="#f472b6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h8"/></svg></span><span><b>Landing + SEO</b><small>Desarrollo desde USD 150</small></span></a><a href="#crm" data-tab="crm"><span class="sn-i" style="background:rgba(34,211,168,.14)"><svg viewBox="0 0 24 24" stroke="#22d3a8"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/></svg></span><span><b>CRM + automatización</b><small>Setup desde USD 100</small></span></a><a href="#bi" data-tab="bi"><span class="sn-i" style="background:rgba(251,146,60,.14)"><svg viewBox="0 0 24 24" stroke="#fb923c"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span><span><b>Business Intelligence</b><small>Proyecto a medida</small></span></a></nav>
   <div class="svc-list">
   <article class="svc rv" id="ads">
    <div class="svc-media"><picture><source srcset="01_dashboard_publicidad.webp" type="image/webp"><img width="1200" height="800" src="01_dashboard_publicidad.png" alt="Panel de performance con leads, oportunidades y conversiones por canal" loading="lazy" decoding="async"></picture></div>
@@ -985,6 +1027,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
    </div>
   </article>
+  <article class="svc rv" id="bi">
+   <div class="svc-media"><picture><source srcset="google-ads-dashboard.webp" type="image/webp"><img width="1254" height="1254" src="google-ads-dashboard.png" alt="Dashboard de Business Intelligence con métricas de inversión, conversiones y retorno" loading="lazy" decoding="async"></picture></div>
+   <div class="svc-body">
+    <div class="svc-top"><span class="svc-n" style="color:#fb923c">05</span><span class="svc-cat" style="color:#fb923c">Business Intelligence</span></div>
+    <h3>Business Intelligence e integraciones de datos</h3>
+    <p>Unimos anuncios, analítica, ecommerce y CRM en dashboards automáticos. Ves en un solo lugar cuánto inviertes, cuánto vendes y qué canal es rentable.</p>
+    <ul class="svc-ben"><li>ROAS real cruzando inversión y ventas</li><li>Dashboards en Looker Studio o Power BI</li><li>Pipeline, forecast y costo por venta</li><li>Actualización automática de los datos</li></ul>
+    <div class="chips"><a class="chip" href="/servicios/business-intelligence/">Business Intelligence</a><a class="chip" href="/servicios/bi-ecommerce/">BI para ecommerce</a><a class="chip" href="/servicios/bi-ventas-crm/">BI para ventas y CRM</a></div>
+    <div class="svc-foot">
+     <div class="price-tag"><small>Precio</small><b style="font-size:1.4rem">A medida</b></div>
+     <div class="svc-cta"><a href="/servicios/business-intelligence/" class="btn btn-ghost">Ver detalle</a><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20un%20proyecto%20de%20Business%20Intelligence" target="_blank" rel="noopener" class="btn btn-wa" data-wa="cotizar_bi"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Cotizar</a></div>
+    </div>
+   </div>
+  </article>
   </div>
  </div>
 </section>
@@ -1019,11 +1075,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="/servicios/chatbots-whatsapp/"><div><b>Chatbots WhatsApp</b><span>Respuestas, menús y agendamiento</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
     <a href="/servicios/lead-nurturing/"><div><b>Lead nurturing</b><span>Seguimiento automático hasta la venta</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
    </div>
-   <div class="cat-col rv d3"><h3><i style="background:var(--green)"></i>CRM y procesos</h3>
+   <div class="cat-col rv d3"><h3><i style="background:var(--green)"></i>CRM, procesos y BI</h3>
     <a href="/servicios/crm-a-medida/"><div><b>CRM a medida</b><span>Pipeline adaptado a tu proceso</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
     <a href="/servicios/gohighlevel/"><div><b>GoHighLevel</b><span>Embudos, CRM y automatización</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
     <a href="/servicios/zoho-crm/"><div><b>Zoho CRM</b><span>Implementación e integraciones</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
     <a href="/servicios/automatizacion-marketing/"><div><b>Automatización</b><span>Email, WhatsApp y tareas sin intervención</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/business-intelligence/"><div><b>Business Intelligence</b><span>Marketing y ventas en un solo tablero</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/bi-ecommerce/"><div><b>BI para ecommerce</b><span>Margen, ROAS real y LTV por canal</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    <a href="/servicios/bi-ventas-crm/"><div><b>BI para ventas y CRM</b><span>Pipeline, forecast y costo por venta</span></div><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
    </div>
   </div>
  </div>
@@ -1160,6 +1219,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <div class="fq rv"><button aria-expanded="false" aria-controls="fa8">¿Qué es el marketing de performance?<i aria-hidden="true"></i></button><div class="fa" id="fa8"><div><p>Es marketing orientado a resultados medibles: cada campaña se evalúa por leads, ventas y costo por adquisición, y el presupuesto se mueve hacia lo que genera retorno.</p></div></div></div>
    <div class="fq rv"><button aria-expanded="false" aria-controls="fa9">¿Hay permanencia mínima?<i aria-hidden="true"></i></button><div class="fa" id="fa9"><div><p>No trabajamos con permanencia forzada. La relación continúa porque los resultados la justifican.</p></div></div></div>
    <div class="fq rv"><button aria-expanded="false" aria-controls="fa10">¿Cómo empezamos?<i aria-hidden="true"></i></button><div class="fa" id="fa10"><div><p>Toca cualquier botón de WhatsApp de esta página. Te pedimos algunos datos de tu negocio y empezamos con la auditoría gratuita de oportunidades.</p></div></div></div>
+   <div class="fq rv"><button aria-expanded="false" aria-controls="fa11">¿Ofrecen Business Intelligence y dashboards?<i aria-hidden="true"></i></button><div class="fa" id="fa11"><div><p>Sí. Conectamos tus anuncios, Google Analytics 4, tu ecommerce y tu CRM en dashboards automáticos en Looker Studio o Power BI, con ROAS real, costo por venta y forecast. Es un proyecto a medida de pago único.</p></div></div></div>
   </div>
  </div>
 </section>
@@ -1191,7 +1251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  <div class="ct">
   <div class="ft">
    <div><a href="#inicio" class="logo"><em>Yach</em>Sell</a><p>Marketing de Performance y operaciones automatizadas: Paid Media, agentes de IA, landing pages con SEO y CRM. Crece resultados sin aumentar el backlog de tu equipo.</p></div>
-   <div><h4>Servicios</h4><ul><li><a href="/servicios/marketing-de-performance/">Marketing de performance</a></li><li><a href="/servicios/google-ads/">Google Ads</a></li><li><a href="/servicios/meta-ads/">Meta Ads</a></li><li><a href="/servicios/gpt-ads/">GPT Ads</a></li><li><a href="/servicios/agentes-ia/">Agentes de IA</a></li><li><a href="/servicios/landing-page-seo/">Landing + SEO</a></li><li><a href="/servicios/crm-a-medida/">CRM a medida</a></li><li><a href="/servicios/">Todos los servicios</a></li></ul></div>
+   <div><h4>Servicios</h4><ul><li><a href="/servicios/marketing-de-performance/">Marketing de performance</a></li><li><a href="/servicios/google-ads/">Google Ads</a></li><li><a href="/servicios/meta-ads/">Meta Ads</a></li><li><a href="/servicios/gpt-ads/">GPT Ads</a></li><li><a href="/servicios/agentes-ia/">Agentes de IA</a></li><li><a href="/servicios/landing-page-seo/">Landing + SEO</a></li><li><a href="/servicios/crm-a-medida/">CRM a medida</a></li><li><a href="/servicios/business-intelligence/">Business Intelligence</a></li><li><a href="/servicios/">Todos los servicios</a></li></ul></div>
    <div><h4>Sectores</h4><ul><li><a href="/sectores/inmobiliarias/">Inmobiliarias</a></li><li><a href="/sectores/ecommerce/">Ecommerce</a></li><li><a href="/sectores/empresas-b2b/">Soluciones B2B</a></li><li><a href="/sectores/call-centers/">Call centers</a></li><li><a href="/sectores/clinicas-dentales/">Clínicas dentales</a></li><li><a href="/sectores/clinicas-esteticas/">Clínicas estéticas</a></li><li><a href="/sectores/high-ticket/">High ticket</a></li><li><a href="/sectores/">Todos los sectores</a></li></ul></div>
    <div><h4>Contacto</h4><ul><li><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20mi%20auditor%C3%ADa%20gratis%20de%20oportunidades" target="_blank" rel="noopener" data-wa="footer">WhatsApp</a></li><li><a href="https://www.yachsell.com">www.yachsell.com</a></li></ul></div>
   </div>
@@ -1199,7 +1259,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  </div>
 </footer>
 
-<a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20una%20auditor%C3%ADa%20gratis%20de%20mis%20pautas" target="_blank" rel="noopener" class="waf" data-wa="flotante" aria-label="Auditoría gratis por WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Auditoría gratis</a>
+<a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20una%20auditor%C3%ADa%20gratis%20de%20mis%20pautas" target="_blank" rel="noopener" class="waf" data-wa="flotante" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> WhatsApp</a>
 <div class="mbar" id="mbar"><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20mi%20auditor%C3%ADa%20gratis%20de%20oportunidades" target="_blank" rel="noopener" class="btn btn-wa btn-lg" data-wa="barra_movil"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Auditoría gratis por WhatsApp</a></div>
 
 <script>
@@ -1238,7 +1298,7 @@ function setStep(i){cur=i;sts.forEach(function(s,j){s.classList.toggle('on',j===
 sts.forEach(function(s,i){s.addEventListener('click',function(){clearInterval(auto);setStep(i)})});
 
 // Marquee
-var mi=['Marketing de performance','Soluciones B2B','Call centers','Google Ads','Meta Ads','GPT Ads','Clínicas dentales','Clínicas estéticas','Agentes de IA','TikTok Ads','CRM','LinkedIn Ads','Automatización','WhatsApp','SEO','GoHighLevel','Zoho CRM','Lead nurturing','Auditoría gratis','Planes a medida'];
+var mi=['Marketing de performance','Soluciones B2B','Call centers','Google Ads','Meta Ads','GPT Ads','Clínicas dentales','Clínicas estéticas','Agentes de IA','TikTok Ads','CRM','LinkedIn Ads','Automatización','WhatsApp','SEO','GoHighLevel','Zoho CRM','Business Intelligence','Lead nurturing','Auditoría gratis','Planes a medida'];
 var mq=mi.map(function(t){return '<span class="mq-i">'+t+'</span>'}).join('');d.getElementById('mqT').innerHTML=mq+mq;
 
 // FAQ
@@ -1264,6 +1324,15 @@ d.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
 d.addEventListener('click',function(e){var a=e.target.closest('a[data-wa]');if(!a)return;w.dataLayer.push({event:'whatsapp_click',wa_origen:a.dataset.wa,wa_url:a.href})});
 
 d.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+<script>
+(function(){var d=document,w=window,rm=w.matchMedia('(prefers-reduced-motion:reduce)').matches;
+var b=d.createElement('div');b.className='sprog';b.setAttribute('aria-hidden','true');d.body.appendChild(b);
+function sp(){var h=d.documentElement,m=h.scrollHeight-h.clientHeight;b.style.setProperty('--p',m>0?(h.scrollTop/m).toFixed(4):0)}
+w.addEventListener('scroll',sp,{passive:true});sp();
+if(!rm&&w.matchMedia('(hover:hover)').matches){d.querySelectorAll('.svc,.soc,.sc,.pillar,.plan,.fact,.mode,.cat-col').forEach(function(el){el.addEventListener('pointermove',function(e){var r=el.getBoundingClientRect();el.style.setProperty('--mx',(e.clientX-r.left)+'px');el.style.setProperty('--my',(e.clientY-r.top)+'px')})})}
+if('IntersectionObserver' in w){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target,n=parseFloat(el.dataset.to);io.unobserve(el);if(rm||isNaN(n))return;var t0=null;function st(ts){if(!t0)t0=ts;var k=Math.min((ts-t0)/1100,1);el.textContent=Math.round(n*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(st)}el.textContent='0';requestAnimationFrame(st)})},{threshold:.6});d.querySelectorAll('[data-to]').forEach(function(el){io.observe(el)})}
 })();
 </script>
 </body>

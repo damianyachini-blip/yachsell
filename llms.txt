@@ -1,6 +1,6 @@
 # YachSell
 
-> Agencia de Marketing de Performance y operaciones automatizadas: Paid Media (Google Ads, Meta Ads, GPT Ads, TikTok y LinkedIn), agentes de IA, CRM y automatización comercial para empresas B2B, ecommerce, call centers, clínicas dentales y estéticas, y ventas high ticket. Opera desde Argentina para España, LATAM, Brasil y mercados internacionales. Contacto por WhatsApp: +54 9 11 2482-9594. Auditoría de oportunidades gratis.
+> Agencia de Marketing de Performance y operaciones automatizadas: Paid Media (Google Ads, Meta Ads, GPT Ads, TikTok y LinkedIn), agentes de IA, CRM, Business Intelligence y automatización comercial para empresas B2B, ecommerce, call centers, clínicas dentales y estéticas, y ventas high ticket. Opera desde Argentina para España, LATAM, Brasil y mercados internacionales. Contacto por WhatsApp: +54 9 11 2482-9594. Auditoría de oportunidades gratis.
 
 ## Precios (USD)
 - Gestión publicitaria: USD 150/mes por cuenta (Google Ads o Meta Ads); captación omnicanal USD 200/mes.
@@ -9,6 +9,7 @@
 - Clínicas dentales y estéticas: sistema completo (pauta omnicanal, contenido para redes, agente de IA y CRM) desde USD 300/mes.
 - GoHighLevel: setup esencial desde USD 100; funnels avanzados a cotizar según el embudo.
 - CRM, IA y automatizaciones: implementación de pago único desde USD 100.
+- Business Intelligence (dashboards e integraciones BI para ecommerce y sistemas de ventas): proyecto a medida.
 - Toda la gestión publicitaria incluye integración total de conversiones, Google Analytics 4 y reportes semanales. Setup único desde USD 100; la inversión publicitaria se abona aparte.
 
 ## Servicios
@@ -32,6 +33,10 @@
 - [GoHighLevel](https://www.yachsell.com/servicios/gohighlevel/): Implementación de GoHighLevel desde cero: CRM, calendarios, WhatsApp y automatizaciones. Setup esencial desde USD 100; funnels avanzados a cotizar.
 - [Zoho CRM](https://www.yachsell.com/servicios/zoho-crm/): Implementación y configuración de Zoho CRM: módulos, pipelines, automatizaciones, integración con WhatsApp, formularios y campañas. Setup desde USD 100 (pago único).
 - [Automatización de marketing](https://www.yachsell.com/servicios/automatizacion-marketing/): Automatización de marketing y ventas: flujos de email y WhatsApp, asignación de leads, recordatorios e integraciones. Setup desde USD 100 (pago único).
+
+- [Business Intelligence](https://www.yachsell.com/servicios/business-intelligence/): Business Intelligence para empresas: unimos anuncios, ecommerce, CRM y ventas en dashboards automáticos para decidir con datos. Proyecto a medida.
+- [BI para ecommerce](https://www.yachsell.com/servicios/bi-ecommerce/): Integraciones BI para ecommerce: conectamos tu tienda, Google Ads, Meta Ads y GA4 en dashboards de ventas, margen, ROAS real, CAC y LTV.
+- [BI para ventas y CRM](https://www.yachsell.com/servicios/bi-ventas-crm/): BI para sistemas de ventas: conectamos CRM, call center y anuncios en dashboards de pipeline, conversión por etapa, forecast y costo por venta.
 
 ## Soluciones por sector
 - [Clínicas dentales](https://www.yachsell.com/sectores/clinicas-dentales/): Sistema completo para clínicas dentales: pautas omnicanal, contenido para redes, agentes de IA y CRM que agendan primeras visitas. Desde USD 300/mes.
