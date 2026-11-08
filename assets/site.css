@@ -739,3 +739,33 @@ picture{display:contents}
 .flw-met div{padding:10px}
 }
 @media (prefers-reduced-motion:reduce){.flw-pn.on .fa-in,.flw-pn.on .flw-score s{animation:none}}
+
+/* ── v7: Sobre nosotros ── */
+.fdr-card{justify-self:center;width:100%;max-width:380px;padding:18px;border-radius:var(--r-xl);border:1px solid var(--border);background:radial-gradient(120% 90% at 85% 0%,rgba(168,85,247,.22),transparent 60%),radial-gradient(90% 70% at 0% 100%,rgba(0,229,255,.14),transparent 60%),var(--bg-1);box-shadow:0 40px 100px -30px rgba(168,85,247,.45)}
+.fdr-card img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:22px}
+.fdr-card>div{padding:16px 6px 4px}
+.fdr-card b{display:block;font-size:1.2rem}
+.fdr-card span{display:block;font-size:.88rem;color:var(--text-3);margin-top:2px}
+.fdr-card a{display:inline-block;margin-top:12px;font-size:.86rem;font-weight:600;color:var(--cyan)}
+.fdr-name{padding:22px 26px;border-radius:var(--r-lg);border:1px solid var(--border-h);background:linear-gradient(90deg,rgba(0,229,255,.07),rgba(168,85,247,.06))}
+.fdr-name small{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan)}
+.fdr-name p{margin-top:6px;color:var(--text-2);font-size:1.02rem}
+.fdr-name b{color:#fff}
+.fdr-name em{font-style:normal;font-weight:700;color:#fff}
+.fdr{padding:30px;border-radius:var(--r-xl);border:1px solid var(--border);background:var(--card)}
+.fdr-bio{max-width:820px}
+.fdr-bio p{color:var(--text-2);margin-top:14px;font-size:1.02rem}
+.fdr-bio .fdr-role{margin-top:0;font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan)}
+.fdr-q{margin:26px 0 22px;padding:4px 0 4px 20px;border-left:3px solid var(--purple);font-size:1.2rem;font-weight:700;line-height:1.45;color:#fff}
+.fdr-kv{display:grid;grid-template-columns:220px 1fr;border-radius:var(--r-lg);border:1px solid var(--border);background:var(--card);overflow:hidden}
+.fdr-kv dt,.fdr-kv dd{padding:14px 20px;border-bottom:1px solid var(--border)}
+.fdr-kv dt{color:var(--text-3);font-size:.9rem}
+.fdr-kv dd{font-weight:600}
+.fdr-kv dt:last-of-type,.fdr-kv dd:last-of-type{border-bottom:0}
+@media (max-width:720px){
+.fdr{padding:20px}
+.fdr-kv{grid-template-columns:1fr}
+.fdr-kv dt{padding-bottom:0;border-bottom:0}
+.fdr-kv dd{padding-top:4px}
+.fdr-q{font-size:1.05rem}
+}
