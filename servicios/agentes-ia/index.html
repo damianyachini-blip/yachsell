@@ -36,41 +36,86 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.yachsell.com/"},{"@type":"ListItem","position":2,"name":"Servicios","item":"https://www.yachsell.com/servicios/"},{"@type":"ListItem","position":3,"name":"Agentes de IA","item":"https://www.yachsell.com/servicios/agentes-ia/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"¿El agente reemplaza a mi equipo?","acceptedAnswer":{"@type":"Answer","text":"No, lo potencia. Resuelve lo repetitivo y deriva a tu equipo las conversaciones con mayor probabilidad de cierre."}},{"@type":"Question","name":"¿Que pasa si el cliente pregunta algo que el agente no sabe?","acceptedAnswer":{"@type":"Answer","text":"El agente reconoce el limite y deriva la conversacion a una persona, sin inventar informacion."}},{"@type":"Question","name":"¿Funciona en WhatsApp?","acceptedAnswer":{"@type":"Answer","text":"Si. Trabajamos con WhatsApp Business API y tambien con Instagram, Messenger y chat web."}},{"@type":"Question","name":"¿Cuanto cuesta un agente de IA?","acceptedAnswer":{"@type":"Answer","text":"Plan Esencial: USD 100/mes con implementacion de USD 100 (sin costo al contratar Paid Media). Plan Enterprise: desde USD 300/mes con implementacion desde USD 200. Ambos incluyen CRM, entrenamiento del agente, automatizaciones y derivaciones a agentes humanos."}}]}</script>
 <style>
-.plans-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
-.plan-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:32px;position:relative}
-.plan-card.featured{border-color:rgba(168,85,247,.5);background:linear-gradient(160deg,rgba(168,85,247,.08),rgba(0,229,255,.04))}
-.plan-card .plan-badge{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:16px}
-.plan-card h3{font-size:1.4rem;margin:0 0 4px}
-.plan-card .plan-price{font-size:2rem;font-weight:800;margin:12px 0 4px}
-.plan-card .plan-price span{font-size:.9rem;font-weight:500;opacity:.7}
-.plan-card .plan-impl{font-size:.82rem;color:var(--text-3);margin-bottom:20px}
-.plan-card .plan-incl{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);margin:0 0 12px}
-.plan-card .plan-excl{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);margin:20px 0 8px}
-.plan-card .excl-list{list-style:none;padding:0;margin:0;font-size:.88rem}
-.plan-card .excl-list li{padding:4px 0;color:var(--text-3)}
-.plan-card .excl-list li::before{content:"—";margin-right:8px;opacity:.5}
-.plan-card .plan-note{font-size:.82rem;color:var(--text-2);margin-top:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.06);font-style:italic}
-.plan-promo{display:inline-block;background:linear-gradient(90deg,#00e5ff,#a855f7);color:#000;font-size:.72rem;font-weight:700;letter-spacing:.06em;padding:5px 14px;border-radius:100px;margin-top:12px}
-.phone-mock{max-width:360px;margin:40px auto;background:#111;border-radius:32px;padding:12px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
-.phone-notch{width:120px;height:6px;background:#222;border-radius:3px;margin:0 auto 12px}
-.phone-header{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#1a3a2a;border-radius:12px 12px 0 0}
-.phone-header .ph-avatar{width:36px;height:36px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;color:#fff}
+/* PLANES — diseño premium con construcción de valor */
+.plans-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:40px;border-radius:20px;overflow:hidden}
+.plan-card{padding:40px 36px;position:relative}
+.plan-card.plan-es{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:20px 0 0 20px}
+.plan-card.plan-ent{background:linear-gradient(160deg,rgba(168,85,247,.1) 0%,rgba(0,229,255,.06) 100%);border:1px solid rgba(168,85,247,.35);border-radius:0 20px 20px 0}
+.plan-card.plan-ent::before{content:"MAS POPULAR";position:absolute;top:0;right:32px;background:linear-gradient(90deg,#a855f7,#00e5ff);color:#000;font-size:.62rem;font-weight:800;letter-spacing:.12em;padding:6px 16px;border-radius:0 0 8px 8px}
+.plan-card .plan-badge{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:20px}
+.plan-card h3{font-size:1.5rem;font-weight:800;margin:0 0 6px}
+.plan-card .plan-price{font-size:2.8rem;font-weight:900;margin:16px 0 2px;line-height:1}
+.plan-card .plan-price span{font-size:.85rem;font-weight:500;opacity:.6}
+.plan-card .plan-impl{font-size:.82rem;color:var(--text-3);margin-bottom:24px}
+.plan-card .plan-sep{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent);margin:24px 0}
+.plan-card .plan-incl{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin:0 0 16px}
+.plan-card .chk{columns:1}
+.plan-card .chk li{font-size:.86rem;padding:5px 0 5px 28px}
+.plan-card .plan-excl{font-size:.68rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin:24px 0 8px}
+.plan-card .excl-list{list-style:none;padding:0;margin:0;font-size:.8rem}
+.plan-card .excl-list li{padding:3px 0;color:rgba(255,255,255,.35)}
+.plan-card .excl-list li::before{content:"✕";margin-right:8px;font-size:.65rem}
+.plan-card .plan-note{font-size:.84rem;color:var(--text-2);margin-top:24px;padding:16px 20px;background:rgba(255,255,255,.03);border-radius:10px;border-left:3px solid rgba(168,85,247,.4);line-height:1.55}
+.plan-promo{display:inline-block;background:linear-gradient(90deg,#00e5ff,#a855f7);color:#000;font-size:.72rem;font-weight:700;letter-spacing:.06em;padding:6px 16px;border-radius:100px;margin-top:16px}
+.plan-cta{display:inline-block;margin-top:24px;padding:14px 32px;border-radius:10px;font-weight:700;font-size:.92rem;text-align:center;width:100%;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.plan-cta:hover{transform:translateY(-2px)}
+.plan-cta.cta-es{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:#fff}
+.plan-cta.cta-ent{background:linear-gradient(135deg,#a855f7,#7c3aed);color:#fff;box-shadow:0 8px 30px rgba(168,85,247,.25)}
+
+/* DEMO — conversacion animada */
+.demo-wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px}
+.demo-left{display:flex;flex-direction:column;gap:24px}
+.demo-tabs{display:flex;gap:8px;margin-bottom:8px}
+.demo-tab{padding:8px 18px;border-radius:100px;font-size:.78rem;font-weight:600;cursor:pointer;border:1px solid rgba(255,255,255,.1);background:transparent;color:var(--text-3);transition:all .25s}
+.demo-tab.active{background:rgba(168,85,247,.15);border-color:rgba(168,85,247,.4);color:#e0e0e0}
+.phone-mock{max-width:340px;margin:0;background:#111;border-radius:28px;padding:10px;box-shadow:0 20px 60px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.06)}
+.phone-notch{width:100px;height:5px;background:#222;border-radius:3px;margin:0 auto 10px}
+.phone-header{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px 10px 0 0}
+.phone-header.wa{background:#1a3a2a}
+.phone-header.ig{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
+.phone-header.fb{background:#1877f2}
+.phone-header .ph-avatar{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.72rem;color:#fff}
 .phone-header .ph-info{flex:1}
-.phone-header .ph-info b{font-size:.85rem;display:block}
-.phone-header .ph-info small{font-size:.7rem;color:rgba(255,255,255,.5)}
-.phone-chat{background:#0b1410;padding:14px;border-radius:0 0 12px 12px;display:flex;flex-direction:column;gap:8px;min-height:320px}
-.chat-msg{max-width:82%;padding:9px 13px;border-radius:10px;font-size:.82rem;line-height:1.45}
+.phone-header .ph-info b{font-size:.82rem;display:block}
+.phone-header .ph-info small{font-size:.68rem;color:rgba(255,255,255,.5)}
+.phone-chat{background:#0b1410;padding:12px;border-radius:0 0 10px 10px;display:flex;flex-direction:column;gap:6px;min-height:280px;max-height:360px;overflow:hidden;position:relative}
+.chat-msg{max-width:82%;padding:8px 12px;border-radius:10px;font-size:.78rem;line-height:1.4;opacity:0;transform:translateY(12px);animation:msgIn .35s ease forwards}
 .chat-msg.user{background:#005c4b;align-self:flex-end;border-bottom-right-radius:2px}
 .chat-msg.bot{background:#1f2c33;align-self:flex-start;border-bottom-left-radius:2px}
-.chat-msg.system{background:rgba(168,85,247,.15);align-self:center;text-align:center;font-size:.72rem;border-radius:8px;color:rgba(255,255,255,.6);max-width:90%}
-.chat-msg .chat-time{display:block;text-align:right;font-size:.62rem;opacity:.45;margin-top:3px}
-.val-table{width:100%;border-collapse:collapse;margin-top:32px;font-size:.88rem}
-.val-table th,.val-table td{padding:12px 16px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06)}
-.val-table thead th{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3);font-weight:600}
+.chat-msg.system{background:rgba(168,85,247,.15);align-self:center;text-align:center;font-size:.68rem;border-radius:8px;color:rgba(255,255,255,.6);max-width:90%}
+.chat-msg .chat-time{display:block;text-align:right;font-size:.58rem;opacity:.4;margin-top:2px}
+@keyframes msgIn{to{opacity:1;transform:translateY(0)}}
+
+/* Demo derecha — flujo CRM */
+.crm-flow{display:flex;flex-direction:column;gap:16px}
+.crm-step{display:flex;align-items:flex-start;gap:16px;padding:16px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;opacity:0;animation:stepIn .4s ease forwards}
+@keyframes stepIn{to{opacity:1}}
+.crm-step .step-num{min-width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;color:#fff}
+.crm-step .step-body h4{font-size:.88rem;margin:0 0 4px;font-weight:700}
+.crm-step .step-body p{font-size:.78rem;color:var(--text-3);margin:0}
+.crm-mock{background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:16px;margin-top:8px}
+.crm-mock .crm-bar{display:flex;gap:8px;margin-bottom:12px}
+.crm-mock .crm-bar span{height:8px;border-radius:4px;flex:1}
+.crm-mock .crm-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:.76rem;color:var(--text-3)}
+.crm-mock .crm-row b{color:#fff;font-weight:600}
+.crm-mock .crm-row .status{font-size:.68rem;padding:3px 10px;border-radius:100px;font-weight:600}
+
+/* TABLA COMPARATIVA */
+.val-table{width:100%;border-collapse:separate;border-spacing:0;margin-top:32px;font-size:.88rem;border-radius:12px;overflow:hidden}
+.val-table th,.val-table td{padding:14px 18px;text-align:left;border-bottom:1px solid rgba(255,255,255,.04)}
+.val-table thead th{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;padding:18px}
+.val-table thead th:first-child{background:transparent}
+.val-table .col-sin{background:rgba(239,68,68,.04);color:rgba(239,68,68,.7)}
+.val-table .col-sin-head{background:rgba(239,68,68,.08);color:#ef4444}
 .val-table .col-ys{background:rgba(168,85,247,.06)}
+.val-table .col-ys-head{background:rgba(168,85,247,.1);color:#a855f7}
 .val-table .col-ent{background:rgba(0,229,255,.04)}
-.val-table .ok{color:#22d3a8}
-.val-table .no{color:rgba(255,255,255,.25)}
+.val-table .col-ent-head{background:rgba(0,229,255,.08);color:#00e5ff}
+.val-table .ok{color:#22d3a8;font-weight:600}
+.val-table .no{color:rgba(239,68,68,.5)}
+.val-table tbody tr:hover{background:rgba(255,255,255,.02)}
+
+/* USE CASES + MGMT */
 .use-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
 .use-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:24px}
 .use-card h4{font-size:.95rem;margin:12px 0 6px}
@@ -83,11 +128,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .mgmt-card h4{font-size:.9rem;margin:0 0 6px}
 .mgmt-card p{font-size:.8rem;color:var(--text-2);margin:0}
 @media(max-width:720px){
- .plans-grid{grid-template-columns:1fr}
+ .plans-grid{grid-template-columns:1fr;gap:16px}
+ .plan-card.plan-es{border-radius:20px}
+ .plan-card.plan-ent{border-radius:20px}
+ .demo-wrap{grid-template-columns:1fr;gap:32px}
+ .phone-mock{max-width:100%}
  .use-grid{grid-template-columns:1fr}
  .mgmt-grid{grid-template-columns:1fr 1fr}
  .val-table{font-size:.78rem}
- .val-table th,.val-table td{padding:8px 10px}
+ .val-table th,.val-table td{padding:10px 12px}
 }
 </style>
 </head>
@@ -137,7 +186,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20un%20agente%20de%20IA%20para%20mi%20negocio" target="_blank" rel="noopener" class="btn btn-wa btn-lg" data-wa="hero_agentes-ia"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Solicitar diagnostico gratuito</a>
     <a href="#planes" class="btn btn-ghost btn-lg">Ver planes <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
    </div>
-   <div class="price-chip rv d3"><b>Desde USD 100/mes</b> · Plan Esencial + Plan Enterprise desde USD 300/mes</div>
+   <div class="price-chip rv d3"><b>Planes desde US$100/mes</b></div>
   </div>
   <div class="sp-img rv d2"><picture><source srcset="/03_agente_ia_24h.webp" type="image/webp"><img width="1200" height="800" src="/03_agente_ia_24h.png" alt="Agentes de IA para empresas — YachSell" fetchpriority="high"></picture></div>
  </div>
@@ -157,16 +206,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="sh rv"><div class="eyebrow">Planes</div><h2 class="h2">Elige el plan que se adapta a <span class="grad">tu operacion</span></h2><p class="lead">Nosotros configuramos todo. Tu equipo solo necesita atender las oportunidades reales.</p></div>
   <div class="plans-grid">
    <!-- Plan Esencial -->
-   <div class="plan-card rv">
+   <div class="plan-card plan-es rv">
     <span class="plan-badge" style="background:rgba(0,229,255,.12);color:#00e5ff">Plan Esencial</span>
     <h3>Plan Esencial</h3>
-    <div class="plan-price">USD 100<span>/mes</span></div>
-    <p class="plan-impl">Implementacion: USD 100 (pago unico)</p>
+    <div class="plan-price">US$100<span>/mes</span></div>
+    <p class="plan-impl">Implementacion: US$100 (pago unico)</p>
+    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20contratar%20el%20Plan%20Esencial%20de%20Agentes%20IA" target="_blank" rel="noopener" class="plan-cta cta-es" data-wa="plan_esencial">Comenzar con el Plan Esencial</a>
+    <div class="plan-sep"></div>
     <p class="plan-incl">Todo lo que incluye</p>
     <ul class="chk">
      <li>Agente de IA entrenado con tu informacion comercial</li>
      <li>Diseno del flujo conversacional y tono de marca</li>
-     <li>Integracion con WhatsApp, Instagram, Messenger y web</li>
+     <li>Integracion con WhatsApp, Instagram, Facebook, TikTok y web</li>
      <li>Preguntas de calificacion personalizadas</li>
      <li>Agendamiento automatico de citas y recordatorios</li>
      <li>Derivacion a agentes humanos con contexto completo</li>
@@ -189,11 +240,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="plan-promo">Implementacion sin costo al contratar Paid Media</div>
    </div>
    <!-- Plan Enterprise -->
-   <div class="plan-card featured rv d1">
+   <div class="plan-card plan-ent rv d1">
     <span class="plan-badge" style="background:rgba(168,85,247,.15);color:#a855f7">Plan Enterprise</span>
     <h3>Plan Enterprise</h3>
-    <div class="plan-price" style="color:#a855f7">Desde USD 300<span>/mes</span></div>
-    <p class="plan-impl">Implementacion: desde USD 200</p>
+    <div class="plan-price" style="background:linear-gradient(90deg,#a855f7,#00e5ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Desde US$300<span style="-webkit-text-fill-color:rgba(255,255,255,.5)">/mes</span></div>
+    <p class="plan-impl">Implementacion: desde US$200</p>
+    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20el%20Plan%20Enterprise%20de%20Agentes%20IA" target="_blank" rel="noopener" class="plan-cta cta-ent" data-wa="plan_enterprise">Solicitar Plan Enterprise</a>
+    <div class="plan-sep"></div>
     <p class="plan-incl">Todo lo del Plan Esencial, mas:</p>
     <ul class="chk">
      <li>CRM avanzado incluido y configurado</li>
@@ -221,28 +274,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  </div>
 </section>
 
-<!-- WHATSAPP MOCKUP -->
+<!-- DEMO EN VIVO -->
 <section style="padding-top:30px">
  <div class="ct">
-  <div class="sh rv"><div class="eyebrow">Demostracion en vivo</div><h2 class="h2">Asi trabaja el agente en <span class="grad">WhatsApp</span></h2><p class="lead">Ejemplo real: clinica dental recibe una consulta a las 23:40.</p></div>
-  <div class="phone-mock rv">
-   <div class="phone-notch"></div>
-   <div class="phone-header">
-    <div class="ph-avatar">IA</div>
-    <div class="ph-info"><b>Clinica Dental Premium</b><small>Agente IA · En linea</small></div>
+  <div class="sh rv"><div class="eyebrow">Demostracion en vivo</div><h2 class="h2">Asi trabaja el agente en <span class="grad">cada canal</span></h2><p class="lead">Atencion automatica en WhatsApp, Instagram y Facebook. El sistema completo: desde la consulta hasta la reserva en el CRM.</p></div>
+  <div class="demo-wrap">
+   <!-- IZQUIERDA: Chat multiplataforma animado -->
+   <div class="demo-left">
+    <div class="demo-tabs">
+     <button class="demo-tab active" data-channel="wa" onclick="switchDemo(this)">WhatsApp</button>
+     <button class="demo-tab" data-channel="ig" onclick="switchDemo(this)">Instagram</button>
+     <button class="demo-tab" data-channel="fb" onclick="switchDemo(this)">Facebook</button>
+    </div>
+    <!-- WhatsApp demo -->
+    <div class="phone-mock rv" id="demo-wa">
+     <div class="phone-notch"></div>
+     <div class="phone-header wa">
+      <div class="ph-avatar" style="background:#25D366">IA</div>
+      <div class="ph-info"><b>Clinica Dental Premium</b><small>Agente IA · En linea</small></div>
+     </div>
+     <div class="phone-chat" id="chat-wa"></div>
+    </div>
+    <!-- Instagram demo -->
+    <div class="phone-mock rv" id="demo-ig" style="display:none">
+     <div class="phone-notch"></div>
+     <div class="phone-header ig">
+      <div class="ph-avatar" style="background:transparent;font-size:1.1rem">&#x1F4F7;</div>
+      <div class="ph-info"><b>@seguros_elite</b><small>Agente IA · Activo</small></div>
+     </div>
+     <div class="phone-chat" id="chat-ig" style="background:#1a1a2e"></div>
+    </div>
+    <!-- Facebook demo -->
+    <div class="phone-mock rv" id="demo-fb" style="display:none">
+     <div class="phone-notch"></div>
+     <div class="phone-header fb">
+      <div class="ph-avatar" style="background:#fff;color:#1877f2">AI</div>
+      <div class="ph-info"><b>Inmobiliaria Central</b><small>Agente IA · Responde al instante</small></div>
+     </div>
+     <div class="phone-chat" id="chat-fb" style="background:#0a0f1a"></div>
+    </div>
    </div>
-   <div class="phone-chat">
-    <div class="chat-msg user">Hola, quiero consultar por un blanqueamiento dental. Cuanto cuesta?<span class="chat-time">23:40</span></div>
-    <div class="chat-msg bot">Hola! Gracias por escribirnos. El blanqueamiento dental tiene un valor desde USD 250. Es la primera vez que nos visitas?<span class="chat-time">23:40</span></div>
-    <div class="chat-msg user">Si, primera vez. Tienen turno esta semana?<span class="chat-time">23:41</span></div>
-    <div class="chat-msg bot">Perfecto. Para darte el mejor turno, podrias indicarme tu nombre completo y si tienes algun tratamiento dental en curso?<span class="chat-time">23:41</span></div>
-    <div class="chat-msg user">Maria Lopez. No, ningun tratamiento activo.<span class="chat-time">23:42</span></div>
-    <div class="chat-msg bot">Gracias, Maria. Tenemos disponibilidad el jueves a las 10:00 o el viernes a las 16:30. Cual te conviene mas?<span class="chat-time">23:42</span></div>
-    <div class="chat-msg user">Jueves a las 10 esta perfecto.<span class="chat-time">23:43</span></div>
-    <div class="chat-msg bot">Listo, Maria. Tu cita quedo agendada para el jueves a las 10:00. Te enviaremos un recordatorio el dia anterior. Alguna otra consulta?<span class="chat-time">23:43</span></div>
-    <div class="chat-msg system">Cita registrada en el CRM · Equipo notificado · Recordatorio programado</div>
-    <div class="chat-msg user">No, eso es todo. Gracias.<span class="chat-time">23:44</span></div>
-    <div class="chat-msg bot">Gracias a ti, Maria! Te esperamos el jueves.<span class="chat-time">23:44</span></div>
+   <!-- DERECHA: Flujo CRM completo -->
+   <div>
+    <h3 class="rv" style="font-size:1.1rem;margin-bottom:8px">Lo que pasa detras de escena</h3>
+    <p class="rv" style="font-size:.86rem;color:var(--text-3);margin-bottom:24px">Mientras el agente conversa, el sistema registra, agenda, cobra y confirma automaticamente.</p>
+    <div class="crm-flow">
+     <div class="crm-step rv" style="animation-delay:.2s"><div class="step-num" style="background:rgba(37,211,102,.15);color:#25D366">1</div><div class="step-body"><h4>Consulta recibida</h4><p>El lead escribe por WhatsApp a las 23:40. El agente responde en 2 segundos.</p></div></div>
+     <div class="crm-step rv" style="animation-delay:.5s"><div class="step-num" style="background:rgba(168,85,247,.15);color:#a855f7">2</div><div class="step-body"><h4>Calificacion automatica</h4><p>El agente identifica servicio, urgencia y datos. Crea el contacto en el CRM.</p></div></div>
+     <div class="crm-step rv" style="animation-delay:.8s"><div class="step-num" style="background:rgba(0,229,255,.12);color:#00e5ff">3</div><div class="step-body"><h4>Turno agendado</h4><p>Ofrece horarios disponibles. Maria elige jueves 10:00. Cita creada en el calendario.</p></div></div>
+     <div class="crm-step rv" style="animation-delay:1.1s"><div class="step-num" style="background:rgba(34,211,168,.12);color:#22d3a8">4</div><div class="step-body"><h4>Cobro y confirmacion</h4><p>Link de pago enviado. Seña cobrada. Confirmacion automatica al paciente.</p></div></div>
+     <div class="crm-step rv" style="animation-delay:1.4s"><div class="step-num" style="background:rgba(251,146,60,.12);color:#fb923c">5</div><div class="step-body"><h4>Recordatorio programado</h4><p>24 horas antes del turno, el sistema envia recordatorio por WhatsApp.</p></div></div>
+    </div>
+    <!-- Mini CRM mockup -->
+    <div class="crm-mock rv" style="margin-top:20px">
+     <div style="font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3);margin-bottom:10px;font-weight:600">Pipeline — Clinica Dental Premium</div>
+     <div class="crm-bar"><span style="background:rgba(37,211,102,.3);flex:2"></span><span style="background:rgba(168,85,247,.3);flex:3"></span><span style="background:rgba(0,229,255,.3);flex:2"></span><span style="background:rgba(34,211,168,.3);flex:4"></span></div>
+     <div class="crm-row"><b>Maria Lopez</b><span>Blanqueamiento</span><span class="status" style="background:rgba(34,211,168,.15);color:#22d3a8">Turno confirmado</span></div>
+     <div class="crm-row"><b>Carlos Ruiz</b><span>Ortodoncia</span><span class="status" style="background:rgba(168,85,247,.15);color:#a855f7">En calificacion</span></div>
+     <div class="crm-row"><b>Ana Vega</b><span>Limpieza</span><span class="status" style="background:rgba(0,229,255,.12);color:#00e5ff">Seña cobrada</span></div>
+    </div>
    </div>
   </div>
  </div>
@@ -293,15 +383,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="sh rv"><div class="eyebrow">Comparativa de valor</div><h2 class="h2">Lo que obtienes con <span class="grad">cada plan</span></h2></div>
   <div class="rv" style="overflow-x:auto">
    <table class="val-table">
-    <thead><tr><th></th><th>Sin YachSell</th><th class="col-ys">Plan Esencial</th><th class="col-ent">Plan Enterprise</th></tr></thead>
+    <thead><tr><th></th><th class="col-sin-head">Sin YachSell</th><th class="col-ys-head">Plan Esencial</th><th class="col-ent-head">Plan Enterprise</th></tr></thead>
     <tbody>
-     <tr><th>Respuesta 24/7</th><td class="no">Solo horario laboral</td><td class="col-ys"><span class="ok">&#10003;</span> WhatsApp, IG, web</td><td class="col-ent"><span class="ok">&#10003;</span> Multicanal avanzado</td></tr>
-     <tr><th>Calificacion automatica</th><td class="no">Manual</td><td class="col-ys"><span class="ok">&#10003;</span> Por reglas</td><td class="col-ent"><span class="ok">&#10003;</span> Avanzada con scoring</td></tr>
-     <tr><th>Agendamiento de citas</th><td class="no">Manual</td><td class="col-ys"><span class="ok">&#10003;</span> Automatico</td><td class="col-ent"><span class="ok">&#10003;</span> Multi-calendario</td></tr>
-     <tr><th>CRM integrado</th><td class="no">Sin CRM</td><td class="col-ys">Licencia aparte</td><td class="col-ent"><span class="ok">&#10003;</span> CRM incluido</td></tr>
-     <tr><th>Coaching al equipo</th><td class="no">—</td><td class="col-ys no">—</td><td class="col-ent"><span class="ok">&#10003;</span> Incluido</td></tr>
-     <tr><th>Automatizaciones</th><td class="no">—</td><td class="col-ys"><span class="ok">&#10003;</span> Esenciales</td><td class="col-ent"><span class="ok">&#10003;</span> Avanzadas multicanal</td></tr>
-     <tr><th>Inversion mensual</th><td>—</td><td class="col-ys"><b>USD 100/mes</b></td><td class="col-ent"><b>Desde USD 300/mes</b></td></tr>
+     <tr><th>Respuesta 24/7</th><td class="col-sin"><span class="no">&#10007;</span> Solo horario laboral</td><td class="col-ys"><span class="ok">&#10003;</span> WhatsApp, IG, FB, TikTok, web</td><td class="col-ent"><span class="ok">&#10003;</span> Multicanal avanzado</td></tr>
+     <tr><th>Calificacion automatica</th><td class="col-sin"><span class="no">&#10007;</span> Manual</td><td class="col-ys"><span class="ok">&#10003;</span> Por reglas</td><td class="col-ent"><span class="ok">&#10003;</span> Avanzada con scoring</td></tr>
+     <tr><th>Agendamiento de citas</th><td class="col-sin"><span class="no">&#10007;</span> Manual</td><td class="col-ys"><span class="ok">&#10003;</span> Automatico</td><td class="col-ent"><span class="ok">&#10003;</span> Multi-calendario</td></tr>
+     <tr><th>CRM integrado</th><td class="col-sin"><span class="no">&#10007;</span> Sin CRM</td><td class="col-ys">Licencia aparte</td><td class="col-ent"><span class="ok">&#10003;</span> CRM incluido</td></tr>
+     <tr><th>Coaching al equipo</th><td class="col-sin"><span class="no">&#10007;</span> No disponible</td><td class="col-ys" style="color:var(--text-3)">—</td><td class="col-ent"><span class="ok">&#10003;</span> Incluido</td></tr>
+     <tr><th>Automatizaciones</th><td class="col-sin"><span class="no">&#10007;</span> Ninguna</td><td class="col-ys"><span class="ok">&#10003;</span> Esenciales</td><td class="col-ent"><span class="ok">&#10003;</span> Avanzadas multicanal</td></tr>
+     <tr><th>Inversion mensual</th><td class="col-sin">—</td><td class="col-ys"><b>US$100/mes</b></td><td class="col-ent"><b>Desde US$300/mes</b></td></tr>
     </tbody>
    </table>
   </div>
@@ -407,5 +497,79 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20un%20agente%20de%20IA%20para%20mi%20negocio" target="_blank" rel="noopener" class="waf" data-wa="flotante" aria-label="Escribenos por WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> WhatsApp</a>
 <div class="mbar" id="mbar"><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20cotizar%20un%20agente%20de%20IA%20para%20mi%20negocio" target="_blank" rel="noopener" class="btn btn-wa btn-lg" data-wa="barra_agentes-ia"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Consultar por WhatsApp</a></div>
 <script src="/assets/site.js?v=8" defer></script>
+<script>
+/* Demo chat animado */
+const demos={
+ wa:[
+  {t:"user",m:"Hola, quiero consultar por un blanqueamiento dental. Cuanto cuesta?",d:0},
+  {t:"bot",m:"Hola! Gracias por escribirnos. El blanqueamiento dental tiene un valor desde USD 250. Es la primera vez que nos visitas?",d:800},
+  {t:"user",m:"Si, primera vez. Tienen turno esta semana?",d:1600},
+  {t:"bot",m:"Para darte el mejor turno, podrias indicarme tu nombre completo?",d:2300},
+  {t:"user",m:"Maria Lopez. Ningun tratamiento activo.",d:3000},
+  {t:"bot",m:"Gracias, Maria. Tenemos jueves 10:00 o viernes 16:30. Cual te conviene?",d:3700},
+  {t:"user",m:"Jueves a las 10.",d:4300},
+  {t:"bot",m:"Listo! Cita agendada jueves 10:00. Te enviamos recordatorio el dia anterior.",d:4900},
+  {t:"system",m:"Cita registrada en CRM · Equipo notificado · Recordatorio programado",d:5500}
+ ],
+ ig:[
+  {t:"user",m:"Hola! Vi su post sobre seguros de auto. Necesito cotizar.",d:0},
+  {t:"bot",m:"Hola! Con gusto. Para darte la mejor cotizacion, que tipo de vehiculo tienes y en que ciudad?",d:800},
+  {t:"user",m:"Toyota Corolla 2022, en Buenos Aires.",d:1600},
+  {t:"bot",m:"Perfecto. Necesitas cobertura todo riesgo o terceros completo?",d:2300},
+  {t:"user",m:"Todo riesgo. Cuanto saldria?",d:3000},
+  {t:"bot",m:"Para un Corolla 2022 todo riesgo, las opciones arrancan desde USD 85/mes. Te paso con un asesor para cerrar la mejor opcion.",d:3700},
+  {t:"system",m:"Lead calificado · Derivado a asesor comercial con contexto completo",d:4400}
+ ],
+ fb:[
+  {t:"user",m:"Hola, busco un departamento de 2 ambientes en Palermo para alquilar.",d:0},
+  {t:"bot",m:"Hola! Tenemos varias opciones en Palermo. Cual es tu presupuesto mensual aproximado?",d:800},
+  {t:"user",m:"Hasta USD 600 mensuales.",d:1600},
+  {t:"bot",m:"Tenemos 3 opciones que se ajustan. Puedo agendarte una visita esta semana. Que dia te queda mejor?",d:2300},
+  {t:"user",m:"Miercoles a la tarde si es posible.",d:3000},
+  {t:"bot",m:"Agendado: miercoles 16:00 con el agente Lucas. Te envio la direccion por WhatsApp. Alguna otra consulta?",d:3700},
+  {t:"system",m:"Visita agendada · Contacto creado en CRM · Agente Lucas notificado",d:4400}
+ ]
+};
+var demoTimers=[];
+function runDemo(ch){
+ demoTimers.forEach(clearTimeout);
+ demoTimers=[];
+ var el=document.getElementById("chat-"+ch);
+ if(!el)return;
+ el.innerHTML="";
+ demos[ch].forEach(function(msg){
+  demoTimers.push(setTimeout(function(){
+   var d=document.createElement("div");
+   d.className="chat-msg "+msg.t;
+   d.style.animationDelay="0s";
+   d.textContent=msg.m;
+   el.appendChild(d);
+   el.scrollTop=el.scrollHeight;
+  },msg.d));
+ });
+ /* Loop: reiniciar demo al terminar */
+ var last=demos[ch][demos[ch].length-1].d;
+ demoTimers.push(setTimeout(function(){runDemo(ch)},last+3000));
+}
+function switchDemo(btn){
+ document.querySelectorAll(".demo-tab").forEach(function(t){t.classList.remove("active")});
+ btn.classList.add("active");
+ var ch=btn.getAttribute("data-channel");
+ ["wa","ig","fb"].forEach(function(c){
+  var el=document.getElementById("demo-"+c);
+  if(el)el.style.display=c===ch?"block":"none";
+ });
+ runDemo(ch);
+}
+/* Auto-start WhatsApp demo when visible */
+var demoStarted=false;
+var obs=new IntersectionObserver(function(entries){
+ entries.forEach(function(e){
+  if(e.isIntersecting&&!demoStarted){demoStarted=true;runDemo("wa");}
+ });
+},{threshold:.3});
+var chatWa=document.getElementById("chat-wa");
+if(chatWa)obs.observe(chatWa);
+</script>
 </body>
 </html>
