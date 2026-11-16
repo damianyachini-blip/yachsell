@@ -36,7 +36,7 @@ d.querySelectorAll('[data-demo]').forEach(function(box){
 })();
 (function(){var d=document,rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
 d.querySelectorAll('[data-flow]').forEach(function(f){
- var st=[].slice.call(f.querySelectorAll('.flw-st')),pn=[].slice.call(f.querySelectorAll('.flw-pn')),wr=f.querySelector('.flw-steps'),pb=f.querySelector('[data-fplay]'),i=0,tm=null,play=!rm,dur=5200;
+ var st=[].slice.call(f.querySelectorAll('.flw-st')),pn=[].slice.call(f.querySelectorAll('.flw-pn')),wr=f.querySelector('.flw-steps'),pb=f.querySelector('[data-fplay]'),i=0,tm=null,play=!rm,dur=3000;
  if(!st.length||st.length!==pn.length)return;
  f.style.setProperty('--dur',dur+'ms');
  function show(k,focus){i=k;st.forEach(function(b,j){var on=j===k;b.classList.toggle('on',on);b.classList.toggle('done',j<k);b.setAttribute('aria-selected',on?'true':'false');b.tabIndex=on?0:-1});
