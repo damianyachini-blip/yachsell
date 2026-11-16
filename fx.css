@@ -1,0 +1,35 @@
+/* YachSell Futuristic Effects v1 */
+/* Grid overlay */
+body::before{content:'';position:fixed;inset:0;
+ background-image:linear-gradient(rgba(0,229,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,255,.025) 1px,transparent 1px);
+ background-size:60px 60px;pointer-events:none;z-index:0;
+ mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black 30%,transparent 70%);
+ -webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black 30%,transparent 70%)}
+/* Scan line */
+body::after{content:'';position:fixed;top:0;left:0;width:100%;height:2px;
+ background:linear-gradient(90deg,transparent,rgba(0,229,255,.12),transparent);
+ animation:scanL 8s linear infinite;pointer-events:none;z-index:9998;opacity:.4}
+@keyframes scanL{0%{top:-2px}100%{top:100vh}}
+/* Glow orbs */
+.glow-orb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0;opacity:.35;animation:orbF 20s ease-in-out infinite alternate}
+.glow-orb.cyan{width:400px;height:400px;background:rgba(0,229,255,.07);top:10%;left:-5%}
+.glow-orb.violet{width:350px;height:350px;background:rgba(168,85,247,.06);bottom:20%;right:-5%;animation-delay:-10s}
+@keyframes orbF{0%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-40px) scale(1.1)}100%{transform:translate(-20px,30px) scale(.95)}}
+/* Gradient shimmer for .grad */
+.grad{background:linear-gradient(135deg,#00e5ff 0%,#a855f7 50%,#00e5ff 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shim 4s linear infinite}
+@keyframes shim{0%{background-position:0% center}100%{background-position:200% center}}
+/* Glassmorphism hover */
+.svc:hover,.plan:hover,.pillar:hover,.cat-col:hover,.tier:hover{border-color:rgba(0,229,255,.12);box-shadow:0 0 30px rgba(0,229,255,.04),0 8px 32px rgba(0,0,0,.2)}
+/* Button glow */
+.btn-wa{position:relative;overflow:hidden}
+.btn-wa::before{content:'';position:absolute;inset:-2px;background:linear-gradient(45deg,#25D366,#00e5ff,#a855f7,#25D366);background-size:300% 300%;border-radius:inherit;z-index:-1;opacity:0;transition:opacity .3s;animation:btnG 3s linear infinite}
+.btn-wa:hover::before{opacity:.5}
+@keyframes btnG{0%{background-position:0% 50%}100%{background-position:300% 50%}}
+/* Scroll bar glow */
+.sprog{background:linear-gradient(90deg,#00e5ff,#a855f7)!important;box-shadow:0 0 12px rgba(0,229,255,.3)}
+/* Section separator */
+section{position:relative}
+/* Eyebrow gradient */
+.eyebrow{letter-spacing:.15em;text-transform:uppercase;font-size:.72rem;font-weight:700;background:linear-gradient(135deg,#00e5ff,#a855f7);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){.glow-orb,.grad,body::after,.btn-wa::before,.sprog{animation:none!important}}
