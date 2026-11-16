@@ -11,10 +11,10 @@ body::after{content:'';position:fixed;top:0;left:0;width:100%;height:2px;
  animation:scanL 8s linear infinite;pointer-events:none;z-index:9998;opacity:.4}
 @keyframes scanL{0%{top:-2px}100%{top:100vh}}
 /* Glow orbs */
-.glow-orb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0;opacity:.35;animation:orbF 20s ease-in-out infinite alternate}
-.glow-orb.cyan{width:400px;height:400px;background:rgba(0,229,255,.07);top:10%;left:-5%}
-.glow-orb.violet{width:350px;height:350px;background:rgba(168,85,247,.06);bottom:20%;right:-5%;animation-delay:-10s}
-@keyframes orbF{0%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-40px) scale(1.1)}100%{transform:translate(-20px,30px) scale(.95)}}
+.glow-orb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0;opacity:.35;animation:orbF 20s ease-in-out infinite alternate;contain:strict}
+.glow-orb.cyan{width:min(400px,80vw);height:min(400px,80vw);background:rgba(0,229,255,.07);top:10%;left:0;transform:translateX(-30%)}
+.glow-orb.violet{width:min(350px,70vw);height:min(350px,70vw);background:rgba(168,85,247,.06);bottom:20%;right:0;transform:translateX(30%);animation-delay:-10s}
+@keyframes orbF{0%{opacity:.3}50%{opacity:.45}100%{opacity:.25}}
 /* Gradient shimmer for .grad */
 .grad{background:linear-gradient(135deg,#00e5ff 0%,#a855f7 50%,#00e5ff 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:shim 4s linear infinite}
 @keyframes shim{0%{background-position:0% center}100%{background-position:200% center}}
