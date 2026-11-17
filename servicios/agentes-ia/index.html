@@ -42,9 +42,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .plan-card.plan-es{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
 .plan-card.plan-eco{background:linear-gradient(160deg,rgba(0,229,255,.08) 0%,rgba(34,211,168,.04) 100%);border:1px solid rgba(0,229,255,.3)}
 .plan-card.plan-emp{background:linear-gradient(160deg,rgba(168,85,247,.1) 0%,rgba(0,229,255,.06) 100%);border:1px solid rgba(168,85,247,.35)}
-.plan-var{margin-top:24px;padding:20px 28px;border-radius:14px;background:linear-gradient(135deg,rgba(0,229,255,.06),rgba(168,85,247,.06));border:1px solid rgba(0,229,255,.15);font-size:.88rem;color:var(--text-2);line-height:1.6;text-align:center;grid-column:1/-1}
-.plan-var strong{display:block;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#00e5ff;margin-bottom:6px}
-.plan-var p{margin:0;font-size:.86rem}
+.plan-var{margin-top:24px;padding:28px 32px;border-radius:16px;background:linear-gradient(135deg,rgba(0,229,255,.08),rgba(168,85,247,.08));border:1px solid transparent;font-size:.88rem;color:var(--text-2);line-height:1.6;text-align:center;grid-column:1/-1;position:relative;overflow:hidden}
+.plan-var::before{content:"";position:absolute;inset:-1px;border-radius:17px;padding:1px;background:linear-gradient(135deg,#00e5ff,#a855f7,#00e5ff);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;background-size:200% 200%;animation:varBorder 4s ease-in-out infinite}
+@keyframes varBorder{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.plan-var::after{content:"";position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.04),transparent);animation:varShimmer 5s ease-in-out infinite}
+@keyframes varShimmer{0%,100%{left:-100%}50%{left:150%}}
+.plan-var strong{display:block;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:linear-gradient(90deg,#00e5ff,#a855f7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px}
+.plan-var p{margin:0 0 18px;font-size:.88rem;color:var(--text-2)}
+.plan-var .var-cta{display:inline-block;padding:12px 36px;border-radius:100px;font-weight:700;font-size:.88rem;text-decoration:none;color:#000;background:linear-gradient(135deg,#00e5ff,#a855f7);position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s;box-shadow:0 4px 20px rgba(0,229,255,.25),0 4px 20px rgba(168,85,247,.15)}
+.plan-var .var-cta:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 8px 30px rgba(0,229,255,.35),0 8px 30px rgba(168,85,247,.25)}
+.plan-var .var-cta::after{content:"";position:absolute;top:0;left:-100%;width:70%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);animation:ctaGlitter 3s ease-in-out infinite}
+@keyframes ctaGlitter{0%,100%{left:-100%}50%{left:150%}}
 .plan-card .plan-badge{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:20px}
 .plan-card h3{font-size:1.5rem;font-weight:800;margin:0 0 6px}
 .plan-card .plan-price{font-size:2.8rem;font-weight:900;margin:16px 0 2px;line-height:1}
@@ -308,6 +316,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <div class="plan-var rv">
     <strong>Disponible: Metodo variable</strong>
     <p>Analizamos tu caso y si aplica podemos trabajar por metodo variable sin fees fijos, solo pago de honorarios por comision de ventas.</p>
+    <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20consultar%20por%20el%20metodo%20variable%20de%20Agentes%20IA" target="_blank" rel="noopener" class="var-cta" data-wa="metodo_variable">Aplica ahora</a>
    </div>
   </div>
  </div>
