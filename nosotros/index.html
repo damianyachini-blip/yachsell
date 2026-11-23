@@ -30,7 +30,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css?v=8">
-<noscript><style>.rv{opacity:1!important;transform:none!important}</style></noscript>
+<noscript><style>.rv{opacity:1!important;transform:none!important}
+#gridCanvas{position:fixed;inset:0;z-index:-1;pointer-events:none;width:100%;height:100%}
+.h1-swap{display:inline-block;position:relative;overflow:hidden;vertical-align:bottom}
+.h1-swap .sw-word{display:inline-block;transition:opacity .45s,transform .45s;opacity:1;transform:translateY(0)}
+.h1-swap .sw-word.out{opacity:0;transform:translateY(-100%);position:absolute;left:0;top:0}
+.h1-swap .sw-word.in{opacity:0;transform:translateY(60%)}
+.h1-swap .sw-word.in.active{opacity:1;transform:translateY(0)}
+</style></noscript>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AboutPage", "url": "https://www.yachsell.com/nosotros/", "name": "Sobre YachSell", "about": {"@id": "https://www.yachsell.com/#org"}, "mainEntity": {"@id": "https://www.yachsell.com/#org"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "@id": "https://www.yachsell.com/nosotros/#damian-yachini", "name": "Damián Yachini", "jobTitle": "Founder · Especialista en Marketing IA", "image": "https://www.yachsell.com/damian-yachini.jpg", "url": "https://www.yachsell.com/nosotros/", "sameAs": ["https://www.linkedin.com/in/damianyachini/"], "worksFor": {"@id": "https://www.yachsell.com/#org"}, "description": "Especialista en marketing digital, gestión publicitaria y operaciones comerciales. Fundador de YachSell, agencia de marketing IA que combina Business Intelligence, Paid Media e inteligencia artificial.", "knowsAbout": ["Marketing de performance", "Meta Ads", "Google Ads", "GPT Ads", "Business Intelligence", "CRM", "Automatización comercial", "Inteligencia artificial aplicada a ventas"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.yachsell.com/"}, {"@type": "ListItem", "position": 2, "name": "Sobre nosotros", "item": "https://www.yachsell.com/nosotros/"}]}</script>
@@ -76,7 +83,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div>
    <nav class="crumbs" aria-label="Ruta"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Sobre nosotros</span></nav>
    <div class="eyebrow rv" style="color:#00e5ff">Sobre nosotros</div>
-   <h1 class="rv d1">Sobre YachSell: publicidad, datos e IA <span class="grad">al servicio de tus ventas</span></h1>
+   <h1 class="rv d1">Sobre YachSell: publicidad, datos e <span class="h1-swap" id="pgSwap1"></span> <span class="grad">al servicio de tus ventas</span></h1>
    <p class="hero-p rv d2">YachSell es una agencia de marketing IA fundada en 2025 por Damián Yachini. Combinamos Business Intelligence, Paid Media e inteligencia artificial para que la publicidad forme parte de una estrategia comercial medible, no de una actividad aislada.</p>
    <div class="hero-btns rv d3">
     <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20que%20analicemos%20mi%20caso" target="_blank" rel="noopener" class="btn btn-wa btn-lg" data-wa="hero_nosotros"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Analicemos tu caso</a>
@@ -177,5 +184,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20que%20analicemos%20mi%20caso" target="_blank" rel="noopener" class="waf" data-wa="flotante" aria-label="Escríbenos por WhatsApp"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> WhatsApp</a>
 <div class="mbar" id="mbar"><a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20que%20analicemos%20mi%20caso" target="_blank" rel="noopener" class="btn btn-wa btn-lg" data-wa="barra_nosotros"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Consultar por WhatsApp</a></div>
 <script src="/assets/site.js?v=8" defer></script>
+
+<canvas id="gridCanvas" aria-hidden="true"></canvas>
+<script>
+(function(){
+ var c=document.getElementById('gridCanvas');if(!c)return;
+ var ctx=c.getContext('2d'),mx=0.5,my=0.5,scrollY=0,gap=64;
+ var dpr=Math.min(window.devicePixelRatio||1,2);
+ var isMob='ontouchstart' in window;
+ function resize(){c.width=innerWidth*dpr;c.height=innerHeight*dpr;c.style.width=innerWidth+'px';c.style.height=innerHeight+'px';ctx.setTransform(dpr,0,0,dpr,0,0)}
+ resize();addEventListener('resize',resize);
+ if(!isMob)document.addEventListener('mousemove',function(e){mx=e.clientX/innerWidth;my=e.clientY/innerHeight});
+ addEventListener('scroll',function(){scrollY=pageYOffset},{passive:true});
+ function draw(){
+  var w=innerWidth,h=innerHeight;ctx.clearRect(0,0,w,h);
+  var offX=(mx-.5)*18,offY=(my-.5)*18-(scrollY*.08)%gap;
+  if(isMob)offX=Math.sin(scrollY*.003)*8;
+  var fe=h*.75;
+  for(var x=offX%gap;x<w;x+=gap){var d=Math.abs(x-mx*w)/w;var g=isMob?.03:Math.max(.02,.055-d*.06);ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,fe);ctx.strokeStyle='rgba(255,255,255,'+g+')';ctx.lineWidth=1;ctx.stroke()}
+  for(var y=offY%gap;y<fe;y+=gap){if(y<0)continue;var dy=Math.abs(y-my*h)/h;var gh=isMob?.03:Math.max(.02,.05-dy*.05);var f=y>fe*.6?1-(y-fe*.6)/(fe*.4):1;ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.strokeStyle='rgba(255,255,255,'+(gh*f)+')';ctx.lineWidth=1;ctx.stroke()}
+  if(!isMob){for(var gx=offX%gap;gx<w;gx+=gap){for(var gy=offY%gap;gy<fe;gy+=gap){if(gy<0)continue;var dx2=gx-mx*w,dy2=gy-my*h;var dd=Math.sqrt(dx2*dx2+dy2*dy2);if(dd<200){var a=.15*(1-dd/200);var f2=gy>fe*.6?1-(gy-fe*.6)/(fe*.4):1;ctx.beginPath();ctx.arc(gx,gy,1.5,0,Math.PI*2);ctx.fillStyle='rgba(0,229,255,'+(a*f2)+')';ctx.fill()}}}}
+  requestAnimationFrame(draw)}
+ draw()})();
+
+<script>
+(function(){
+ var words=['IA','resultados','automatización','ventas'];
+ var el=document.getElementById('pgSwap1');if(!el)return;
+ var idx=0;
+ var span=document.createElement('span');span.className='sw-word active';span.textContent=words[0];el.appendChild(span);
+ setInterval(function(){
+  idx=(idx+1)%words.length;
+  var cur=el.querySelector('.sw-word.active');
+  if(cur){cur.classList.remove('active');cur.classList.add('out');}
+  var nw=document.createElement('span');nw.className='sw-word in';nw.textContent=words[idx];el.appendChild(nw);
+  requestAnimationFrame(function(){requestAnimationFrame(function(){nw.classList.add('active')})});
+  setTimeout(function(){if(cur&&cur.parentNode)cur.parentNode.removeChild(cur)},500);
+ },2800);
+})();
+</script>
 </body>
 </html>
