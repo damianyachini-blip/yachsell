@@ -234,6 +234,7 @@ a.chip:hover{border-color:var(--wa);color:#fff}
 
 /* ── Pricing ── */
 .prc{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.prc-3{grid-template-columns:repeat(3,1fr)}
 .pc{position:relative;display:flex;flex-direction:column;padding:28px 24px;border-radius:var(--r-lg);background:var(--card);border:1px solid var(--border);transition:transform .3s var(--ease),border-color .3s}
 .pc:hover{transform:translateY(-4px);border-color:var(--border-h)}
 .pc.hl{background:linear-gradient(var(--bg-1),var(--bg-1)) padding-box,var(--grad) border-box;border:1px solid transparent}
@@ -549,6 +550,7 @@ picture{display:contents}
 .cm-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
 .cm-chips span{font-size:.7rem;padding:5px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.16);color:var(--text-2);background:rgba(255,255,255,.03)}
 .tiers{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:1000px;margin:0 auto}
+.tiers-3{grid-template-columns:repeat(3,1fr);max-width:1200px}
 .tier{position:relative;display:flex;flex-direction:column;padding:32px 28px;border-radius:var(--r-lg);background:var(--card);border:1px solid var(--border)}
 .tier.rec{background:linear-gradient(var(--bg-1),var(--bg-1)) padding-box,var(--grad) border-box;border:1px solid transparent;box-shadow:0 30px 80px -40px rgba(168,85,247,.6)}
 .tier .tb{position:absolute;top:-12px;left:28px;font-family:var(--mono);font-size:.64rem;font-weight:700;letter-spacing:.1em;padding:5px 11px;border-radius:999px;background:var(--grad-2);color:#05050d}
