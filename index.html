@@ -112,7 +112,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      "@type": "Service",
      "name": "Plan Pequeños Negocios: captación omnicanal + agente IA"
     },
-    "description": "Implementación única USD 150, luego 5% variable sobre ventas generadas.",
+    "description": "Implementación única USD 150, luego desde 10% variable sobre ventas generadas.",
     "priceSpecification": {
      "@type": "UnitPriceSpecification",
      "price": 150,
@@ -127,7 +127,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      "@type": "Service",
      "name": "Plan Ecommerce: captación omnicanal + email marketing + agentes IA"
     },
-    "description": "Implementación única USD 150, luego desde 5% variable sobre ventas generadas.",
+    "description": "Implementación única USD 150, luego desde 8% variable sobre ventas generadas.",
     "priceSpecification": {
      "@type": "UnitPriceSpecification",
      "price": 150,
@@ -142,7 +142,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      "@type": "Service",
      "name": "Plan Empresas de Servicios: captación + CRM + agentes IA + marketing omnicanal"
     },
-    "description": "Implementación única USD 250, luego desde 1% variable sobre ventas generadas. Ideal para clínicas, B2B y equipos comerciales.",
+    "description": "Implementación única USD 250, luego desde 5% variable sobre ventas generadas. Ideal para clínicas, B2B y equipos comerciales.",
     "priceSpecification": {
      "@type": "UnitPriceSpecification",
      "price": 250,
@@ -292,7 +292,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
    "name": "¿Trabajan con pymes?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Sí. Gran parte de nuestros clientes son pymes. Nuestro plan Pequeños Negocios arranca con una implementación de USD 150 y luego cobramos 5% variable sobre ventas generadas. Sin fees fijos, sin permanencia y con reportes automatizados."
+    "text": "Sí. Gran parte de nuestros clientes son pymes. Nuestro plan Pequeños Negocios arranca con una implementación de USD 150 y luego cobramos desde 10% variable sobre ventas generadas. Sin fees fijos, sin permanencia y con reportes automatizados."
    }
   }
  ]
@@ -545,9 +545,12 @@ a.chip:hover{border-color:var(--border-h);color:#fff}
 
 /* ── Pricing ── */
 .prc{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.pc{position:relative;display:flex;flex-direction:column;padding:28px 24px;border-radius:var(--r-lg);background:var(--card);border:1px solid var(--border);transition:transform .3s var(--ease),border-color .3s}
+.pc{position:relative;display:flex;flex-direction:column;padding:32px 28px;border-radius:var(--r-lg);background:rgba(12,12,30,.65);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.06);transition:transform .3s var(--ease),border-color .3s,box-shadow .3s}
+.pc:hover{border-color:rgba(0,229,255,.15);box-shadow:0 0 40px rgba(0,229,255,.06),0 12px 40px rgba(0,0,0,.3);transform:translateY(-4px)}
+.pc .pct-badge{margin:12px 0 6px;padding:10px 18px;border-radius:14px;font-family:var(--mono);font-size:1.6rem;font-weight:900;letter-spacing:-.02em;text-align:center;line-height:1.2}
+.pc .pct-badge small{display:block;font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-top:4px;opacity:.7}
 .pc:hover{transform:translateY(-4px);border-color:var(--border-h)}
-.pc.hl{background:linear-gradient(var(--bg-1),var(--bg-1)) padding-box,var(--grad) border-box;border:1px solid transparent}
+.pc.hl{background:linear-gradient(rgba(12,12,30,.75),rgba(12,12,30,.75)) padding-box,var(--grad) border-box;border:1px solid transparent;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
 .pc .pc-b{position:absolute;top:-11px;left:24px;font-family:var(--mono);font-size:.64rem;font-weight:700;letter-spacing:.1em;padding:5px 10px;border-radius:999px;background:var(--grad-2);color:#05050d}
 .pc .pc-ic{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;margin-bottom:18px}
 .pc .pc-ic svg{width:21px;height:21px;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
@@ -792,11 +795,12 @@ a.pill span{color:var(--cyan);font-weight:700}
 @media (max-width:720px){.hero-proof{grid-template-columns:1fr;width:100%}.hero-proof>div+div{border-left:0;border-top:1px solid var(--border)}.h1-k{font-size:.66rem;letter-spacing:.14em;margin-bottom:14px}.pill{font-size:.74rem}}
 .h1-l{display:block}
 .hero h1 .h1-l.grad{display:block;width:max-content;max-width:100%}
-.h1-swap{display:inline-block;position:relative;overflow:hidden;vertical-align:bottom}
-.h1-swap .sw-word{display:inline-block;transition:opacity .45s,transform .45s;opacity:1;transform:translateY(0)}
-.h1-swap .sw-word.out{opacity:0;transform:translateY(-100%);position:absolute;left:0;top:0}
-.h1-swap .sw-word.in{opacity:0;transform:translateY(60%)}
+.h1-swap{display:inline-block;position:relative;overflow:hidden;vertical-align:bottom;min-width:2ch}
+.h1-swap .sw-word{display:inline-block;transition:opacity .32s,transform .32s;opacity:1;transform:translateY(0);color:#fff!important;-webkit-text-fill-color:#fff!important}
+.h1-swap .sw-word.out{opacity:0;transform:translateY(-110%);position:absolute;left:0;top:0}
+.h1-swap .sw-word.in{opacity:0;transform:translateY(70%)}
 .h1-swap .sw-word.in.active{opacity:1;transform:translateY(0)}
+.grad .h1-swap .sw-word{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent!important}
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important;filter:none!important}.msg{display:block!important}
 /* ═══ FUTURISTIC EFFECTS ═══ */
@@ -1299,28 +1303,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="sh c rv">
    <div class="eyebrow">Modelo variable</div>
    <h2 class="h2">No somos un costo. <span class="grad">Somos tu socio estratégico.</span></h2>
-   <p class="lead">Solo cobramos una implementación única + comisión variable sobre ventas. Si no vendés, no pagás honorarios.</p>
+   <p class="lead">Solo cobramos una implementación única + comisión variable sobre ventas. Si no vendes, no pagas honorarios.</p>
   </div>
 
   <div class="prc" style="grid-template-columns:repeat(3,1fr)">
    <div class="pc rv"><div class="pc-ic" style="background:rgba(0,229,255,.1)"><svg viewBox="0 0 24 24" stroke="#00e5ff"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9h18v2a3 3 0 01-6 0 3 3 0 01-6 0 3 3 0 01-6 0z"/><path d="M5 13v8h14v-8"/></svg></div>
     <h3>Pequeños negocios</h3>
     <div class="from">Implementación única</div><div class="amt"><span>USD</span>150</div>
-    <div style="margin:10px 0 4px;padding:8px 14px;border-radius:999px;background:rgba(0,229,255,.08);display:inline-block;font-family:var(--mono);font-size:.78rem;color:var(--cyan);font-weight:700">Luego 5% variable sobre ventas</div>
-    <ul class="chk"><li>Sistema de captación omnicanal: Meta Ads + Google Ads + TikTok Ads + ChatGPT Ads</li><li>Publicación de contenido inbound marketing</li><li>Agente de IA con superpoderes para WhatsApp y redes sociales</li><li>Configuración de cuentas publicitarias, tracking, GTM, GA4 y reportes automatizados</li></ul>
+    <div class="pct-badge" style="background:rgba(0,229,255,.08);color:var(--cyan)">Desde 10%<small>variable sobre ventas</small></div>
+    <ul class="chk"><li>Captación omnicanal: Meta Ads + Google Ads + TikTok Ads + ChatGPT Ads</li><li>Publicación de contenido inbound marketing</li><li>Agente de IA con superpoderes para WhatsApp y redes sociales</li><li>Configuración de cuentas publicitarias, tracking, GTM, GA4 y reportes automatizados</li></ul>
     <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20una%20demo%20del%20plan%20para%20peque%C3%B1os%20negocios" target="_blank" rel="noopener" class="btn btn-wa" data-wa="plan_pequeños"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Solicita una demo</a>
    </div>
    <div class="pc rv d1"><div class="pc-ic" style="background:rgba(168,85,247,.12)"><svg viewBox="0 0 24 24" stroke="#a855f7"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg></div>
     <h3>Ecommerce</h3>
     <div class="from">Implementación única</div><div class="amt"><span>USD</span>150</div>
-    <div style="margin:10px 0 4px;padding:8px 14px;border-radius:999px;background:rgba(168,85,247,.08);display:inline-block;font-family:var(--mono);font-size:.78rem;color:var(--purple);font-weight:700">Luego desde 5% variable sobre ventas</div>
-    <ul class="chk"><li>Captación omnicanal: Meta Ads + Google Ads + TikTok Ads + ChatGPT Ads</li><li>Contenido inbound marketing</li><li>Email marketing, carritos abandonados, recupero de pagos y audiencias automatizadas</li><li>Agentes de IA para tienda y redes sociales</li><li>Configuración de cuentas publicitarias, tracking, GTM, GA4 y reportes automatizados</li></ul>
+    <div class="pct-badge" style="background:rgba(168,85,247,.08);color:var(--purple)">Desde 8%<small>variable sobre ventas</small></div>
+    <ul class="chk"><li>Captación omnicanal: Meta Ads + Google Ads + TikTok Ads + ChatGPT Ads</li><li>Contenido inbound marketing</li><li>Email marketing, carritos abandonados, recuperación de pagos y audiencias automatizadas</li><li>Agentes de IA para tienda y redes sociales</li><li>Configuración de cuentas publicitarias, tracking, GTM, GA4 y reportes automatizados</li></ul>
     <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20una%20demo%20del%20plan%20Ecommerce" target="_blank" rel="noopener" class="btn btn-wa" data-wa="plan_ecommerce"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Solicita una demo</a>
    </div>
    <div class="pc hl rv d2"><span class="pc-b">RECOMENDADO</span><div class="pc-ic" style="background:rgba(34,211,168,.12)"><svg viewBox="0 0 24 24" stroke="#22d3a8"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3"/></svg></div>
     <h3>Empresas de servicios</h3>
-    <div class="from" style="font-size:.65rem">Ideal para clínicas, B2B y equipos comerciales · Implementación única</div><div class="amt"><span>USD</span>250</div>
-    <div style="margin:10px 0 4px;padding:8px 14px;border-radius:999px;background:rgba(34,211,168,.08);display:inline-block;font-family:var(--mono);font-size:.78rem;color:var(--green);font-weight:700">Luego desde 1% variable sobre ventas</div>
+    <div class="from" style="font-size:.65rem">Clínicas, B2B y equipos comerciales · Implementación única</div><div class="amt"><span>USD</span>250</div>
+    <div class="pct-badge" style="background:rgba(34,211,168,.08);color:var(--green)">Desde 5%<small>variable sobre ventas</small></div>
     <ul class="chk"><li>Captación omnicanal completa</li><li>Agentes de IA con superpoderes: agendar citas, confirmar pedidos, cobrar y hacer seguimiento</li><li>Automatización de CRM y proceso comercial</li><li>Creación ilimitada de landing pages para ofertas personalizadas</li><li>Email marketing, WhatsApp marketing, SMS marketing</li><li>Nurturing y newsletter</li><li>Configuración de cuentas publicitarias, tracking, GTM, GA4 y reportes automatizados</li><li>Reuniones quincenales sobre objetivos y resultados</li></ul>
     <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20solicitar%20una%20demo%20del%20plan%20Empresas%20de%20Servicios" target="_blank" rel="noopener" class="btn btn-wa" data-wa="plan_servicios"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Solicita una demo</a>
    </div>
@@ -1329,7 +1333,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- Qué NO incluye + Diferenciador -->
   <div class="modes">
    <div class="modes-h rv"><b>Transparencia total</b><span>Vendemos resultados, no aplicaciones.</span></div>
-   <div class="mode rv d1"><div class="mo" style="background:rgba(168,85,247,.1);color:var(--purple)">%</div><div><b>Nuestro fee variable es solo honorarios</b><span>No incluye licencias de CRM, consumos de IA, WhatsApp ni inversión en plataformas publicitarias. Esos costos se abonan aparte y los controlas vos directamente.</span></div></div>
+   <div class="mode rv d1"><div class="mo" style="background:rgba(168,85,247,.1);color:var(--purple)">%</div><div><b>Nuestro fee variable es solo honorarios</b><span>No incluye licencias de CRM, consumos de IA, WhatsApp ni inversión en plataformas publicitarias. Esos costos se abonan aparte y los controlas tú directamente.</span></div></div>
    <div class="mode rv d2"><div class="mo" style="background:rgba(34,211,168,.1);color:var(--green)"><svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><b>Total control de tus datos y sistemas</b><span>Nuestras automatizaciones se realizan con N8N open source, montadas en nuestro servidor. Entregamos los backups a tu equipo técnico. Todos nuestros clientes tienen control total de sus licencias, sistemas y datos.</span></div></div>
   </div>
   <!-- Contenido con IA incluido -->
@@ -1508,7 +1512,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    <div class="fq rv"><button aria-expanded="false" aria-controls="fa10">¿Cómo empezamos?<i aria-hidden="true"></i></button><div class="fa" id="fa10"><div><p>Toca cualquier botón de WhatsApp de esta página. Te pedimos algunos datos de tu negocio y empezamos con la auditoría gratuita de oportunidades.</p></div></div></div>
    <div class="fq rv"><button aria-expanded="false" aria-controls="fa11">¿Ofrecen Business Intelligence y dashboards?<i aria-hidden="true"></i></button><div class="fa" id="fa11"><div><p>Sí. Conectamos tus anuncios, Google Analytics 4, tu ecommerce y tu CRM en dashboards automáticos en Looker Studio o Power BI, con ROAS real, costo por venta y forecast. Es un proyecto a medida de pago único.</p></div></div></div>
 <div class="fq rv"><button aria-expanded="false" aria-controls="fa12">¿YachSell gestiona ChatGPT Ads (GPT Ads)?<i aria-hidden="true"></i></button><div class="fa" id="fa12"><div><p>Sí. Gestionamos campañas de GPT Ads, también llamados ChatGPT Ads o anuncios en ChatGPT, integradas en nuestros planes de captación omnicanal con modelo variable: implementación única + comisión sobre ventas generadas.</p></div></div></div>
-<div class="fq rv"><button aria-expanded="false" aria-controls="fa13">¿Trabajan con pymes?<i aria-hidden="true"></i></button><div class="fa" id="fa13"><div><p>Sí. Gran parte de nuestros clientes son pymes. Nuestro plan Pequeños Negocios arranca con USD 150 de implementación y luego cobramos 5% variable sobre ventas generadas. Sin fees fijos, sin permanencia y con reportes automatizados.</p></div></div></div>
+<div class="fq rv"><button aria-expanded="false" aria-controls="fa13">¿Trabajan con pymes?<i aria-hidden="true"></i></button><div class="fa" id="fa13"><div><p>Sí. Gran parte de nuestros clientes son pymes. Nuestro plan Pequeños Negocios arranca con USD 150 de implementación y luego cobramos desde 10% variable sobre ventas generadas. Sin fees fijos, sin permanencia y con reportes automatizados.</p></div></div></div>
   </div>
  </div>
 </section>
@@ -1642,7 +1646,7 @@ wa:[
 ],
 ig:[
 {t:"user",m:"Vi el post del seguro para autos, me interesa",d:600},
-{t:"bot",m:"¡Hola! Gracias por escribirnos. ¿Qué vehículo tenés asegurado actualmente?",d:2000},
+{t:"bot",m:"¡Hola! Gracias por escribirnos. ¿Qué vehículo tienes asegurado actualmente?",d:2000},
 {t:"user",m:"Un Toyota Corolla 2022",d:3600},
 {t:"bot",m:"Para un Corolla 2022 tenemos cobertura todo riesgo desde USD 89/mes. Incluye grúa 24/7 y auto sustituto. ¿Querés que un asesor te prepare una cotización personalizada?",d:5200},
 {t:"user",m:"Sí, por favor",d:7000},
@@ -1712,9 +1716,9 @@ if('IntersectionObserver' in w){
    nw.textContent=s.words[idx];
    el.appendChild(nw);
    requestAnimationFrame(function(){requestAnimationFrame(function(){nw.classList.add('active');});});
-   setTimeout(function(){if(cur&&cur.parentNode)cur.parentNode.removeChild(cur);},500);
+   setTimeout(function(){if(cur&&cur.parentNode)cur.parentNode.removeChild(cur);},400);
   });
- },2800);
+ },1800);
 })();
 
 /* ═══ Dynamic grid background ═══ */

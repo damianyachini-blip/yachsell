@@ -37,6 +37,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .h1-swap .sw-word.out{opacity:0;transform:translateY(-100%);position:absolute;left:0;top:0}
 .h1-swap .sw-word.in{opacity:0;transform:translateY(60%)}
 .h1-swap .sw-word.in.active{opacity:1;transform:translateY(0)}
+.h1-swap-line{margin-top:8px;font-size:1.4rem;font-weight:700;min-height:1.8em}
+.h1-swap-line .h1-swap{min-width:6ch}
+.h1-swap-line .sw-word{color:var(--cyan)!important;-webkit-text-fill-color:var(--cyan)!important}
 </style></noscript>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AboutPage", "url": "https://www.yachsell.com/nosotros/", "name": "Sobre YachSell", "about": {"@id": "https://www.yachsell.com/#org"}, "mainEntity": {"@id": "https://www.yachsell.com/#org"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "@id": "https://www.yachsell.com/nosotros/#damian-yachini", "name": "Damián Yachini", "jobTitle": "Founder · Especialista en Marketing IA", "image": "https://www.yachsell.com/damian-yachini.jpg", "url": "https://www.yachsell.com/nosotros/", "sameAs": ["https://www.linkedin.com/in/damianyachini/"], "worksFor": {"@id": "https://www.yachsell.com/#org"}, "description": "Especialista en marketing digital, gestión publicitaria y operaciones comerciales. Fundador de YachSell, agencia de marketing IA que combina Business Intelligence, Paid Media e inteligencia artificial.", "knowsAbout": ["Marketing de performance", "Meta Ads", "Google Ads", "GPT Ads", "Business Intelligence", "CRM", "Automatización comercial", "Inteligencia artificial aplicada a ventas"]}</script>
@@ -83,7 +86,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div>
    <nav class="crumbs" aria-label="Ruta"><a href="/">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Sobre nosotros</span></nav>
    <div class="eyebrow rv" style="color:#00e5ff">Sobre nosotros</div>
-   <h1 class="rv d1">Sobre YachSell: publicidad, datos e <span class="h1-swap" id="pgSwap1"></span> <span class="grad">al servicio de tus ventas</span></h1>
+   <h1 class="rv d1">Sobre YachSell: publicidad, datos e IA <span class="grad">al servicio de tus ventas</span></h1>
+   <div class="h1-swap-line"><span class="h1-swap" id="pgSwap1"></span></div>
    <p class="hero-p rv d2">YachSell es una agencia de marketing IA fundada en 2025 por Damián Yachini. Combinamos Business Intelligence, Paid Media e inteligencia artificial para que la publicidad forme parte de una estrategia comercial medible, no de una actividad aislada.</p>
    <div class="hero-btns rv d3">
     <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20que%20analicemos%20mi%20caso" target="_blank" rel="noopener" class="btn btn-wa btn-lg" data-wa="hero_nosotros"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Analicemos tu caso</a>
@@ -218,9 +222,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var cur=el.querySelector('.sw-word.active');
   if(cur){cur.classList.remove('active');cur.classList.add('out');}
   var nw=document.createElement('span');nw.className='sw-word in';nw.textContent=words[idx];el.appendChild(nw);
-  requestAnimationFrame(function(){requestAnimationFrame(function(){nw.classList.add('active')})});
-  setTimeout(function(){if(cur&&cur.parentNode)cur.parentNode.removeChild(cur)},500);
- },2800);
+  requestAnimationFrame(function(){requestAnimationFrame(function(){nw.classList.add('active')});});
+  setTimeout(function(){if(cur&&cur.parentNode)cur.parentNode.removeChild(cur)},400);
+ },1800);
 })();
 </script>
 </body>
