@@ -795,12 +795,6 @@ a.pill span{color:var(--cyan);font-weight:700}
 @media (max-width:720px){.hero-proof{grid-template-columns:1fr;width:100%}.hero-proof>div+div{border-left:0;border-top:1px solid var(--border)}.h1-k{font-size:.66rem;letter-spacing:.14em;margin-bottom:14px}.pill{font-size:.74rem}}
 .h1-l{display:block}
 .hero h1 .h1-l.grad{display:block;width:max-content;max-width:100%}
-.h1-swap{display:inline-block;position:relative;overflow:hidden;vertical-align:bottom;min-width:2ch;white-space:nowrap;height:1.15em}
-.h1-swap .sw-word{display:inline-block;transition:opacity .32s,transform .32s;opacity:1;transform:translateY(0);color:#fff!important;-webkit-text-fill-color:#fff!important;white-space:nowrap}
-.h1-swap .sw-word.out{opacity:0;transform:translateY(-110%);position:absolute;left:0;top:0;pointer-events:none}
-.h1-swap .sw-word.in{opacity:0;transform:translateY(70%)}
-.h1-swap .sw-word.in.active{opacity:1;transform:translateY(0)}
-.grad .h1-swap .sw-word{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent!important}
 </style>
 <noscript><style>.rv{opacity:1!important;transform:none!important;filter:none!important}.msg{display:block!important}
 /* ═══ FUTURISTIC EFFECTS ═══ */
@@ -973,7 +967,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="hero-txt">
    <a class="pill rv" href="/servicios/gpt-ads/"><b>NUEVO</b> Anuncia en ChatGPT con GPT Ads <span aria-hidden="true">→</span></a>
    <a class="pill rv" href="/servicios/agentes-ia/" style="background:linear-gradient(135deg,rgba(168,85,247,.18),rgba(0,229,255,.12));border-color:rgba(168,85,247,.3)"><b>NUEVO</b> Agentes IA con Superpoderes <span aria-hidden="true">→</span></a>
-   <h1 class="rv d1"><span class="h1-k">Agencia de Marketing IA<span class="sr">: </span></span><span class="h1-l">El anuncio <span class="h1-swap" id="heroSwap1"></span></span> <span class="h1-l">La IA <span class="h1-swap" id="heroSwap2"></span></span> <span class="h1-l grad">Tu equipo <span class="h1-swap" id="heroSwap3"></span></span></h1>
+   <h1 class="rv d1"><span class="h1-k">Agencia de Marketing IA<span class="sr">: </span></span><span class="h1-l">El anuncio atrae</span><span class="h1-l">La IA responde</span><span class="h1-l grad">Tu equipo vende</span></h1>
    <p class="hero-p rv d2">Tu socio comercial: modelo 100% variable sobre ventas realizadas, previa evaluación de tu caso. Sin implementación, sin fees fijos. Publicidad online omnicanal, agentes IA, CRM y automatización comercial — <strong>de la primera interacción al cierre, todo conectado.</strong></p>
    <div class="hero-btns rv d3">
     <a href="https://api.whatsapp.com/send/?phone=5491124829594&amp;text=Hola%20YachSell%2C%20quiero%20que%20analicemos%20mi%20caso" target="_blank" rel="noopener" class="btn btn-wa btn-lg" data-wa="hero"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="#fff"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 01-5.383-1.572l-.386-.232-3.234 1.084 1.084-3.234-.232-.386A9.94 9.94 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" fill="#fff"/></svg> Analicemos tu caso</a>
@@ -1687,42 +1681,6 @@ if('IntersectionObserver' in w){
  var hio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!hDemoStarted){hDemoStarted=true;hRunDemo("wa");hio.unobserve(e.target)}})},{threshold:.3});
  var hds=d.getElementById("demo-home");if(hds)hio.observe(hds);
 }
-})();
-
-/* ═══ Hero word swap animation ═══ */
-(function(){
- var sets=[
-  {id:'heroSwap1',words:['atrae','capta','convierte','impacta']},
-  {id:'heroSwap2',words:['responde','califica','agenda','cierra']},
-  {id:'heroSwap3',words:['vende','crece','escala','factura']}
- ];
- var idx=0;
- sets.forEach(function(s){
-  var el=document.getElementById(s.id);
-  if(!el)return;
-  var span=document.createElement('span');
-  span.className='sw-word active';
-  span.textContent=s.words[0];
-  el.appendChild(span);
- });
- setInterval(function(){
-  idx=(idx+1)%sets[0].words.length;
-  sets.forEach(function(s){
-   var el=document.getElementById(s.id);
-   if(!el)return;
-   /* limpiar todos los .out residuales antes de animar */
-   var old=el.querySelectorAll('.sw-word.out');
-   old.forEach(function(o){o.parentNode.removeChild(o);});
-   var cur=el.querySelector('.sw-word.active');
-   if(cur){cur.classList.remove('active');cur.classList.add('out');}
-   var nw=document.createElement('span');
-   nw.className='sw-word in';
-   nw.textContent=s.words[idx];
-   el.appendChild(nw);
-   requestAnimationFrame(function(){requestAnimationFrame(function(){nw.classList.add('active');});});
-   setTimeout(function(){if(cur&&cur.parentNode)cur.parentNode.removeChild(cur);},400);
-  });
- },1800);
 })();
 
 /* ═══ Dynamic grid background ═══ */
